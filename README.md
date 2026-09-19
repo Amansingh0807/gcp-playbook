@@ -45,8 +45,8 @@ Unlike conventional study guides that either provide high-level summaries or ove
 | :--- | :--- | :--- | :---: | :---: |
 | [Phase 00](phases/phase-00-cloud-fundamentals.md) | **Cloud Computing Fundamentals** | NIST Characteristics, IaaS/PaaS/SaaS, Shared Responsibility, Regions vs Zones | ⭐⭐⭐☆☆ | ✅ Complete |
 | [Phase 01](phases/phase-01-gcp-fundamentals.md) | **GCP Fundamentals & Hierarchy** | Console, Cloud Shell, SDK, Projects, Billing & Budgets, Resource Hierarchy, Org Policies | ⭐⭐⭐⭐⭐ | ✅ Complete |
-| [Phase 02](phases/phase-02-identity-security-iam.md) | **Identity & Security (IAM)** | Principals, Roles (Basic/Predefined/Custom), Service Accounts, Keys, Workload Identity | ⭐⭐⭐⭐⭐ | 📝 Queued |
-| [Phase 03](phases/phase-03-compute.md) | **Compute Services** | Compute Engine, MIGs, Autoscaling, App Engine, Cloud Run, Cloud Functions | ⭐⭐⭐⭐⭐ | 📝 Queued |
+| [Phase 02](phases/phase-02-identity-security-iam.md) | **Identity & Security (IAM)** | Principals, Roles (Basic/Predefined/Custom), Service Accounts, Keys, Workload Identity | ⭐⭐⭐⭐⭐ | ✅ Complete |
+| [Phase 03](phases/phase-03-compute.md) | **Compute Services** | Compute Engine, MIGs, Autoscaling, App Engine, Cloud Run, Cloud Functions | ⭐⭐⭐⭐⭐ | ✅ Complete |
 | [Phase 04](phases/phase-04-storage.md) | **Storage Services** | Cloud Storage (GCS) Classes, Retention, CMEK, Persistent Disks, Local SSD, Filestore | ⭐⭐⭐⭐⭐ | 📝 Queued |
 | [Phase 05](phases/phase-05-databases.md) | **Databases & Analytics** | Cloud SQL, Firestore, Bigtable, Spanner, Memorystore, BigQuery Core | ⭐⭐⭐⭐☆ | 📝 Queued |
 | [Phase 06](phases/phase-06-networking.md) | **VPC & Networking** | Global VPC, Subnets, Firewall Rules, Cloud NAT, Cloud DNS, Cloud Load Balancing | ⭐⭐⭐⭐⭐ | 📝 Queued |
@@ -113,7 +113,9 @@ gcp-playbook/
 │   ├── by-phase/                      <- 15-question sets for immediate post-phase testing
 │   │   ├── phase-00.md
 │   │   ├── phase-01.md
-│   │   └── ... (phase-02 to 12)
+│   │   ├── phase-02.md
+│   │   ├── phase-03.md
+│   │   └── ... (phase-04 to 12)
 │   ├── mock-exams/                    <- Full-length 50-question mixed mocks (100+ questions)
 │   │   ├── mock-exam-01.md
 │   │   └── mock-exam-02.md
@@ -128,6 +130,8 @@ gcp-playbook/
 
 - **[Phase 0 Practice Drill](practice-questions/by-phase/phase-00.md):** 10 MCQs + 5 MSQs on NIST Characteristics, IaaS/PaaS/SaaS, Shared Responsibility.
 - **[Phase 1 Practice Drill](practice-questions/by-phase/phase-01.md):** 10 MCQs + 5 MSQs on Resource Hierarchy, Project IDs, Budgets & IAM inheritance.
+- **[Phase 2 Practice Drill](practice-questions/by-phase/phase-02.md):** 10 MCQs + 5 MSQs on IAM Formula, Roles, Service Accounts, Keys vs Impersonation.
+- **[Phase 3 Practice Drill](practice-questions/by-phase/phase-03.md):** 10 MCQs + 5 MSQs on Compute Engine, Spot VMs, MIG Autoscaling, Cloud Run, Cloud Functions.
 - **[Mock Exam 01](practice-questions/mock-exams/mock-exam-01.md):** Timed 50-Question Full-Length Simulator (Part 1).
 - **[Mock Exam 02](practice-questions/mock-exams/mock-exam-02.md):** Timed 50-Question Full-Length Simulator (Part 2).
 - **[High-Frequency Exam Traps](practice-questions/high-frequency-questions.md):** Recurring scenario patterns reported in recent exam cycles.
