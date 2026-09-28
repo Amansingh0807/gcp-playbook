@@ -43,19 +43,19 @@ Unlike conventional study guides that either provide high-level summaries or ove
 
 | Phase | Topic | Focus Areas | Exam Weight | Status |
 | :--- | :--- | :--- | :---: | :---: |
-| [Phase 00](phases/phase-00-cloud-fundamentals.md) | **Cloud Computing Fundamentals** | NIST Characteristics, IaaS/PaaS/SaaS, Shared Responsibility, Regions vs Zones | ⭐⭐⭐☆☆ | ✅ Complete |
-| [Phase 01](phases/phase-01-gcp-fundamentals.md) | **GCP Fundamentals & Hierarchy** | Console, Cloud Shell, SDK, Projects, Billing & Budgets, Resource Hierarchy, Org Policies | ⭐⭐⭐⭐⭐ | ✅ Complete |
-| [Phase 02](phases/phase-02-identity-security-iam.md) | **Identity & Security (IAM)** | Principals, Roles (Basic/Predefined/Custom), Service Accounts, Keys, Workload Identity | ⭐⭐⭐⭐⭐ | ✅ Complete |
-| [Phase 03](phases/phase-03-compute.md) | **Compute Services** | Compute Engine, MIGs, Autoscaling, App Engine, Cloud Run, Cloud Functions | ⭐⭐⭐⭐⭐ | ✅ Complete |
-| [Phase 04](phases/phase-04-storage.md) | **Storage Services** | Cloud Storage (GCS) Classes, Retention, CMEK, Persistent Disks, Local SSD, Filestore | ⭐⭐⭐⭐⭐ | 📝 Queued |
-| [Phase 05](phases/phase-05-databases.md) | **Databases & Analytics** | Cloud SQL, Firestore, Bigtable, Spanner, Memorystore, BigQuery Core | ⭐⭐⭐⭐☆ | 📝 Queued |
-| [Phase 06](phases/phase-06-networking.md) | **VPC & Networking** | Global VPC, Subnets, Firewall Rules, Cloud NAT, Cloud DNS, Cloud Load Balancing | ⭐⭐⭐⭐⭐ | 📝 Queued |
-| [Phase 07](phases/phase-07-kubernetes-gke.md) | **Kubernetes Engine (GKE)** | K8s Objects, GKE Standard vs Autopilot, Node Pools, Autoscaling, `kubectl` essentials | ⭐⭐⭐⭐☆ | 📝 Queued |
-| [Phase 08](phases/phase-08-monitoring-operations.md) | **Monitoring & Operations** | Cloud Monitoring, Metrics, Alerting, Cloud Logging, Log Router, Audit Logs | ⭐⭐⭐⭐☆ | 📝 Queued |
-| [Phase 09](phases/phase-09-devops-automation.md) | **DevOps & Automation** | Cloud Build, Artifact Registry, CI/CD, Terraform IaC, Cloud Assist | ⭐⭐⭐☆☆ | 📝 Queued |
-| [Phase 10](phases/phase-10-billing-cost-optimization.md) | **Billing & Cost Optimization** | CUDs vs SUDs, Pricing Calculator, Cost Export to BigQuery, Budget Automations | ⭐⭐⭐⭐☆ | 📝 Queued |
-| [Phase 11](phases/phase-11-high-availability-reliability.md) | **High Availability & Reliability** | Multi-region architectures, DR Strategies (RTO/RPO), Failover & Replication | ⭐⭐⭐⭐☆ | 📝 Queued |
-| [Phase 12](phases/phase-12-scenario-mastery.md) | **ACE Scenario Mastery & Battlecards** | 15+ Head-to-Head Service Comparisons, Decision Trees, Exam Trap Patterns | ⭐⭐⭐⭐⭐ | 📝 Queued |
+| [Phase 00](phases/phase-00-cloud-fundamentals.md) | **Cloud Computing Fundamentals** | NIST Characteristics, IaaS/PaaS/SaaS, Shared Responsibility, Regions vs Zones | ⭐⭐⭐☆☆ | 
+| [Phase 01](phases/phase-01-gcp-fundamentals.md) | **GCP Fundamentals & Hierarchy** | Console, Cloud Shell, SDK, Projects, Billing & Budgets, Resource Hierarchy, Org Policies | ⭐⭐⭐⭐⭐ | 
+| [Phase 02](phases/phase-02-identity-security-iam.md) | **Identity & Security (IAM)** | Principals, Roles (Basic/Predefined/Custom), Service Accounts, Keys, Workload Identity | ⭐⭐⭐⭐⭐ | 
+| [Phase 03](phases/phase-03-compute.md) | **Compute Services** | Compute Engine, MIGs, Autoscaling, App Engine, Cloud Run, Cloud Functions | ⭐⭐⭐⭐⭐ | 
+| [Phase 04](phases/phase-04-storage.md) | **Storage Services** | Cloud Storage (GCS) Classes, Retention, CMEK, Persistent Disks, Local SSD, Filestore | ⭐⭐⭐⭐⭐ |  
+| [Phase 05](phases/phase-05-databases.md) | **Databases & Analytics** | Cloud SQL, Firestore, Bigtable, Spanner, Memorystore, BigQuery Core | ⭐⭐⭐⭐☆ | 
+| [Phase 06](phases/phase-06-networking.md) | **VPC & Networking** | Global VPC, Subnets, Firewall Rules, Cloud NAT, Cloud DNS, Cloud Load Balancing | ⭐⭐⭐⭐⭐ | 
+| [Phase 07](phases/phase-07-kubernetes-gke.md) | **Kubernetes Engine (GKE)** | K8s Objects, GKE Standard vs Autopilot, Node Pools, Autoscaling, `kubectl` essentials | ⭐⭐⭐⭐☆ | 
+| [Phase 08](phases/phase-08-monitoring-operations.md) | **Monitoring & Operations** | Cloud Monitoring, Metrics, Alerting, Cloud Logging, Log Router, Audit Logs | ⭐⭐⭐⭐☆ | 
+| [Phase 09](phases/phase-09-devops-automation.md) | **DevOps & Automation** | Cloud Build, Artifact Registry, CI/CD, Terraform IaC, Cloud Assist | ⭐⭐⭐☆☆ | 
+| [Phase 10](phases/phase-10-billing-cost-optimization.md) | **Billing & Cost Optimization** | CUDs vs SUDs, Pricing Calculator, Cost Export to BigQuery, Budget Automations | ⭐⭐⭐⭐☆ | 
+| [Phase 11](phases/phase-11-high-availability-reliability.md) | **High Availability & Reliability** | Multi-region architectures, DR Strategies (RTO/RPO), Failover & Replication | ⭐⭐⭐⭐☆ | 
+| [Phase 12](phases/phase-12-scenario-mastery.md) | **ACE Scenario Mastery & Battlecards** | 15+ Head-to-Head Service Comparisons, Decision Trees, Exam Trap Patterns | ⭐⭐⭐⭐⭐ | 
 
 ---
 
