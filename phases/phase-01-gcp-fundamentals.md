@@ -1,3 +1,7 @@
+[← Previous Phase: Cloud Fundamentals](phase-00-cloud-fundamentals.md) · [Next Phase: Identity & Security (IAM) →](phase-02-identity-security-iam.md)
+
+---
+
 # Phase 1 — Google Cloud Platform Fundamentals ⭐⭐⭐⭐⭐
 
 > **Prerequisite:** [Phase 00 — Cloud Computing Fundamentals](phase-00-cloud-fundamentals.md)  
@@ -11,7 +15,7 @@
 
 Google Cloud Console, Projects & Billing, and the Resource Hierarchy together form the operational skeleton of GCP — the tools used to interact with GCP (Console, Cloud Shell, `gcloud` CLI), the fundamental container that holds resources and billing (Projects), and the organizational tree that governs security policies (Organization ➔ Folder ➔ Project ➔ Resources).
 
-> **Hinglish:** Ye teeno cheezein GCP ka "control room" hain — Console/CLI se tum GCP ko control karte ho, Project tumhara "bill aur container" hai, aur Resource Hierarchy tumhara "company ka organizational chart" hai jisse security aur policies upar se neeche automatically flow karti hain.
+> **In short:** These three pillars are the "control room" of GCP — Console and CLI let you interact with GCP, Projects are your billing and resource containers, and the Resource Hierarchy is your organizational chart where security policies flow automatically from top to bottom.
 
 ---
 
@@ -82,7 +86,7 @@ Google Cloud Console, Projects & Billing, and the Resource Hierarchy together fo
 3. **IAM is Purely Additive:** A user's effective permissions are the **UNION** of all permissions granted across all parent nodes. You cannot restrict or remove an IAM permission at a project level if it was granted higher up at the folder or organization level.
 4. **Organization Policies (Guardrails):** Unlike IAM (which governs *who* can do what), Organization Policies govern *what* can be done. Org policies can enforce restrictions regardless of a user's IAM privileges.
 
-> **Hinglish:** Jaise company mein CEO ka rule sab par apply hota hai (Organization), phir department head ka rule apne department pe (Folder), phir team lead ka rule apni team pe (Project) — neeche wala upar wale ka rule automatically follow karta hai.
+> **In short:** Think of it like a corporate hierarchy — the CEO's rules apply to everyone (Organization), department heads set rules for their departments (Folders), and team leads govern their teams (Projects). Lower levels automatically inherit the rules from above.
 
 ---
 
@@ -444,3 +448,7 @@ Your company wants to guarantee that cloud spending in a development project sto
 - **Official ACE Exam Guide Mappings:**
   - *Section 1.1:* Setting up cloud solution environments (Managing projects, assigning billing accounts, establishing resource hierarchy).
   - *Section 1.2:* Planning and configuring compute, data, and network resources.
+
+---
+
+[← Previous Phase: Cloud Fundamentals](phase-00-cloud-fundamentals.md) · [Next Phase: Identity & Security (IAM) →](phase-02-identity-security-iam.md)
