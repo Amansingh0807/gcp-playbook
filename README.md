@@ -41,7 +41,7 @@ Unlike conventional study guides that either provide high-level summaries or ove
 
 ## 🗺️ Curriculum Roadmap
 
-| Phase | Topic | Focus Areas | Exam Weight | Status |
+| Phase | Topic | Focus Areas | Exam Weight | 
 | :--- | :--- | :--- | :---: | :---: |
 | [Phase 00](phases/phase-00-cloud-fundamentals.md) | **Cloud Computing Fundamentals** | NIST Characteristics, IaaS/PaaS/SaaS, Shared Responsibility, Regions vs Zones | ⭐⭐⭐☆☆ | 
 | [Phase 01](phases/phase-01-gcp-fundamentals.md) | **GCP Fundamentals & Hierarchy** | Console, Cloud Shell, SDK, Projects, Billing & Budgets, Resource Hierarchy, Org Policies | ⭐⭐⭐⭐⭐ | 
