@@ -1,3 +1,7 @@
+[← Previous Phase: GCP Fundamentals](phase-01-gcp-fundamentals.md) · [Next Phase: Compute Services →](phase-03-compute.md)
+
+---
+
 # Phase 2 — Identity & Security (Cloud IAM) ⭐⭐⭐⭐⭐
 
 > **Prerequisite:** [Phase 01 — Google Cloud Platform Fundamentals](phase-01-gcp-fundamentals.md)  
@@ -74,7 +78,7 @@
 5. **Condition Evaluation:** If an IAM Condition is present (e.g., time-window restriction), it is evaluated via Common Expression Language (CEL).
 6. **Default Deny:** If no binding in the hierarchy permits the action, access is denied immediately.
 
-> **Hinglish:** IAM check hamesha dekhta hai — "kya kahin bhi (resource, project, folder ya org level pe) tumhe ye permission mili hai?" Agar kahin bhi mili toh allow, warna default deny.
+> **In short:** IAM always checks — "Has this principal been granted this permission anywhere in the hierarchy (resource, project, folder, or org level)?" If it finds a match anywhere, access is allowed. Otherwise, it defaults to deny.
 
 ---
 
@@ -159,7 +163,7 @@ request.time < timestamp("2026-12-31T00:00:00Z")
 - **Service Account Impersonation:** Allows a user or service account to temporarily assume the identity of another service account using short-lived OAuth2 tokens. No physical key file is ever downloaded.
 - **Workload Identity Federation:** Enables workloads running outside Google Cloud (AWS, Azure, on-premises, GitHub Actions) to authenticate and exchange their native tokens for short-lived GCP tokens without service account keys.
 
-> **Hinglish:** Workload Identity ka matlab — "key file download karke laptop me mat rakho; bas trust setup karo aur temporary short-lived token lo."
+> **In short:** The core idea behind Workload Identity is simple — don't download key files to your machine. Instead, set up a trust relationship and use temporary, short-lived tokens.
 
 ---
 
@@ -425,3 +429,7 @@ A junior data analyst requires access to run queries against BigQuery datasets i
 - **Official ACE Exam Guide Mappings:**
   - *Section 5.1:* Managing Identity and Access Management (IAM) (Managing IAM role bindings, custom roles, service accounts).
   - *Section 5.2:* Managing service accounts (Granting scopes, service account user roles, impersonation).
+
+---
+
+[← Previous Phase: GCP Fundamentals](phase-01-gcp-fundamentals.md) · [Next Phase: Compute Services →](phase-03-compute.md)
