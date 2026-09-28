@@ -1,3 +1,7 @@
+← Previous Phase: *None (This is the starting phase)* · [Next Phase: GCP Fundamentals →](phase-01-gcp-fundamentals.md)
+
+---
+
 # Phase 0 — Cloud Computing Fundamentals ⭐⭐⭐☆☆
 
 > **Prerequisite:** None (Absolute Beginner Friendly)  
@@ -11,7 +15,7 @@
 
 **Cloud Computing** is the delivery of computing resources — servers, storage, databases, networking, and software — over the internet ("the cloud"), instead of owning and running physical hardware yourself. You rent computing power from a provider (like Google, AWS, Microsoft) and pay only for what you use.
 
-> **Hinglish:** Cloud computing matlab apna khud ka computer/server kharidne ke bajaye, kisi bade company (Google/AWS) ke servers ko internet ke through rent par lena — **jitna use, utna paisa**.
+> **In short:** Instead of buying your own hardware, you rent computing power from a large provider over the internet — you only pay for what you actually use.
 
 ---
 
@@ -70,7 +74,7 @@
 4. **Scaling (if configured):** Managed Instance Groups (MIGs) automatically spin up extra VMs when CPU/HTTP load spikes and tear them down when demand recedes.
 5. **Termination:** When deleted, virtual resources are unmapped, memory is scrubbed, and hardware is returned to Google's shared pool for other tenants.
 
-> **Hinglish:** Jab tum cloud par resource maangte ho, Google ke paas already hazaron servers ready hote hain (shared pool mein) — woh turant ek chhota sa slice tumhe assign kar dete hain, jaise hotel mein room turant mil jata hai bina nayi building banaye.
+> **In short:** When you request a resource, Google already has thousands of servers in a shared pool ready to go — it instantly assigns a small slice to you, much like getting a hotel room without building a new hotel.
 
 ---
 
@@ -104,7 +108,7 @@ Capabilities are available over the network and accessed through standard mechan
 The provider's computing resources are pooled to serve multiple consumers using a multi-tenant model, with different physical and virtual resources dynamically assigned and reassigned according to consumer demand. Customer workloads remain strictly isolated.  
 *Example:* Your VM runs on the same physical rack server as another company's VM, but virtualization and hardware security prevent either company from viewing the other's data.
 
-> **Hinglish:** Jaise ek residential society mein alag-alag flats hote hain — sab ek hi building (physical server) mein rehte hain, par har flat (VM) private aur locked hota hai.
+> **In short:** Think of it like separate apartments in a building — everyone shares the same physical structure (server), but each apartment (VM) is private and isolated.
 
 ### 5.4 Rapid Elasticity
 Capabilities can be elastically provisioned and released to scale rapidly outward and inward commensurate with demand. To the consumer, available resources often appear infinite.  
@@ -147,10 +151,10 @@ SaaS ──────────────────▶ PaaS ────
 | **FaaS** | Function as a Service | Underlying runtime, container lifecycle, event bindings | Discrete modular functions executed on specific triggers | Cloud Functions | A vending machine: insert coin (event trigger) ➔ get snack (function output) |
 | **CaaS** | Containers as a Service | Underlying VM provisioning, cluster lifecycle, master plane | Container images, Kubernetes manifests, pod configurations | Google Kubernetes Engine (GKE) | Cargo shipping containers; standard packaging, carrier manages the ship |
 
-> **Hinglish:**  
-> - **IaaS:** Khali plot milta hai, tumhe khud cement, deewar aur chhat banani padti hai.  
-> - **PaaS:** Ready-made flat milta hai, bas apna saaman le aao aur rehna shuru karo.  
-> - **SaaS:** Luxury hotel room — khana, safai sab ready, bas enjoy karo.
+> **In short:**  
+> - **IaaS:** You get an empty plot of land — you build the walls, roof, and plumbing yourself.  
+> - **PaaS:** You get a ready-made apartment — just bring your furniture and move in.  
+> - **SaaS:** You get a luxury hotel room — food, cleaning, everything is handled for you.
 
 ### 6.3 Shared Responsibility Model
 
@@ -454,3 +458,7 @@ Under the Google Cloud Shared Responsibility Model, which of the following is AL
 - **Directly Related GCP Services:** Compute Engine, App Engine, Cloud Functions, Cloud Run, Cloud Storage, VPC Networks.
 - **Official ACE Exam Guide Mappings:**
   - *Section 1:* Setting up a cloud solution environment (understanding cloud architecture & resource deployment scopes).
+
+---
+
+← Previous Phase: *None (This is the starting phase)* · [Next Phase: GCP Fundamentals →](phase-01-gcp-fundamentals.md)
