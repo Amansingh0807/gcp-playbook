@@ -1,3 +1,7 @@
+[← Previous Phase: Identity & Security (IAM)](phase-02-identity-security-iam.md) · [Next Phase: Storage Services →](phase-04-storage.md)
+
+---
+
 # Phase 3 — Compute Services ⭐⭐⭐⭐⭐
 
 > **Prerequisite:** [Phase 02 — Identity & Security (Cloud IAM)](phase-02-identity-security-iam.md)  
@@ -11,7 +15,7 @@
 
 **Compute** in GCP is the overarching umbrella term for all the services that execute your application code — ranging from full virtual machines that you completely control (Compute Engine) to fully managed, serverless platforms where you simply deploy code or containers without managing infrastructure (App Engine, Cloud Run, Cloud Functions).
 
-> **Hinglish:** Compute matlab — **"tumhara code kahaan chalega?"** Compute Engine mein tum poora computer (OS, memory, disk) control karte ho, jabki Cloud Functions/Cloud Run mein tum bas code doge, baaki sab scaling aur server maintenance Google sambhalega.
+> **In short:** Compute is about "where does your code run?" With Compute Engine, you control the entire machine (OS, memory, disk). With Cloud Run or Cloud Functions, you just hand over your code and Google handles all the scaling and infrastructure.
 
 ---
 
@@ -96,7 +100,7 @@ Compute Engine   ───▶   GKE (Kubernetes)   ───▶   Cloud Run   �
 - **Reset:** Hard reset (similar to holding the physical power button). Memory is wiped; ephemeral IP and disk attachments remain intact.
 - **Delete:** Permanently destroys the VM. Boot disk is deleted by default unless "Keep boot disk" was enabled.
 
-> **Hinglish:** Stop = computer band karna (disk ka bill chalega, CPU band), Suspend = sleep mode (RAM disk par save hoti hai, jaldi wake-up), Reset = restart button dabana, Delete = system hi destroy kar dena.
+> **In short:** Stop = power off (disk billing continues, CPU stops). Suspend = sleep mode (RAM saved to disk, fast wake-up). Reset = pressing the restart button. Delete = destroying the entire machine permanently.
 
 ---
 
@@ -234,7 +238,7 @@ Compute Engine   ───▶   GKE (Kubernetes)   ───▶   Cloud Run   �
 | **Sustained Use (SUD)**| Applied automatically when VMs run >25% of month | Up to 30% discount | None (Automatic) | Steady-state VMs without commitments |
 | **Committed Use (CUD)**| Contractual commitment for 1 or 3 years | Up to 57% (Compute) / 70% (RAM)| None | Predictable, baseline enterprise workloads |
 
-> **Hinglish:** Spot VM matlab tatkal ticket ya last-minute standby flight — bohot sasti hai, lekin agar full fare passenger aa gaya toh tumhe seat chhodni padegi (preemption).
+> **In short:** A Spot VM is like a standby airline ticket — massively discounted, but if a full-fare passenger shows up, you lose your seat (preemption).
 
 ---
 
@@ -476,3 +480,7 @@ What happens to data stored on a Local SSD when the parent Compute Engine VM is 
   - *Section 2.1:* Planning and configuring compute resources (sizing, Spot VMs, selecting runtimes).
   - *Section 3.1:* Deploying and implementing Compute Engine resources.
   - *Section 3.3:* Deploying Cloud Run and Cloud Functions resources.
+
+---
+
+[← Previous Phase: Identity & Security (IAM)](phase-02-identity-security-iam.md) · [Next Phase: Storage Services →](phase-04-storage.md)
