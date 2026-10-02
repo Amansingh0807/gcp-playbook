@@ -1,4 +1,4 @@
-[← Previous Phase: Identity & Security (IAM)](phase-02-identity-security-iam.md) · [Next Phase: Storage Services →](phase-04-storage.md)
+[⬅️ Previous: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md) | [➡️ Next: Phase 04 — Storage Services](phase-04-storage.md)
 
 ---
 
@@ -15,7 +15,7 @@
 
 **Compute** in GCP is the overarching umbrella term for all the services that execute your application code — ranging from full virtual machines that you completely control (Compute Engine) to fully managed, serverless platforms where you simply deploy code or containers without managing infrastructure (App Engine, Cloud Run, Cloud Functions).
 
-> **In short:** Compute is about "where does your code run?" With Compute Engine, you control the entire machine (OS, memory, disk). With Cloud Run or Cloud Functions, you just hand over your code and Google handles all the scaling and infrastructure.
+> **Core Concept:** Compute answers the question: **"Where and how does your application execute?"** Compute Engine gives you complete low-level control over OS, memory, and disks, while serverless offerings like Cloud Run and Cloud Functions abstract away infrastructure entirely so you pay only for code execution time.
 
 ---
 
@@ -100,7 +100,11 @@ Compute Engine   ───▶   GKE (Kubernetes)   ───▶   Cloud Run   �
 - **Reset:** Hard reset (similar to holding the physical power button). Memory is wiped; ephemeral IP and disk attachments remain intact.
 - **Delete:** Permanently destroys the VM. Boot disk is deleted by default unless "Keep boot disk" was enabled.
 
-> **In short:** Stop = power off (disk billing continues, CPU stops). Suspend = sleep mode (RAM saved to disk, fast wake-up). Reset = pressing the restart button. Delete = destroying the entire machine permanently.
+> **Lifecycle State Summary:**  
+> - **Stop:** Powers down CPU/RAM; compute billing halts, but attached Persistent Disks continue to accrue storage charges.  
+> - **Suspend:** Hibernates the instance by persisting RAM contents to disk, allowing near-instantaneous resume.  
+> - **Reset:** Hard reboot of the guest OS; memory is cleared, but disks and ephemeral IP remain attached.  
+> - **Delete:** Permanently terminates the VM and cleans up unpreserved resources.
 
 ---
 
@@ -238,7 +242,7 @@ Compute Engine   ───▶   GKE (Kubernetes)   ───▶   Cloud Run   �
 | **Sustained Use (SUD)**| Applied automatically when VMs run >25% of month | Up to 30% discount | None (Automatic) | Steady-state VMs without commitments |
 | **Committed Use (CUD)**| Contractual commitment for 1 or 3 years | Up to 57% (Compute) / 70% (RAM)| None | Predictable, baseline enterprise workloads |
 
-> **In short:** A Spot VM is like a standby airline ticket — massively discounted, but if a full-fare passenger shows up, you lose your seat (preemption).
+> **Analogy:** Think of Spot VMs like standby airline seating: offered at steep 60%–91% discounts, but subject to immediate forfeiture (preemption) whenever regular full-fare demand surges.
 
 ---
 
@@ -471,7 +475,7 @@ What happens to data stored on a Local SSD when the parent Compute Engine VM is 
 
 ---
 
-## 21. Related Topics
+## 21. Related Topics & Navigation
 
 - **Study Before This:** [Phase 02 — Identity & Security (Cloud IAM)](phase-02-identity-security-iam.md).
 - **Study After This:** [Phase 04 — Storage Services](phase-04-storage.md) & [Phase 06 — Networking](phase-06-networking.md).
@@ -483,4 +487,4 @@ What happens to data stored on a Local SSD when the parent Compute Engine VM is 
 
 ---
 
-[← Previous Phase: Identity & Security (IAM)](phase-02-identity-security-iam.md) · [Next Phase: Storage Services →](phase-04-storage.md)
+[⬅️ Previous: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md) | [➡️ Next: Phase 04 — Storage Services](phase-04-storage.md)

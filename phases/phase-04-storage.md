@@ -1,4 +1,4 @@
-[← Previous Phase: Compute Services](phase-03-compute.md) · [Next Phase: Databases & Analytics →](phase-05-databases.md)
+[⬅️ Previous: Phase 03 — Compute Services](phase-03-compute.md) | [➡️ Next: Phase 05 — Databases & Analytics](phase-05-databases.md)
 
 ---
 
@@ -17,7 +17,7 @@
 
 **Cloud Storage** is Google's fully managed **object storage** service — a place to store any type of file (images, videos, backups, logs, documents) as "objects" inside containers called "buckets," accessible from anywhere via the internet, at massive scale, without managing any servers.
 
-> **In short:** Cloud Storage is an unlimited online locker — store as many files as you want (photos, videos, backups), and Google will keep them safe and accessible from anywhere over the internet.
+> **Core Concept:** Cloud Storage acts as an infinitely scalable online object locker. You store unstructured data (media files, backups, logs, archives), and Google guarantees durability, replication, and global HTTP/HTTPS accessibility with zero infrastructure management.
 
 ---
 
@@ -47,7 +47,7 @@
 
 A **bucket** is the top-level container in Cloud Storage. Every object (file) must live inside a bucket.
 
-> **In short:** A bucket is like a top-level folder — but unlike regular folders, its name must be unique globally across all of Google Cloud, not just within your project.
+> **Analogy:** Think of a bucket like a root folder, but with one critical distinction: its name must be unique across the entire global Google Cloud namespace, not just within your project.
 
 #### Bucket Naming Rules (⚠️ Exam Favorite):
 | Rule | Detail |
@@ -85,7 +85,7 @@ An **object** is the individual file stored inside a bucket. Each object consist
 
 **Maximum Object Size:** 5 TiB (5 terabytes per single object).
 
-> **In short:** An object is your actual file. Every file in a bucket has a unique name (key) and comes with metadata (descriptive key-value pairs).
+> **Core Concept:** An object represents your raw file bytes paired with descriptor metadata and a unique key that functions as its address within the bucket.
 
 ### 3.3 Storage Classes (⚠️ Most Tested Topic)
 
@@ -120,7 +120,7 @@ Storage classes define the **cost**, **availability**, and **minimum storage dur
 | Cost | Lower (single copy) | Higher (multiple copies stored) |
 | Recovery | Not possible | Retrieve any previous version by generation number |
 
-> **In short:** With versioning turned on, every previous version of a file is preserved — even if you accidentally delete or overwrite it, you can recover any past version.
+> **Key Takeaway:** With versioning enabled, every overwrite or deletion retains the previous file copy under a unique generation number, shielding you against accidental loss.
 
 #### Key Commands:
 ```bash
@@ -194,7 +194,7 @@ A **retention policy** specifies a minimum period of time that objects must be s
 | **Retention Policy Lock** | Once locked, the policy CANNOT be removed or shortened — only lengthened |
 | **Bucket Lock** | Makes the retention policy permanent and irreversible (for compliance) |
 
-> **In short:** Once a retention policy is set, nobody can delete files before the retention period expires — this is critical for compliance in industries like banking, healthcare, and government.
+> **Compliance Rule:** A retention policy enforces an immutable lock window during which no user—including project owners—can delete or overwrite the data.
 
 > **Exam Trap:** A **locked** retention policy is **PERMANENT** and **IRREVERSIBLE**. Even a project owner or organization admin cannot remove it. The only way to get rid of the data is to wait until the retention period expires.
 
@@ -223,7 +223,7 @@ A **Signed URL** gives time-limited read or write access to a specific object, w
 gsutil signurl -d 1h /path/to/service-account-key.json gs://my-bucket/my-file.pdf
 ```
 
-> **In short:** A Signed URL is like a temporary pass — give it to anyone and they can access your file for a limited time without needing a Google account.
+> **Analogy:** A Signed URL acts like a temporary, time-bound visitor pass. Anyone who holds the URL can read or upload the specified file without needing Google credentials.
 
 ### 3.9 Encryption
 
@@ -451,7 +451,7 @@ gcloud compute disks delete my-disk --zone=us-central1-a
 | **Managed** | Fully managed — no server OS to maintain |
 | **Key Difference** | File storage (hierarchical) vs. Object storage (flat) vs. Block storage (disk) |
 
-> **In short:** Filestore is like a shared network drive — multiple VMs can read from and write to the same folder simultaneously, just like a shared drive in an office network.
+> **Analogy:** Filestore functions like a traditional shared network drive (NAS/NFS), allowing multiple VMs and GKE pods to read and write to the same hierarchical file system simultaneously.
 
 ---
 
@@ -598,11 +598,11 @@ gcloud compute disks delete my-disk --zone=us-central1-a
 
 ---
 
-## 16. What's Next?
+## 16. Navigation & What's Next
 
-- **Study Before This:** [Phase 03 — Compute Services](phase-03-compute.md).
-- **Study After This:** [Phase 05 — Databases & Analytics](phase-05-databases.md).
+[⬅️ Previous: Phase 03 — Compute Services](phase-03-compute.md) | [➡️ Next: Phase 05 — Databases & Analytics](phase-05-databases.md)
 
 ---
 
-[← Previous Phase: Compute Services](phase-03-compute.md) · [Next Phase: Databases & Analytics →](phase-05-databases.md)
+*Last Updated: October 2026*  
+*Phase Status: ✅ Complete*

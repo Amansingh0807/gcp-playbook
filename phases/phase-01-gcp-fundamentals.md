@@ -1,4 +1,4 @@
-[← Previous Phase: Cloud Fundamentals](phase-00-cloud-fundamentals.md) · [Next Phase: Identity & Security (IAM) →](phase-02-identity-security-iam.md)
+[⬅️ Previous: Phase 00 — Cloud Fundamentals](phase-00-cloud-fundamentals.md) | [➡️ Next: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md)
 
 ---
 
@@ -15,7 +15,7 @@
 
 Google Cloud Console, Projects & Billing, and the Resource Hierarchy together form the operational skeleton of GCP — the tools used to interact with GCP (Console, Cloud Shell, `gcloud` CLI), the fundamental container that holds resources and billing (Projects), and the organizational tree that governs security policies (Organization ➔ Folder ➔ Project ➔ Resources).
 
-> **In short:** These three pillars are the "control room" of GCP — Console and CLI let you interact with GCP, Projects are your billing and resource containers, and the Resource Hierarchy is your organizational chart where security policies flow automatically from top to bottom.
+> **Core Concept:** These components form GCP's central nervous system: Console and CLI tools provide management control, Projects serve as billing and resource containers, and the Resource Hierarchy establishes an inherited security and organizational structure across the entire enterprise.
 
 ---
 
@@ -86,7 +86,7 @@ Google Cloud Console, Projects & Billing, and the Resource Hierarchy together fo
 3. **IAM is Purely Additive:** A user's effective permissions are the **UNION** of all permissions granted across all parent nodes. You cannot restrict or remove an IAM permission at a project level if it was granted higher up at the folder or organization level.
 4. **Organization Policies (Guardrails):** Unlike IAM (which governs *who* can do what), Organization Policies govern *what* can be done. Org policies can enforce restrictions regardless of a user's IAM privileges.
 
-> **In short:** Think of it like a corporate hierarchy — the CEO's rules apply to everyone (Organization), department heads set rules for their departments (Folders), and team leads govern their teams (Projects). Lower levels automatically inherit the rules from above.
+> **Analogy:** Comparable to corporate executive governance: executive directives set at the corporate boardroom (Organization) bind all business units (Folders), which in turn mandate departmental operational rules (Projects). Child nodes seamlessly inherit all guardrails established by ancestors.
 
 ---
 
@@ -440,7 +440,7 @@ Your company wants to guarantee that cloud spending in a development project sto
 
 ---
 
-## 21. Related Topics
+## 21. Related Topics & Navigation
 
 - **Study Before This:** [Phase 00 — Cloud Computing Fundamentals](phase-00-cloud-fundamentals.md).
 - **Study After This:** [Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md).
@@ -451,4 +451,4 @@ Your company wants to guarantee that cloud spending in a development project sto
 
 ---
 
-[← Previous Phase: Cloud Fundamentals](phase-00-cloud-fundamentals.md) · [Next Phase: Identity & Security (IAM) →](phase-02-identity-security-iam.md)
+[⬅️ Previous: Phase 00 — Cloud Fundamentals](phase-00-cloud-fundamentals.md) | [➡️ Next: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md)

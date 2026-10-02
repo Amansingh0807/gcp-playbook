@@ -1,4 +1,4 @@
-[← Previous Phase: GCP Fundamentals](phase-01-gcp-fundamentals.md) · [Next Phase: Compute Services →](phase-03-compute.md)
+[⬅️ Previous: Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md) | [➡️ Next: Phase 03 — Compute Services](phase-03-compute.md)
 
 ---
 
@@ -14,7 +14,6 @@
 ## 1. Definition
 
 **IAM (Identity and Access Management)** is Google Cloud's centralized authorization system for controlling **WHO** (a person, group, or application) can do **WHAT** (an action, like "create a VM") on **WHICH** resource (a project, a bucket, or an individual VM).
-
 
 ---
 
@@ -78,7 +77,7 @@
 5. **Condition Evaluation:** If an IAM Condition is present (e.g., time-window restriction), it is evaluated via Common Expression Language (CEL).
 6. **Default Deny:** If no binding in the hierarchy permits the action, access is denied immediately.
 
-> **In short:** IAM always checks — "Has this principal been granted this permission anywhere in the hierarchy (resource, project, folder, or org level)?" If it finds a match anywhere, access is allowed. Otherwise, it defaults to deny.
+> **Authorization Rule:** The IAM evaluation engine inspects the effective policy: if ANY ancestor or resource-level binding explicitly permits the requested action, access is granted. If no binding allows it, Google Cloud defaults to deny.
 
 ---
 
@@ -163,7 +162,7 @@ request.time < timestamp("2026-12-31T00:00:00Z")
 - **Service Account Impersonation:** Allows a user or service account to temporarily assume the identity of another service account using short-lived OAuth2 tokens. No physical key file is ever downloaded.
 - **Workload Identity Federation:** Enables workloads running outside Google Cloud (AWS, Azure, on-premises, GitHub Actions) to authenticate and exchange their native tokens for short-lived GCP tokens without service account keys.
 
-> **In short:** The core idea behind Workload Identity is simple — don't download key files to your machine. Instead, set up a trust relationship and use temporary, short-lived tokens.
+> **Security Best Practice:** Never download static credential files to workstations or CI/CD pipelines. Workload Identity establishes mutual OIDC federation so external workloads dynamically exchange native tokens for ephemeral, short-lived GCP tokens.
 
 ---
 
@@ -421,7 +420,7 @@ A junior data analyst requires access to run queries against BigQuery datasets i
 
 ---
 
-## 21. Related Topics
+## 21. Related Topics & Navigation
 
 - **Study Before This:** [Phase 01 — GCP Fundamentals & Resource Hierarchy](phase-01-gcp-fundamentals.md).
 - **Study After This:** [Phase 03 — Compute Services](phase-03-compute.md).
@@ -432,4 +431,4 @@ A junior data analyst requires access to run queries against BigQuery datasets i
 
 ---
 
-[← Previous Phase: GCP Fundamentals](phase-01-gcp-fundamentals.md) · [Next Phase: Compute Services →](phase-03-compute.md)
+[⬅️ Previous: Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md) | [➡️ Next: Phase 03 — Compute Services](phase-03-compute.md)
