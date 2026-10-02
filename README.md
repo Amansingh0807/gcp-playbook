@@ -26,7 +26,7 @@ Unlike conventional study guides that either provide high-level summaries or ove
 
 ```
 ┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐       ┌───────────────────┐
-│  Step 1: Read   │  ──▶  │  Step 2: Drill  │  ──▶  │  Step 3: Mock   │  ──▶  │   Step 4: Drill   │
+│  Step 1: Read   │  ──▶ │  Step 2: Drill  │  ──▶  │  Step 3: Mock   │  ──▶ │   Step 4: Drill   │
 │   Core Phase    │       │ Phase Questions │       │    Exam Run     │       │  High-Frequency   │
 │ (Theory + CLI)  │       │   (Immediate)   │       │ (Every 3 Phases)│       │  Repeated Traps   │
 └─────────────────┘       └─────────────────┘       └─────────────────┘       └───────────────────┘
