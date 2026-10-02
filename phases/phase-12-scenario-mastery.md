@@ -1,7 +1,3 @@
-[← Previous Phase: High Availability & Reliability](phase-11-high-availability-reliability.md) · Next Phase: *None (This is the final phase)*
-
----
-
 # Phase 12 — ACE Scenario Mastery & Battlecards ⭐⭐⭐⭐⭐
 
 > **Prerequisite:** All prior phases (Phase 00 through Phase 11)  
@@ -32,7 +28,3 @@
 ---
 
 *Status: 📝 Queued for full battlecard and decision tree expansions.*
-
----
-
-[← Previous Phase: High Availability & Reliability](phase-11-high-availability-reliability.md) · Next Phase: *None (This is the final phase)*

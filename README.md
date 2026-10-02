@@ -26,7 +26,7 @@ Unlike conventional study guides that either provide high-level summaries or ove
 
 ```
 ┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐       ┌───────────────────┐
-│  Step 1: Read   │  ──▶  │  Step 2: Drill  │  ──▶  │  Step 3: Mock   │  ──▶  │   Step 4: Drill   │
+│  Step 1: Read   │  ──▶ │  Step 2: Drill  │  ──▶  │  Step 3: Mock   │  ──▶ │   Step 4: Drill   │
 │   Core Phase    │       │ Phase Questions │       │    Exam Run     │       │  High-Frequency   │
 │ (Theory + CLI)  │       │   (Immediate)   │       │ (Every 3 Phases)│       │  Repeated Traps   │
 └─────────────────┘       └─────────────────┘       └─────────────────┘       └───────────────────┘
@@ -38,7 +38,6 @@ Unlike conventional study guides that either provide high-level summaries or ove
 4. **Step 4 — Final Polish with High-Frequency Bank (`practice-questions/high-frequency-questions.md`):** In the last 72 hours before your exam, drill the repeated questions and trap scenarios that candidates encounter year after year.
 
 ---
-
 ## 🗺️ Curriculum Roadmap
 
 <p align="center">
@@ -64,7 +63,6 @@ Unlike conventional study guides that either provide high-level summaries or ove
 | **Phase 12** | ACE Scenario Mastery & Battlecards | [Study Phase 12 ➔](phases/phase-12-scenario-mastery.md) |
 
 ---
-
 ## 🎯 Standard Chapter Structure (The 21-Section Blueprint)
 
 Every phase guide adheres to an uncompromising, consistent structure:
