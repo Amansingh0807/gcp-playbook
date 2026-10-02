@@ -10,7 +10,7 @@ Whether you are contributing notes for an upcoming phase, adding new questions, 
 
 ### 1. Chapter Structure Standard (The 21-Section Rule)
 All phase chapters in `phases/` must strictly adhere to the 21-section blueprint:
-1. Definition (Simple English + 1-Line Hinglish)
+1. Definition (Clear, Plain English Definition)
 2. Why does this service exist?
 3. Architecture / Working (Internals, Lifecycle, ASCII diagrams)
 4. Core Components (Table: Component, What it is, Why it exists, Analogy)

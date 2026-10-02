@@ -13,7 +13,7 @@
 
 This repository is an all-in-one preparation system for the **Google Cloud Associate Cloud Engineer (ACE)** exam. 
 
-Unlike conventional study guides that either provide high-level summaries or overwhelming reference docs, this playbook is built on a **standardized 21-section blueprint per chapter**. Every service is broken down from ground zero using simple English, intuitive Hinglish analogies, architecture diagrams, hands-on CLI (`gcloud`) walkthroughs, and exam trap breakdowns.
+Unlike conventional study guides that either provide high-level summaries or overwhelming reference docs, this playbook is built on a **standardized blueprint per chapter**. Every service is broken down from ground zero using clear, concise, human-written English notes, architecture diagrams, hands-on CLI (`gcloud`) walkthroughs, and exam trap breakdowns.
 
 ### Official Exam Alignment
 - Official Guide: [Google Cloud Associate Cloud Engineer Exam Guide](https://cloud.google.com/learn/certification/guides/associate-cloud-engineer)
@@ -64,7 +64,7 @@ Unlike conventional study guides that either provide high-level summaries or ove
 Every phase guide adheres to an uncompromising, consistent structure:
 
 ```
-1. Definition (Simple English + 1-Line Hinglish)
+1. Definition (Clear, Plain English Definition)
 2. Why does this service exist? (Problem it solves)
 3. Architecture / Working (Internals, lifecycle, ASCII diagrams)
 4. Core Components (What, why, how, analogies)
@@ -142,6 +142,33 @@ gcp-playbook/
 
 Have you taken the ACE exam recently? Found a recurring question pattern or want to submit an improvement?
 Check out our [CONTRIBUTING.md](CONTRIBUTING.md) guide!
+
+---
+
+## 📚 Sources & Reference Attribution
+
+The contents and architectural insights in this playbook have been curated, synthesized, and verified from:
+- **Google Cloud Official Documentation & Whitepapers** (Architecture Framework, Best Practices, Cloud Guides)
+- **Google Cloud Skills Boost & Qwiklabs** hands-on lab step-by-step documentation
+- **Technical YouTube Channels & Deep-Dive Playlists** specializing in GCP certifications and architecture
+- **State-of-the-Art AI LLM Synthesis** for rigorous explanation structures, scenario validations, and edge-case drilling
+- **GCP Community & Medium Engineering Articles**, post-mortems, and certified engineer field reports
+
+---
+
+## 📬 Feedback, Corrections & Community Reporting
+
+Accuracy and clarity are our top priorities. If you notice:
+- Any typo, grammatical error, or formatting glitch
+- A factual mistake or outdated Google Cloud command/setting
+- A missing critical exam topic or scenario that should be covered
+- Additional examples or explanations that could make a concept clearer
+
+Please don't hesitate to reach out! You are highly encouraged to:
+- **Open an Issue** on this GitHub repository, or
+- **Connect directly via Email:** [amansingh080704@gmail.com](mailto:amansingh080704@gmail.com)
+
+Every contribution helps keep this playbook 100% exam-ready for fellow cloud engineers.
 
 ---
 
