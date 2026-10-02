@@ -38,8 +38,8 @@ Unlike conventional study guides that either provide high-level summaries or ove
 4. **Step 4 — Final Polish with High-Frequency Bank (`practice-questions/high-frequency-questions.md`):** In the last 72 hours before your exam, drill the repeated questions and trap scenarios that candidates encounter year after year.
 
 ---
-
 ## 🗺️ Curriculum Roadmap
+
 
 | Phase | Topic | Focus Areas | Exam Weight | 
 | :--- | :--- | :--- | :---: | :---: |
@@ -58,7 +58,6 @@ Unlike conventional study guides that either provide high-level summaries or ove
 | [Phase 12](phases/phase-12-scenario-mastery.md) | **ACE Scenario Mastery & Battlecards** | 15+ Head-to-Head Service Comparisons, Decision Trees, Exam Trap Patterns | ⭐⭐⭐⭐⭐ | 
 
 ---
-
 ## 🎯 Standard Chapter Structure (The 21-Section Blueprint)
 
 Every phase guide adheres to an uncompromising, consistent structure:
