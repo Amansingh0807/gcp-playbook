@@ -1,19 +1,19 @@
-[⬅️ Previous: Phase 00 — Cloud Fundamentals](phase-00-cloud-fundamentals.md) | [➡️ Next: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md)
+[<- Previous: Phase 00 — Cloud Fundamentals](phase-00-cloud-fundamentals.md) | [-> Next: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md)
 
 ---
 
-# Phase 1 — Google Cloud Platform Fundamentals ⭐⭐⭐⭐⭐
+# Phase 1 — Google Cloud Platform Fundamentals (Exam Weight: 5/5)
 
 > **Prerequisite:** [Phase 00 — Cloud Computing Fundamentals](phase-00-cloud-fundamentals.md)  
 > **Estimated Study Time:** 3–4 Hours  
-> **Exam Weight:** ⭐⭐⭐⭐⭐ (Highest Priority Exam Domain)  
+> **Exam Weight:** (Exam Weight: 5/5) (Highest Priority Exam Domain)  
 > **Covers:** Module 1.1 (Console, Cloud Shell, Cloud SDK, gcloud CLI, APIs, Marketplace), Module 1.2 (Projects & Billing), Module 1.3 (Resource Hierarchy & Org Policies)
 
 ---
 
 ## 1. Definition
 
-Google Cloud Console, Projects & Billing, and the Resource Hierarchy together form the operational skeleton of GCP — the tools used to interact with GCP (Console, Cloud Shell, `gcloud` CLI), the fundamental container that holds resources and billing (Projects), and the organizational tree that governs security policies (Organization ➔ Folder ➔ Project ➔ Resources).
+Google Cloud Console, Projects & Billing, and the Resource Hierarchy together form the operational skeleton of GCP — the tools used to interact with GCP (Console, Cloud Shell, `gcloud` CLI), the fundamental container that holds resources and billing (Projects), and the organizational tree that governs security policies (Organization -> Folder -> Project -> Resources).
 
 > **Core Concept:** These components form GCP's central nervous system: Console and CLI tools provide management control, Projects serve as billing and resource containers, and the Resource Hierarchy establishes an inherited security and organizational structure across the entire enterprise.
 
@@ -29,7 +29,7 @@ Google Cloud Console, Projects & Billing, and the Resource Hierarchy together fo
 ### Why it was created:
 - **Console, Cloud Shell, and `gcloud` CLI** were built to provide multiple administrative paths: visual exploration for beginners and scripted automation for DevOps/CI-CD workflows.
 - **Projects** were introduced as the fundamental isolation boundary — every single resource in GCP **must** belong to exactly one project.
-- **Resource Hierarchy** (Organization ➔ Folders ➔ Projects ➔ Resources) was engineered so enterprises can define a security or compliance rule once at the top level and have it inherit downwards to thousands of child resources automatically.
+- **Resource Hierarchy** (Organization -> Folders -> Projects -> Resources) was engineered so enterprises can define a security or compliance rule once at the top level and have it inherit downwards to thousands of child resources automatically.
 
 ### What happens if this doesn't exist:
 - No centralized billing attribution leads to runaway, unallocated corporate cloud costs.
@@ -119,7 +119,7 @@ Google Cloud Console, Projects & Billing, and the Resource Hierarchy together fo
 
 ---
 
-### Module 1.3 — Resource Hierarchy ⭐⭐⭐⭐⭐
+### Module 1.3 — Resource Hierarchy (Exam Weight: 5/5)
 | Component | What it is | Why it exists | Real-World Analogy |
 | :--- | :--- | :--- | :--- |
 | **Organization** | Root node of the hierarchy, linked to a Google Workspace or Cloud Identity domain | Represents the entire corporate enterprise; top-level governance boundary | The **global corporate headquarters** |
@@ -254,7 +254,7 @@ gcloud config list
 
 ## 12. Real-World Use Cases
 
-1. **Multi-Department Enterprises:** Uses `Org ➔ Department Folders ➔ Environment Folders (Dev/Stage/Prod) ➔ Projects` to enforce strict isolation.
+1. **Multi-Department Enterprises:** Uses `Org -> Department Folders -> Environment Folders (Dev/Stage/Prod) -> Projects` to enforce strict isolation.
 2. **Centralized FinOps Teams:** Ingests billing export data from dozens of projects into BigQuery to generate Looker Studio executive cost dashboards.
 3. **Regulated Financial Services:** Implements an Organization Policy restricting all resource deployments strictly to compliant geographic regions.
 4. **Automated CI/CD Workflows:** Spin up ephemeral test projects via `gcloud` CLI in automated testing pipelines and delete them upon completion.
@@ -265,10 +265,10 @@ gcloud config list
 ## 13. Hands-on (Console + CLI)
 
 ### Console Walkthrough
-1. **Create a Project:** In Google Cloud Console, click the project selector dropdown in the top bar ➔ **New Project** ➔ Set Project Name ➔ Click **Create**.
-2. **Link Billing Account:** Go to **Billing** in the Navigation Menu ➔ Select **My Projects** ➔ Select project ➔ **Change Billing Account**.
-3. **Set a Budget:** Navigation Menu ➔ **Billing** ➔ **Budgets & Alerts** ➔ Click **Create Budget** ➔ Name budget ➔ Set target amount ➔ Configure 50%, 90%, 100% threshold rules ➔ Save.
-4. **View Resource Hierarchy:** Navigation Menu ➔ **IAM & Admin** ➔ **Manage Resources**.
+1. **Create a Project:** In Google Cloud Console, click the project selector dropdown in the top bar -> **New Project** -> Set Project Name -> Click **Create**.
+2. **Link Billing Account:** Go to **Billing** in the Navigation Menu -> Select **My Projects** -> Select project -> **Change Billing Account**.
+3. **Set a Budget:** Navigation Menu -> **Billing** -> **Budgets & Alerts** -> Click **Create Budget** -> Name budget -> Set target amount -> Configure 50%, 90%, 100% threshold rules -> Save.
+4. **View Resource Hierarchy:** Navigation Menu -> **IAM & Admin** -> **Manage Resources**.
 
 ### CLI (`gcloud`) Master Commands
 ```bash
@@ -302,10 +302,10 @@ gcloud alpha projects update my-ace-demo-project --update-labels=environment=pro
 
 ---
 
-## 14. ACE Exam Focus ⭐⭐⭐⭐⭐
+## 14. ACE Exam Focus (Exam Weight: 5/5)
 
 ### Top Tested Concepts:
-- **Resource Hierarchy Order:** `Organization ➔ Folder ➔ Project ➔ Resource`.
+- **Resource Hierarchy Order:** `Organization -> Folder -> Project -> Resource`.
 - **Project ID vs. Project Number:** User-chosen string vs. Google-assigned integer.
 - **IAM Inheritance:** Effective permissions are always the **Union** of all ancestor grants.
 - **Budgets:** Budgets notify; they do not automatically shut off resources.
@@ -362,7 +362,7 @@ gcloud alpha projects update my-ace-demo-project --update-labels=environment=pro
 
 ## 18. Quick Revision Sheet
 
-- **Hierarchy Order:** Organization ➔ Folder ➔ Project ➔ Resource.
+- **Hierarchy Order:** Organization -> Folder -> Project -> Resource.
 - **Mnemonic:** **O**h **F**ine, **P**lease **R**elax (**O**rg, **F**older, **P**roject, **R**esource).
 - **Identifiers:**
   - **Project Name:** Editable, non-unique display name.
@@ -379,7 +379,7 @@ gcloud alpha projects update my-ace-demo-project --update-labels=environment=pro
 ## 19. Interview Questions
 
 **Q1: What is the exact sequence of the Google Cloud Resource Hierarchy?**  
-*Answer:* Organization (root) ➔ Folder (optional, up to 10 levels) ➔ Project (mandatory) ➔ Resource (leaf node).
+*Answer:* Organization (root) -> Folder (optional, up to 10 levels) -> Project (mandatory) -> Resource (leaf node).
 
 **Q2: What is the difference between a Project ID and a Project Number?**  
 *Answer:* A Project ID is a globally unique, user-chosen string identifier used in APIs and CLI commands. A Project Number is a globally unique, auto-generated numeric identifier assigned by Google for internal orchestration. Both are immutable.
@@ -416,10 +416,10 @@ gcloud alpha projects update my-ace-demo-project --update-labels=environment=pro
 
 ### Question 1 (Resource Hierarchy)
 What is the correct order of the Google Cloud resource hierarchy from top to bottom?
-- [ ] A. Project ➔ Folder ➔ Organization ➔ Resource
-- [x] B. Organization ➔ Folder ➔ Project ➔ Resource
-- [ ] C. Folder ➔ Organization ➔ Project ➔ Resource
-- [ ] D. Organization ➔ Project ➔ Folder ➔ Resource
+- [ ] A. Project -> Folder -> Organization -> Resource
+- [x] B. Organization -> Folder -> Project -> Resource
+- [ ] C. Folder -> Organization -> Project -> Resource
+- [ ] D. Organization -> Project -> Folder -> Resource
 *Explanation: Organization is the root node, followed by optional Folders, mandatory Projects, and individual Resources.*
 
 ### Question 2 (IAM Inheritance)
@@ -451,4 +451,4 @@ Your company wants to guarantee that cloud spending in a development project sto
 
 ---
 
-[⬅️ Previous: Phase 00 — Cloud Fundamentals](phase-00-cloud-fundamentals.md) | [➡️ Next: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md)
+[<- Previous: Phase 00 — Cloud Fundamentals](phase-00-cloud-fundamentals.md) | [-> Next: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md)

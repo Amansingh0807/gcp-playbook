@@ -1,12 +1,12 @@
-➡️ [Next: Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md)
+-> [Next: Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md)
 
 ---
 
-# Phase 0 — Cloud Computing Fundamentals ⭐⭐⭐☆☆
+# Phase 0 — Cloud Computing Fundamentals (Exam Weight: 3/5)
 
 > **Prerequisite:** None (Absolute Beginner Friendly)  
 > **Estimated Study Time:** 2–3 Hours  
-> **Exam Weight:** ⭐⭐⭐☆☆ (Foundational Core Concepts)  
+> **Exam Weight:** (Exam Weight: 3/5) (Foundational Core Concepts)  
 > **Covers:** Module 0.1 (Intro to Cloud Computing), Module 0.2 (Service Models), Module 0.3 (Deployment Models), Module 0.4 (Google Cloud Overview)
 
 ---
@@ -129,7 +129,7 @@ Cloud systems automatically control and optimize resource use by leveraging a me
 ### 6.1 Evolution: On-Premises to Cloud
 
 ```
-[ On-Premises ] ──▶ [ Colocation ] ──▶ [ Virtualization ] ──▶ [ Public Cloud ]
+[ On-Premises ] --> [ Colocation ] --> [ Virtualization ] --> [ Public Cloud ]
 You own & manage    Rent rack space,   Multiple VMs on one     Rent compute/storage,
 all physical hardware manage your hardware physical machine    zero hardware ownership
 ```
@@ -138,7 +138,7 @@ all physical hardware manage your hardware physical machine    zero hardware own
 
 ```
 LOW CONTROL, MINIMAL MANAGEMENT                     HIGH CONTROL, HIGH MANAGEMENT
-SaaS ──────────────────▶ PaaS ──────────────────▶ IaaS ──────────────────▶ On-Premises
+SaaS ────────────────--> PaaS ────────────────--> IaaS ────────────────--> On-Premises
 (Google Workspace)      (App Engine/Cloud Run)   (Compute Engine)        (Own Data Center)
 ```
 
@@ -148,7 +148,7 @@ SaaS ──────────────────▶ PaaS ────
 | **PaaS** | Platform as a Service | Physical infra, virtualization, OS, language runtimes, automatic scaling, patching | Application source code, configuration, data | App Engine, Cloud Run | Renting a fully-built house; you just bring your furniture |
 | **SaaS** | Software as a Service | Everything (infrastructure, OS, application code, updates, maintenance) | Your end-user data and user access credentials | Google Workspace, Gmail | Staying in a hotel room; everything is fully managed |
 | **Serverless** | Serverless Computing | Server provisioning, OS patching, idle management, zero-scaling | Application logic, event triggers, query definitions | Cloud Functions, Cloud Run, BigQuery | Hailing a taxi / Uber; you only pay while riding, no car maintenance |
-| **FaaS** | Function as a Service | Underlying runtime, container lifecycle, event bindings | Discrete modular functions executed on specific triggers | Cloud Functions | A vending machine: insert coin (event trigger) ➔ get snack (function output) |
+| **FaaS** | Function as a Service | Underlying runtime, container lifecycle, event bindings | Discrete modular functions executed on specific triggers | Cloud Functions | A vending machine: insert coin (event trigger) -> get snack (function output) |
 | **CaaS** | Containers as a Service | Underlying VM provisioning, cluster lifecycle, master plane | Container images, Kubernetes manifests, pod configurations | Google Kubernetes Engine (GKE) | Cargo shipping containers; standard packaging, carrier manages the ship |
 
 > **Quick Architectural Summary:**  
@@ -311,7 +311,7 @@ gcloud config list
 
 ---
 
-## 14. ACE Exam Focus ⭐⭐⭐⭐⭐
+## 14. ACE Exam Focus (Exam Weight: 5/5)
 
 ### Most Commonly Tested Concepts:
 - **NIST Characteristics:** Identifying scenarios matching Elasticity vs. Measured Service vs. Resource Pooling.
@@ -461,4 +461,4 @@ Under the Google Cloud Shared Responsibility Model, which of the following is AL
 
 ---
 
-➡️ [Next: Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md)
+-> [Next: Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md)
