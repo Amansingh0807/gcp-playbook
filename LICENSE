@@ -1,0 +1,48 @@
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+
+Copyright (c) 2026 Aman Singh (amansingh080704@gmail.com)
+Project: Google Cloud Associate Cloud Engineer (ACE) Master Playbook
+Repository: https://github.com/Amansingh0807/gcp-playbook
+
+================================================================================
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+================================================================================
+
+You are free to:
+
+1. SHARE — Copy and redistribute the material in any medium or format.
+2. ADAPT — Remix, transform, and build upon the material for non-commercial purposes.
+
+Under the following binding conditions:
+
+* ATTRIBUTION (BY):
+  You must give appropriate credit to the original author (Aman Singh), provide
+  a direct link to the original repository (https://github.com/Amansingh0807/gcp-playbook),
+  and indicate if changes were made. You may do so in any reasonable manner, but
+  not in any way that suggests the licensor endorses you or your use.
+
+* NON-COMMERCIAL (NC):
+  You may NOT use the material for commercial purposes. This includes, but is not
+  limited to: selling the material, bundling it with paid courses or subscriptions,
+  putting it behind a paywall, or using it in monetized commercial training without
+  explicit prior written permission from the copyright holder.
+
+* SHARE-ALIKE (SA):
+  If you remix, transform, or build upon the material, you must distribute your
+  contributions under the same license as the original (CC BY-NC-SA 4.0).
+
+* ANTI-PLAGIARISM & PROHIBITION OF REBRANDING:
+  You are strictly prohibited from forking, copying, scraping, or re-hosting this
+  repository (or substantial portions thereof) and rebranding it as your own
+  intellectual creation. Removing the author's name, email, original links, or
+  claiming authorship of this playbook or its question banks is a direct violation
+  of this license and copyright law.
+
+================================================================================
+NO WARRANTY
+================================================================================
+
+This playbook and practice questions are provided "AS IS", without warranty of any
+kind, express or implied. Google Cloud, Google Kubernetes Engine, and other product
+names are trademarks of Google LLC. This repository is an independent study guide
+and is not affiliated with, sponsored by, or endorsed by Google LLC.

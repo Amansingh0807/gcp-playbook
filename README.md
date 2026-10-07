@@ -1,15 +1,15 @@
-# ☁️ Google Cloud Associate Cloud Engineer (ACE) Master Playbook
+# Google Cloud Associate Cloud Engineer (ACE) Master Playbook
 
 > **The definitive, zero-fluff, exam-ready handbook and question bank designed to take you from beginner to Google Cloud Certified Associate Cloud Engineer.**
 
 [![Google Cloud](https://img.shields.io/badge/Google%20Cloud-ACE%20Exam-4285F4?logo=googlecloud&logoColor=white)](https://cloud.google.com/learn/certification/associate-cloud-engineer)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Curriculum](https://img.shields.io/badge/Curriculum-13%20Phases%20(0--12)-blue.svg)](#-curriculum-roadmap)
-[![Practice Questions](https://img.shields.io/badge/Question%20Bank-100%2B%20Exam%20Tested-orange.svg)](#-practice-question-bank)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
+[![Curriculum](https://img.shields.io/badge/Curriculum-13%20Phases%20(0--12)-blue.svg)](#curriculum-roadmap)
+[![Practice Questions](https://img.shields.io/badge/Question%20Bank-300%2B%20Exam%20Tested-orange.svg)](#practice-question-bank)
 
 ---
 
-## 📌 About This Playbook
+## About This Playbook
 
 This repository is an all-in-one preparation system for the **Google Cloud Associate Cloud Engineer (ACE)** exam. 
 
@@ -22,11 +22,11 @@ Unlike conventional study guides that either provide high-level summaries or ove
 
 ---
 
-## 🧭 How To Use This Playbook (The 4-Step Strategy)
+## How To Use This Playbook (The 4-Step Strategy)
 
 ```
 ┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐       ┌───────────────────┐
-│  Step 1: Read   │  ──▶ │  Step 2: Drill  │  ──▶  │  Step 3: Mock   │  ──▶ │   Step 4: Drill   │
+│  Step 1: Read   │  --> │  Step 2: Drill  │  -->  │  Step 3: Mock   │  --> │   Step 4: Drill   │
 │   Core Phase    │       │ Phase Questions │       │    Exam Run     │       │  High-Frequency   │
 │ (Theory + CLI)  │       │   (Immediate)   │       │ (Every 3 Phases)│       │  Repeated Traps   │
 └─────────────────┘       └─────────────────┘       └─────────────────┘       └───────────────────┘
@@ -38,32 +38,32 @@ Unlike conventional study guides that either provide high-level summaries or ove
 4. **Step 4 — Final Polish with High-Frequency Bank (`practice-questions/high-frequency-questions.md`):** In the last 72 hours before your exam, drill the repeated questions and trap scenarios that candidates encounter year after year.
 
 ---
-## 🗺️ Curriculum Roadmap
+## Curriculum Roadmap
 
 <p align="center">
   <img src="assets/diagrams/GCP.png" alt="Google Cloud ACE Curriculum Roadmap" width="100%" />
 </p>
 
-### 📑 Quick Phase Navigation
+### Quick Phase Navigation
 
 | Phase | Topic | Link |
 | :--- | :--- | :---: |
-| **Phase 00** | Cloud Computing Fundamentals | [Study Phase 00 ➔](phases/phase-00-cloud-fundamentals.md) |
-| **Phase 01** | GCP Fundamentals & Hierarchy | [Study Phase 01 ➔](phases/phase-01-gcp-fundamentals.md) |
-| **Phase 02** | Identity & Security (IAM) | [Study Phase 02 ➔](phases/phase-02-identity-security-iam.md) |
-| **Phase 03** | Compute Services | [Study Phase 03 ➔](phases/phase-03-compute.md) |
-| **Phase 04** | Storage Services | [Study Phase 04 ➔](phases/phase-04-storage.md) |
-| **Phase 05** | Databases & Analytics | [Study Phase 05 ➔](phases/phase-05-databases.md) |
-| **Phase 06** | VPC & Networking | [Study Phase 06 ➔](phases/phase-06-networking.md) |
-| **Phase 07** | Kubernetes Engine (GKE) | [Study Phase 07 ➔](phases/phase-07-kubernetes-gke.md) |
-| **Phase 08** | Monitoring & Operations | [Study Phase 08 ➔](phases/phase-08-monitoring-operations.md) |
-| **Phase 09** | DevOps & Automation | [Study Phase 09 ➔](phases/phase-09-devops-automation.md) |
-| **Phase 10** | Billing & Cost Optimization | [Study Phase 10 ➔](phases/phase-10-billing-cost-optimization.md) |
-| **Phase 11** | High Availability & Reliability | [Study Phase 11 ➔](phases/phase-11-high-availability-reliability.md) |
-| **Phase 12** | ACE Scenario Mastery & Battlecards | [Study Phase 12 ➔](phases/phase-12-scenario-mastery.md) |
+| **Phase 00** | Cloud Computing Fundamentals | [Study Phase 00 ->](phases/phase-00-cloud-fundamentals.md) |
+| **Phase 01** | GCP Fundamentals & Hierarchy | [Study Phase 01 ->](phases/phase-01-gcp-fundamentals.md) |
+| **Phase 02** | Identity & Security (IAM) | [Study Phase 02 ->](phases/phase-02-identity-security-iam.md) |
+| **Phase 03** | Compute Services | [Study Phase 03 ->](phases/phase-03-compute.md) |
+| **Phase 04** | Storage Services | [Study Phase 04 ->](phases/phase-04-storage.md) |
+| **Phase 05** | Databases & Analytics | [Study Phase 05 ->](phases/phase-05-databases.md) |
+| **Phase 06** | VPC & Networking | [Study Phase 06 ->](phases/phase-06-networking.md) |
+| **Phase 07** | Kubernetes Engine (GKE) | [Study Phase 07 ->](phases/phase-07-kubernetes-gke.md) |
+| **Phase 08** | Monitoring & Operations | [Study Phase 08 ->](phases/phase-08-monitoring-operations.md) |
+| **Phase 09** | DevOps & Automation | [Study Phase 09 ->](phases/phase-09-devops-automation.md) |
+| **Phase 10** | Billing & Cost Optimization | [Study Phase 10 ->](phases/phase-10-billing-cost-optimization.md) |
+| **Phase 11** | High Availability & Reliability | [Study Phase 11 ->](phases/phase-11-high-availability-reliability.md) |
+| **Phase 12** | ACE Scenario Mastery & Battlecards | [Study Phase 12 ->](phases/phase-12-scenario-mastery.md) |
 
 ---
-## 🎯 Standard Chapter Structure (The 21-Section Blueprint)
+## Standard Chapter Structure (The 21-Section Blueprint)
 
 Every phase guide adheres to an uncompromising, consistent structure:
 
@@ -81,7 +81,7 @@ Every phase guide adheres to an uncompromising, consistent structure:
 11. Limitations (When NOT to use)
 12. Real-World Use Cases (10+ industry scenarios)
 13. Hands-on (Step-by-step Console + gcloud CLI commands)
-14. ACE Exam Focus ⭐⭐⭐⭐⭐ (Keywords, traps, common scenarios)
+14. ACE Exam Focus (Exam Weight: 5/5) (Keywords, traps, common scenarios)
 15. Service Comparisons (Direct head-to-head comparison tables)
 16. Best Practices (Official Google Cloud recommendations)
 17. Common Mistakes (Beginner pitfalls to avoid)
@@ -93,7 +93,7 @@ Every phase guide adheres to an uncompromising, consistent structure:
 
 ---
 
-## 📂 Repository Directory Layout
+## Repository Directory Layout
 
 ```
 gcp-playbook/
@@ -114,15 +114,14 @@ gcp-playbook/
 │   ├── phase-11-high-availability-reliability.md
 │   └── phase-12-scenario-mastery.md
 ├── practice-questions/                <- Dedicated question drill banks
-│   ├── by-phase/                      <- 15-question sets for immediate post-phase testing
+│   ├── by-phase/                      <- 15-question sets for immediate post-phase testing (Phases 00–12)
 │   │   ├── phase-00.md
 │   │   ├── phase-01.md
-│   │   ├── phase-02.md
-│   │   ├── phase-03.md
-│   │   └── ... (phase-04 to 12)
-│   ├── mock-exams/                    <- Full-length 50-question mixed mocks (100+ questions)
-│   │   ├── mock-exam-01.md
-│   │   └── mock-exam-02.md
+│   │   └── ... (phase-02 to 12)
+│   ├── top-100-master-questions.md    <- Instructor Top 100 Master Questions categorized across 6 domains
+│   ├── mock-exams/                    <- Full-length 50-question timed exam simulators (100 questions)
+│   │   ├── mock-exam-01.md            <- Mock 01 (includes actual exam recall questions)
+│   │   └── mock-exam-02.md            <- Mock 02 (full mixed-domain timed simulator)
 │   └── high-frequency-questions.md    <- Gold repeated exam questions & top traps
 └── assets/
     └── diagrams/                      <- Architecture visual references
@@ -130,37 +129,39 @@ gcp-playbook/
 
 ---
 
-## 📝 Practice Question Bank
+## Practice Question Bank (300+ Exam Questions)
 
-- **[Phase 0 Practice Drill](practice-questions/by-phase/phase-00.md):** 10 MCQs + 5 MSQs on NIST Characteristics, IaaS/PaaS/SaaS, Shared Responsibility.
-- **[Phase 1 Practice Drill](practice-questions/by-phase/phase-01.md):** 10 MCQs + 5 MSQs on Resource Hierarchy, Project IDs, Budgets & IAM inheritance.
-- **[Phase 2 Practice Drill](practice-questions/by-phase/phase-02.md):** 10 MCQs + 5 MSQs on IAM Formula, Roles, Service Accounts, Keys vs Impersonation.
-- **[Phase 3 Practice Drill](practice-questions/by-phase/phase-03.md):** 10 MCQs + 5 MSQs on Compute Engine, Spot VMs, MIG Autoscaling, Cloud Run, Cloud Functions.
-- **[Mock Exam 01](practice-questions/mock-exams/mock-exam-01.md):** Timed 50-Question Full-Length Simulator (Part 1).
-- **[Mock Exam 02](practice-questions/mock-exams/mock-exam-02.md):** Timed 50-Question Full-Length Simulator (Part 2).
-- **[High-Frequency Exam Traps](practice-questions/high-frequency-questions.md):** Recurring scenario patterns reported in recent exam cycles.
+- **[Phase-by-Phase Practice Drills](practice-questions/by-phase/):** 195 interactive questions (15 per phase across all 13 phases) with deep distractor rationales and score tracking.
+- **[Top 100 Topic-Wise Master Questions](practice-questions/top-100-master-questions.md):** The definitive 100-question master collection from the lead GCP instructor across all 6 core exam domains.
+- **[Full-Length Mock Exam 01](practice-questions/mock-exams/mock-exam-01.md):** 50-Question timed full simulator featuring latest real exam test recall scenarios.
+- **[Full-Length Mock Exam 02](practice-questions/mock-exams/mock-exam-02.md):** 50-Question timed full simulator covering advanced edge-cases and troubleshooting.
+- **[High-Frequency Exam Traps](practice-questions/high-frequency-questions.md):** Recurring scenario patterns, traps, and gotchas reported in recent test cycles.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Have you taken the ACE exam recently? Found a recurring question pattern or want to submit an improvement?
 Check out our [CONTRIBUTING.md](CONTRIBUTING.md) guide!
 
 ---
 
-## 📚 Sources & Reference Attribution
+## Sources & Reference Attribution
 
-The contents and architectural insights in this playbook have been curated, synthesized, and verified from:
-- **Google Cloud Official Documentation & Whitepapers** (Architecture Framework, Best Practices, Cloud Guides)
-- **Google Cloud Skills Boost & Qwiklabs** hands-on lab step-by-step documentation
-- **Technical YouTube Channels & Deep-Dive Playlists** specializing in GCP certifications and architecture
-- **State-of-the-Art AI LLM Synthesis** for rigorous explanation structures, scenario validations, and edge-case drilling
-- **GCP Community & Medium Engineering Articles**, post-mortems, and certified engineer field reports
+All practice questions, scenario breakdowns, and architectural insights in this playbook have been meticulously synthesized, cross-verified, and aligned with authoritative, valid sources:
+
+- **Google Cloud Official Documentation & Architecture Framework:** Command-line syntax (`gcloud`, `gsutil`, `bq`), Google-recommended security benchmarks, IAM hierarchy models, quota structures, and official deployment patterns.
+- **Google Cloud Associate Cloud Engineer Official Exam Guide:** Official syllabus breakdown, exam domain weights, and Google sample exam questions.
+- **Real Candidate Exam Debriefs & Verified Test Recalls:** Practical scenarios and problem formulations verified from recent test cycles, reflecting current exam focus areas (e.g., GKE Autopilot vs Standard, VPC Service Controls, Cloud Run ingress controls, IAM Conditions, Cost Optimization).
+- **Curated Cloud Engineer Interview Preparation Banks:** High-yield technical screening questions, incident management scenarios, and cloud architecture interview problem sets available across reputable engineering prep resources.
+- **Google Cloud Skills Boost & Qwiklabs:** Hands-on lab architectures, enterprise network topologies, step-by-step CLI workflows, and configuration defaults.
+- **Top 100 Lead Instructor Question Bank:** Curated master drills categorized across all 6 official exam domains with detailed distractor rationale.
+
+Every question has been checked to eliminate duplicates across the Mock Exams and the Top 100 Master Bank, ensuring an expansive, non-redundant training experience.
 
 ---
 
-## 📬 Feedback, Corrections & Community Reporting
+## Feedback, Corrections & Community Reporting
 
 Accuracy and clarity are our top priorities. If you notice:
 - Any typo, grammatical error, or formatting glitch
@@ -176,6 +177,9 @@ Every contribution helps keep this playbook 100% exam-ready for fellow cloud eng
 
 ---
 
-## 📄 License
+## License & Fair Use Policy
 
-This repository is open-sourced under the [MIT License](LICENSE). Feel free to use it for personal study or group learning sessions!
+This repository is protected and licensed under the **[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](LICENSE)**.
+
+- **Permitted:** Free for personal study, student groups, self-preparation, and non-commercial educational sharing with full attribution.
+- **Strictly Prohibited:** Commercial reselling, paywalling, course bundling, or forking and stripping credits to rebrand and claim as your own creation. Attribution to Aman Singh and a link to the original repository are strictly required. See [LICENSE](LICENSE) for full legal terms.
