@@ -1,12 +1,12 @@
-[⬅️ Previous: Phase 09 — DevOps & Automation](phase-09-devops-automation.md) | [➡️ Next: Phase 11 — High Availability & Reliability](phase-11-high-availability-reliability.md)
+[<- Previous: Phase 09 — DevOps & Automation](phase-09-devops-automation.md) | [-> Next: Phase 11 — High Availability & Reliability](phase-11-high-availability-reliability.md)
 
 ---
 
-# Phase 10 — Billing & Cost Optimization ⭐⭐⭐⭐☆
+# Phase 10 — Billing & Cost Optimization (Exam Weight: 4/5)
 
 > **Prerequisite:** [Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md) & [Phase 03 — Compute Services](phase-03-compute.md)  
 > **Estimated Study Time:** 3–4 Hours  
-> **Exam Weight:** ⭐⭐⭐⭐☆ (High-Frequency Practical Domain)  
+> **Exam Weight:** (Exam Weight: 4/5) (High-Frequency Practical Domain)  
 > **Covers:** Cloud Billing Accounts (Self-Serve vs. Invoiced), Project Billing Links, Budgets & Threshold Alerts, Programmatic Spend Capping (Pub/Sub + Cloud Functions), GCP Pricing Calculator, Quotas (Rate vs. Allocation), Resource Labels vs. Tags for FinOps, Sustained Use Discounts (SUD), Committed Use Discounts (CUD), Cost Export to BigQuery.
 
 **Financial governance and cost engineering are tested extensively on the Associate Cloud Engineer exam.** Unlike purely theoretical concepts, Google Cloud tests billing through realistic administrative scenarios: setting budget alerts, understanding discount mechanisms, organizing resources for cost allocation, preventing quota exhaustion, and recognizing that budget alerts do not stop resource spending automatically.
@@ -43,9 +43,9 @@ Key foundational concepts in this domain include:
 ### What happens if it doesn't exist:
 - Organizations face unchecked financial liability; rogue scripts exhaust regional resource pools; finance teams fly blind until receiving an unmanageable invoice at month's end; and cost optimization requires painful, manual guesswork.
 
-### Remember for ACE Exam ⭐⭐⭐⭐⭐:
+### Remember for ACE Exam (Exam Weight: 5/5):
 This is one of the most scenario-heavy domains on the exam. The single most tested exam fact across the entire ACE syllabus is:
-> **Critical Exam Rule:** Cloud Budgets and Alerts are **purely informational notifications**. They do **NOT** stop, pause, or cap resource spending automatically. Enforcing a hard spend cap requires custom automation: Cloud Budget ➔ Pub/Sub notification ➔ Cloud Function ➔ Programmatically disable project billing.
+> **Critical Exam Rule:** Cloud Budgets and Alerts are **purely informational notifications**. They do **NOT** stop, pause, or cap resource spending automatically. Enforcing a hard spend cap requires custom automation: Cloud Budget -> Pub/Sub notification -> Cloud Function -> Programmatically disable project billing.
 
 ---
 
@@ -173,7 +173,7 @@ This is one of the most scenario-heavy domains on the exam. The single most test
 ### 5.3 Google Cloud Quotas
 - **Rate Quotas:** Limit the frequency of API calls or commands over short time windows (e.g., 6,000 Compute Engine API read requests per minute). Resets automatically after the time window elapses.
 - **Allocation Quotas:** Limit the absolute quantity of specific infrastructure resources provisioned in a project/region (e.g., maximum 24 vCPUs in region `asia-south1`, maximum 5 Static External IP addresses).
-- **Quota Adjustments:** Quota increases can be requested directly via the Cloud Console (`IAM & Admin` ➔ `Quotas`) and require justification. Many routine increases are approved automatically by Google algorithms, while large increases require human verification.
+- **Quota Adjustments:** Quota increases can be requested directly via the Cloud Console (`IAM & Admin` -> `Quotas`) and require justification. Many routine increases are approved automatically by Google algorithms, while large increases require human verification.
 
 ### 5.4 Resource Labels vs. Tags
 - **Labels:** Simple key-value string pairs (e.g., `environment: production`, `cost-center: marketing-104`) applied to resources. Exported natively into billing data to allow fine-grained cost allocation and chargeback reports. Labels do **not** integrate with Organization Policies or IAM conditional bindings.
@@ -219,7 +219,7 @@ This is one of the most scenario-heavy domains on the exam. The single most test
 To transform an informational budget alert into an automated spending cap, implement the following event-driven pipeline:
 
 ```
-[Cloud Budget] ➔ (Publishes JSON notification) ➔ [Cloud Pub/Sub Topic]
+[Cloud Budget] -> (Publishes JSON notification) -> [Cloud Pub/Sub Topic]
                                                          │
                                                          ▼ (Event Trigger)
                                                [Cloud Function (Python)]
@@ -266,7 +266,7 @@ def stop_billing_on_overspend(event, context):
 
 ### How Google Cloud Billing Works:
 - Resource usage is metered per second (or per minute depending on service) and aggregated continuously.
-- Charges flow upward from individual resources ➔ to the containing Project ➔ to the linked Cloud Billing Account.
+- Charges flow upward from individual resources -> to the containing Project -> to the linked Cloud Billing Account.
 
 ### Key Cost Traps on the ACE Exam:
 1. **Unattached External IP Addresses:** Reserving a static external IP address is free while assigned to a running VM instance. However, if the VM is deleted or stopped and the static IP remains reserved but unattached, Google charges an hourly fee to prevent IPv4 address hoarding.
@@ -333,7 +333,7 @@ def stop_billing_on_overspend(event, context):
 ### 13.1 Google Cloud Console Navigation
 
 **Creating a Budget and Configuring Alert Thresholds:**
-1. Open the Navigation Menu ➔ **Billing** ➔ **Budgets & alerts**.
+1. Open the Navigation Menu -> **Billing** -> **Budgets & alerts**.
 2. Click **Create Budget**.
 3. Under **Scope**, select your Target Billing Account, and optionally filter by specific Projects, Services, or Resource Labels.
 4. Under **Amount**, choose **Specified amount** and enter your target limit (e.g., `1000` USD), or select **Last month's spend** for a dynamic baseline.
@@ -343,7 +343,7 @@ def stop_billing_on_overspend(event, context):
 8. Click **Finish**.
 
 **Requesting a Regional Resource Quota Increase:**
-1. Open the Navigation Menu ➔ **IAM & Admin** ➔ **Quotas & System Limits**.
+1. Open the Navigation Menu -> **IAM & Admin** -> **Quotas & System Limits**.
 2. Filter the list by Service (e.g., `Compute Engine API`) and Metric (e.g., `CPUs`).
 3. Select the target Region (e.g., `asia-south1`).
 4. Check the box next to the quota and click **Edit Quotas** at the top of the console.
@@ -410,7 +410,7 @@ gcloud compute regions describe asia-south1 \
 
 ---
 
-## 14. ACE Exam Focus ⭐⭐⭐⭐⭐
+## 14. ACE Exam Focus (Exam Weight: 5/5)
 
 ### Most Frequently Tested Concepts:
 1. **The Budget Spend Cap Illusion:**
@@ -502,16 +502,16 @@ gcloud compute regions describe asia-south1 \
 
 ## 18. Quick Revision Sheet
 
-- **Billing Account = Payer:** Holds payment methods. 1 Billing Account ➔ Many Projects. 1 Project ➔ 1 Billing Account.
+- **Billing Account = Payer:** Holds payment methods. 1 Billing Account -> Many Projects. 1 Project -> 1 Billing Account.
 - **Budget = Notification Only:** Alerts send emails at % thresholds (50%, 90%, 100%). **Never stops spending on its own**.
-- **Automated Hard Cap:** Cloud Budget ➔ Pub/Sub Topic ➔ Cloud Function ➔ Unlink Billing Account.
+- **Automated Hard Cap:** Cloud Budget -> Pub/Sub Topic -> Cloud Function -> Unlink Billing Account.
 - **Sustained Use Discount (SUD):** **Automatic** compute discount. No commitment. Applies when VMs run >25% of month. Saves ~20%–30%.
 - **Committed Use Discount (CUD):** **Contractual commitment** (1 or 3 years). Deep savings (up to 57%–70%). Pay regardless of actual usage.
 - **Spot VMs:** Preemptible excess compute capacity. Up to 60%–91% discount. Can be terminated with a 30-second warning.
 - **Quotas:** Hard resource and rate limits enforced per project/region. Prevents runaway provisioning and API flooding.
 - **Labels:** Key-value pairs for cost tracking, filtering, and BigQuery billing export.
 - **Pricing Calculator:** Standalone pre-deployment forecasting tool (`cloud.google.com/products/calculator`).
-- **Golden Exam Rule:** "Stop spending automatically" ➔ **Budget + Pub/Sub + Cloud Function**. "Predictable 3-year steady workload" ➔ **Committed Use Discount**. "Prevent runaway VM provisioning" ➔ **Quotas**. "FinOps needs budget control without payment method access" ➔ **`roles/billing.costsManager`**.
+- **Golden Exam Rule:** "Stop spending automatically" -> **Budget + Pub/Sub + Cloud Function**. "Predictable 3-year steady workload" -> **Committed Use Discount**. "Prevent runaway VM provisioning" -> **Quotas**. "FinOps needs budget control without payment method access" -> **`roles/billing.costsManager`**.
 
 ---
 
@@ -687,4 +687,4 @@ gcloud compute regions describe asia-south1 \
 
 ---
 
-[⬅️ Previous: Phase 09 — DevOps & Automation](phase-09-devops-automation.md) | [➡️ Next: Phase 11 — High Availability & Reliability](phase-11-high-availability-reliability.md)
+[<- Previous: Phase 09 — DevOps & Automation](phase-09-devops-automation.md) | [-> Next: Phase 11 — High Availability & Reliability](phase-11-high-availability-reliability.md)

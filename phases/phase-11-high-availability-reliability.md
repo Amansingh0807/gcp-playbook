@@ -1,12 +1,12 @@
-[⬅️ Previous: Phase 10 — Billing & Cost Optimization](phase-10-billing-cost-optimization.md) | [➡️ Next: Phase 12 — ACE Scenario Mastery & Battlecards](phase-12-scenario-mastery.md)
+[<- Previous: Phase 10 — Billing & Cost Optimization](phase-10-billing-cost-optimization.md) | [-> Next: Phase 12 — ACE Scenario Mastery & Battlecards](phase-12-scenario-mastery.md)
 
 ---
 
-# Phase 11 — High Availability & Reliability ⭐⭐⭐⭐☆
+# Phase 11 — High Availability & Reliability (Exam Weight: 4/5)
 
 > **Prerequisite:** [Phase 03 — Compute Services](phase-03-compute.md), [Phase 04 — Storage Services](phase-04-storage.md), & [Phase 06 — Networking Services](phase-06-networking.md)  
 > **Estimated Study Time:** 3–4 Hours  
-> **Exam Weight:** ⭐⭐⭐⭐☆ (High-Frequency Architecture & Design Domain)  
+> **Exam Weight:** (Exam Weight: 4/5) (High-Frequency Architecture & Design Domain)  
 > **Covers:** GCP Physical Hierarchy (Zones, Regions, Multi-Regions), Zonal vs. Regional vs. Multi-Regional Resources, High Availability (HA) vs. Fault Tolerance (FT) vs. Disaster Recovery (DR), RTO & RPO Objectives, Regional Managed Instance Groups (MIGs), Regional Persistent Disks (Synchronous Replication), Cloud SQL HA (Regional Failover) vs. Cross-Region Read Replicas (Asynchronous DR), Disaster Recovery Strategies (Backup & Restore, Pilot Light, Warm Standby, Hot Standby).
 
 **High Availability and Reliability tie together Compute, Storage, Databases, and Networking into a single resilience-focused architectural framework.** On the Associate Cloud Engineer exam, Google frequently presents realistic enterprise failure scenarios (e.g., a data center outage, storage corruption, or regional fiber cut) and tests whether you can select the correct architectural topology that meets strict uptime and data-loss requirements at optimal cost.
@@ -42,7 +42,7 @@ Key foundational concepts include:
 ### What happens if it doesn't exist:
 - Outages translate directly into lost revenue, damaged enterprise reputation, and contractual SLA penalties. Critical patient records, financial transactions, or e-commerce purchases are permanently lost during hardware faults.
 
-### Remember for ACE Exam ⭐⭐⭐⭐⭐:
+### Remember for ACE Exam (Exam Weight: 5/5):
 The ACE exam evaluates resilience through practical trade-offs:
 1. **Redundancy vs. Cost:** Every added layer of resilience increases infrastructure expenditure (e.g., Cloud SQL HA roughly doubles compute cost by running a continuous standby VM).
 2. **Synchronous vs. Asynchronous Replication:** Synchronous replication guarantees **near-zero RPO (zero data loss)** but requires low network latency (same region / cross-zone). Asynchronous replication accommodates higher latency (cross-region) but introduces potential data replication lag during unexpected primary failures.
@@ -326,7 +326,7 @@ Resilience is a direct function of expenditure. Choosing higher availability tie
 ### 13.1 Google Cloud Console Navigation
 
 **Creating a High Availability Regional Managed Instance Group:**
-1. Open the Navigation Menu ➔ **Compute Engine** ➔ **Instance groups**.
+1. Open the Navigation Menu -> **Compute Engine** -> **Instance groups**.
 2. Click **Create instance group**.
 3. Under **Location**, select **Multiple zones** (Regional) and choose your target region (e.g., `asia-south1`).
 4. Select the specific availability zones to distribute instances across (`asia-south1-a`, `asia-south1-b`, `asia-south1-c`).
@@ -336,7 +336,7 @@ Resilience is a direct function of expenditure. Choosing higher availability tie
 8. Click **Create**.
 
 **Configuring Cloud SQL High Availability:**
-1. Open the Navigation Menu ➔ **SQL** ➔ Select your Database Instance.
+1. Open the Navigation Menu -> **SQL** -> Select your Database Instance.
 2. Click **Edit** at the top of the instance details page.
 3. Scroll down to the **Configuration options** section and expand **High availability and data protection**.
 4. Under **Availability type**, select **High availability (regional)**.
@@ -394,7 +394,7 @@ gcloud sql instances failover prod-postgres-ha
 
 ---
 
-## 14. ACE Exam Focus ⭐⭐⭐⭐⭐
+## 14. ACE Exam Focus (Exam Weight: 5/5)
 
 ### Most Frequently Tested Concepts:
 1. **Zonal vs. Regional Resource Survivability:**
@@ -486,7 +486,7 @@ gcloud sql instances failover prod-postgres-ha
 
 ## 18. Quick Revision Sheet
 
-- **Physical Hierarchy:** Region ➔ Contains multiple independent Availability Zones (low latency, isolated power/cooling).
+- **Physical Hierarchy:** Region -> Contains multiple independent Availability Zones (low latency, isolated power/cooling).
 - **Zonal Resource:** Fails if the zone fails (Single VM, Zonal PD).
 - **Regional Resource:** Survives a single zone failure (Regional MIG, Regional PD, Cloud SQL HA).
 - **Multi-Regional Resource:** Survives an entire region failure (Multi-Region Cloud Storage, Multi-Region Spanner).
@@ -497,7 +497,7 @@ gcloud sql instances failover prod-postgres-ha
 - **RPO:** Max tolerable amount of transactional **data loss** measured in time.
 - **Synchronous Replication:** Both primary and replica confirm write. Zero data loss (RPO = 0). Used within-region.
 - **Asynchronous Replication:** Primary commits immediately, replica updates in background. Slight lag risk (RPO > 0). Used cross-region.
-- **Golden Exam Rule:** "Database survives zone failure with zero data loss" ➔ **Cloud SQL HA (Regional)**. "Compute survives zone failure" ➔ **Regional Managed Instance Group**. "Cheapest data protection for non-critical app" ➔ **Scheduled Backups/Snapshots**. "Survive full regional destruction" ➔ **Multi-Region Resource / Cross-Region Replica**.
+- **Golden Exam Rule:** "Database survives zone failure with zero data loss" -> **Cloud SQL HA (Regional)**. "Compute survives zone failure" -> **Regional Managed Instance Group**. "Cheapest data protection for non-critical app" -> **Scheduled Backups/Snapshots**. "Survive full regional destruction" -> **Multi-Region Resource / Cross-Region Replica**.
 
 ---
 
@@ -674,4 +674,4 @@ They are critical because they dictate the required technology and financial inv
 
 ---
 
-[⬅️ Previous: Phase 10 — Billing & Cost Optimization](phase-10-billing-cost-optimization.md) | [➡️ Next: Phase 12 — ACE Scenario Mastery & Battlecards](phase-12-scenario-mastery.md)
+[<- Previous: Phase 10 — Billing & Cost Optimization](phase-10-billing-cost-optimization.md) | [-> Next: Phase 12 — ACE Scenario Mastery & Battlecards](phase-12-scenario-mastery.md)
