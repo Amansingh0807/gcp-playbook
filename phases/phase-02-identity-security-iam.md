@@ -1,12 +1,12 @@
-[⬅️ Previous: Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md) | [➡️ Next: Phase 03 — Compute Services](phase-03-compute.md)
+[<- Previous: Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md) | [-> Next: Phase 03 — Compute Services](phase-03-compute.md)
 
 ---
 
-# Phase 2 — Identity & Security (Cloud IAM) ⭐⭐⭐⭐⭐
+# Phase 2 — Identity & Security (Cloud IAM) (Exam Weight: 5/5)
 
 > **Prerequisite:** [Phase 01 — Google Cloud Platform Fundamentals](phase-01-gcp-fundamentals.md)  
 > **Estimated Study Time:** 4–5 Hours  
-> **Exam Weight:** ⭐⭐⭐⭐⭐ (The Single Most Heavily Tested Domain on the ACE Exam)  
+> **Exam Weight:** (Exam Weight: 5/5) (The Single Most Heavily Tested Domain on the ACE Exam)  
 > **Covers:** IAM Fundamentals (Identity, Principal, User, Group, Domain, Service Account), Permissions/Role/Policy/Binding, IAM Roles (Basic/Predefined/Custom), IAM Policies (Attach/Remove/Inheritance/Conditions), Service Accounts (Creation/Keys/Impersonation), Workload Identity, Security Best Practices, IAM Analyzer, Organization Policies.
 
 ---
@@ -33,7 +33,7 @@
 - Complete regulatory non-compliance (inability to satisfy SOC2, ISO27001, HIPAA, or PCI-DSS auditing mandates).
 
 > [!IMPORTANT]
-> **Remember for ACE Exam ⭐⭐⭐⭐⭐:** IAM is embedded in nearly every question on the ACE exam. Questions focused on Compute Engine, GCS, or Networking frequently revolve around IAM role selection (*"Which role should you grant to follow the principle of least privilege?"*).
+> **Remember for ACE Exam (Exam Weight: 5/5):** IAM is embedded in nearly every question on the ACE exam. Questions focused on Compute Engine, GCS, or Networking frequently revolve around IAM role selection (*"Which role should you grant to follow the principle of least privilege?"*).
 
 ---
 
@@ -72,7 +72,7 @@
 ### Step-by-Step Internal Evaluation Flow:
 1. **Authentication:** A Principal proves their identity via Google OAuth2 credentials or a Service Account token.
 2. **Action Attempt:** The principal invokes an API method on a resource (e.g., `compute.instances.delete`).
-3. **Hierarchy Traversal:** Google Cloud evaluates the IAM policy on the target resource and traverses upwards through all ancestor nodes (`Project ➔ Folder ➔ Organization`).
+3. **Hierarchy Traversal:** Google Cloud evaluates the IAM policy on the target resource and traverses upwards through all ancestor nodes (`Project -> Folder -> Organization`).
 4. **Union Evaluation:** If **any** binding at **any** level grants a role containing the required permission, access is granted (permissions are additive).
 5. **Condition Evaluation:** If an IAM Condition is present (e.g., time-window restriction), it is evaluated via Common Expression Language (CEL).
 6. **Default Deny:** If no binding in the hierarchy permits the action, access is denied immediately.
@@ -174,7 +174,7 @@ request.time < timestamp("2026-12-31T00:00:00Z")
 | **Granularity** | Sweeping (Whole Project) | Granular (Per Service) | Exact (Cherry-picked permissions) |
 | **Maintained By** | Google | Google (Auto-updated) | Customer (Manual maintenance) |
 | **Scope Levels** | Org, Folder, Project, Resource | Org, Folder, Project, Resource | Org and Project only |
-| **Production Use** | ❌ Avoid | ✅ Recommended Default | ⚠️ Only when Predefined doesn't fit |
+| **Production Use** | [No] Avoid | [Yes] Recommended Default | Note: Only when Predefined doesn't fit |
 | **Lifecycle States** | Always GA | Always GA | Alpha, Beta, GA, Disabled, Deleted |
 
 ---
@@ -271,9 +271,9 @@ request.time < timestamp("2026-12-31T00:00:00Z")
 ## 13. Hands-on (Console + CLI)
 
 ### Console Walkthrough
-1. **Grant IAM Role:** Navigation Menu ➔ **IAM & Admin** ➔ **IAM** ➔ Click **Grant Access** ➔ Enter principal email ➔ Select role (e.g., `roles/viewer`) ➔ Click **Save**.
-2. **Create Service Account:** Navigation Menu ➔ **IAM & Admin** ➔ **Service Accounts** ➔ Click **Create Service Account** ➔ Provide ID and description ➔ Assign role ➔ Click **Done**.
-3. **Create Custom Role:** Navigation Menu ➔ **IAM & Admin** ➔ **Roles** ➔ Click **Create Role** ➔ Set Title and ID ➔ Click **Add Permissions** ➔ Filter and select permissions ➔ Click **Create**.
+1. **Grant IAM Role:** Navigation Menu -> **IAM & Admin** -> **IAM** -> Click **Grant Access** -> Enter principal email -> Select role (e.g., `roles/viewer`) -> Click **Save**.
+2. **Create Service Account:** Navigation Menu -> **IAM & Admin** -> **Service Accounts** -> Click **Create Service Account** -> Provide ID and description -> Assign role -> Click **Done**.
+3. **Create Custom Role:** Navigation Menu -> **IAM & Admin** -> **Roles** -> Click **Create Role** -> Set Title and ID -> Click **Add Permissions** -> Filter and select permissions -> Click **Create**.
 
 ### CLI (`gcloud`) Master Commands
 ```bash
@@ -315,7 +315,7 @@ gcloud iam roles create customVmManager \
 
 ---
 
-## 14. ACE Exam Focus ⭐⭐⭐⭐⭐
+## 14. ACE Exam Focus (Exam Weight: 5/5)
 
 ### Most Commonly Tested Scenarios:
 - **Least Privilege Role Selection:** Given a job description, pick the narrowest predefined role (e.g., `roles/storage.objectViewer` vs `roles/storage.admin`).
@@ -367,14 +367,14 @@ gcloud iam roles create customVmManager \
 
 ## 18. Quick Revision Sheet
 
-- **Core Formula:** `Principal + Role = Binding` ➔ `Set of Bindings = Policy`.
-- **Role Types:** Basic (Owner/Editor/Viewer) ➔ Predefined (Google-curated) ➔ Custom (User-curated).
+- **Core Formula:** `Principal + Role = Binding` -> `Set of Bindings = Policy`.
+- **Role Types:** Basic (Owner/Editor/Viewer) -> Predefined (Google-curated) -> Custom (User-curated).
 - **Service Account Golden Rule:** Attach to resources directly or use Workload Identity; **do not download JSON keys**.
 - **Important Role Names:**
   - `roles/iam.serviceAccountUser`: Allows attaching an SA to a resource.
   - `roles/iam.serviceAccountTokenCreator`: Allows impersonating an SA.
   - `roles/resourcemanager.projectIamAdmin`: Allows modifying IAM policies on projects.
-- **IAM Inheritance:** Strictly **additive (Union)** down the hierarchy (`Org ➔ Folder ➔ Project ➔ Resource`).
+- **IAM Inheritance:** Strictly **additive (Union)** down the hierarchy (`Org -> Folder -> Project -> Resource`).
 - **Temporary Access:** Implemented via **IAM Conditions** with CEL timestamp expressions.
 
 ---
@@ -431,4 +431,4 @@ A junior data analyst requires access to run queries against BigQuery datasets i
 
 ---
 
-[⬅️ Previous: Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md) | [➡️ Next: Phase 03 — Compute Services](phase-03-compute.md)
+[<- Previous: Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md) | [-> Next: Phase 03 — Compute Services](phase-03-compute.md)

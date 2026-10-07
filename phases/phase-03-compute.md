@@ -1,12 +1,12 @@
-[⬅️ Previous: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md) | [➡️ Next: Phase 04 — Storage Services](phase-04-storage.md)
+[<- Previous: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md) | [-> Next: Phase 04 — Storage Services](phase-04-storage.md)
 
 ---
 
-# Phase 3 — Compute Services ⭐⭐⭐⭐⭐
+# Phase 3 — Compute Services (Exam Weight: 5/5)
 
 > **Prerequisite:** [Phase 02 — Identity & Security (Cloud IAM)](phase-02-identity-security-iam.md)  
 > **Estimated Study Time:** 5–6 Hours  
-> **Exam Weight:** ⭐⭐⭐⭐⭐ (GCP's Biggest & Most Heavily Tested Compute Domain)  
+> **Exam Weight:** (Exam Weight: 5/5) (GCP's Biggest & Most Heavily Tested Compute Domain)  
 > **Covers:** Compute Engine (VM Basics, Machine Types, Storage, Images/Snapshots, Networking, Lifecycle, Metadata, Access, Pricing), Managed Instance Groups (Templates, Autoscaling, Autohealing, Rolling Updates, Health Checks), App Engine (Standard/Flexible, Versions, Traffic Splitting), Cloud Run (Containers, Revisions, Concurrency), Cloud Functions (Event-driven, Triggers).
 
 ---
@@ -27,14 +27,14 @@
 
 ### Why it was created:
 - A "one-size-fits-all" compute paradigm fails in production:
-  - **Full Control:** Legacy software, specific OS kernels, custom network interfaces ➔ **Compute Engine**.
-  - **Scalable VM Fleets:** Identical VMs with auto-healing and rolling updates ➔ **Managed Instance Groups (MIGs)**.
-  - **Containerized Serverless:** Stateless microservices and APIs ➔ **Cloud Run**.
-  - **PaaS Web Applications:** Monolithic web frameworks with rapid traffic splitting ➔ **App Engine**.
-  - **Event-Driven Micro-logic:** Reacting to cloud storage uploads or Pub/Sub queues ➔ **Cloud Functions**.
+  - **Full Control:** Legacy software, specific OS kernels, custom network interfaces -> **Compute Engine**.
+  - **Scalable VM Fleets:** Identical VMs with auto-healing and rolling updates -> **Managed Instance Groups (MIGs)**.
+  - **Containerized Serverless:** Stateless microservices and APIs -> **Cloud Run**.
+  - **PaaS Web Applications:** Monolithic web frameworks with rapid traffic splitting -> **App Engine**.
+  - **Event-Driven Micro-logic:** Reacting to cloud storage uploads or Pub/Sub queues -> **Cloud Functions**.
 
 > [!IMPORTANT]
-> **Remember for ACE Exam ⭐⭐⭐⭐⭐:** The exam tests your ability to match a business scenario to the exact right compute service on the spectrum based on operational overhead, cost, and architecture constraints.
+> **Remember for ACE Exam (Exam Weight: 5/5):** The exam tests your ability to match a business scenario to the exact right compute service on the spectrum based on operational overhead, cost, and architecture constraints.
 
 ---
 
@@ -45,7 +45,7 @@
 MOST CONTROL                                                      LEAST CONTROL
 MOST MANAGEMENT                                                LEAST MANAGEMENT
      │                                                                │
-Compute Engine   ───▶   GKE (Kubernetes)   ───▶   Cloud Run   ───▶   Cloud Functions
+Compute Engine   ─-->   GKE (Kubernetes)   ─-->   Cloud Run   ─-->   Cloud Functions
   (Raw VMs, OS,          (Orchestrated             (Stateless          (Single Event
    full control)          Containers)               Containers)          Functions)
   
@@ -85,16 +85,16 @@ Compute Engine   ───▶   GKE (Kubernetes)   ───▶   Cloud Run   �
 
 ### 3.3 VM Lifecycle State Machine
 ```
-   [PROVISIONING] ──▶ [STAGING] ──▶ [RUNNING] ──▶ [STOPPING] ──▶ [TERMINATED]
+   [PROVISIONING] --> [STAGING] --> [RUNNING] --> [STOPPING] --> [TERMINATED]
                                        │
-                                (Suspend) ──▶ [SUSPENDED] ──▶ (Resume) ──▶ [RUNNING]
+                                (Suspend) --> [SUSPENDED] --> (Resume) --> [RUNNING]
                                        │
-                                  (Reset) ──▶ Reboots guest OS, stays RUNNING
+                                  (Reset) --> Reboots guest OS, stays RUNNING
                                        │
-                                  (Delete) ──▶ Permanently destroyed
+                                  (Delete) --> Permanently destroyed
 ```
 
-- **Start:** Boots a stopped instance (`TERMINATED` ➔ `RUNNING`).
+- **Start:** Boots a stopped instance (`TERMINATED` -> `RUNNING`).
 - **Stop:** Halts compute execution. **Compute billing stops, but attached Persistent Disks continue to accrue storage charges.**
 - **Suspend:** Pauses the VM, writing RAM contents to disk (faster resume than a full cold boot). Storage for memory image is billed.
 - **Reset:** Hard reset (similar to holding the physical power button). Memory is wiped; ephemeral IP and disk attachments remain intact.
@@ -115,12 +115,12 @@ Compute Engine   ───▶   GKE (Kubernetes)   ───▶   Cloud Run   �
          ▼ creates
 [Managed Instance Group (MIG)]  (Fleet of identical, homogenous VMs)
          │
-         ├───▶ [Autoscaler]  (Watches CPU, Load Balancer traffic, or Cloud Monitoring metrics)
-         │        ├── Load spikes ➔ Automatically provisions new VM instances (Scale Out)
-         │        └── Load drops  ➔ Safely terminates excess instances (Scale In)
+         ├─--> [Autoscaler]  (Watches CPU, Load Balancer traffic, or Cloud Monitoring metrics)
+         │        ├── Load spikes -> Automatically provisions new VM instances (Scale Out)
+         │        └── Load drops  -> Safely terminates excess instances (Scale In)
          │
-         └───▶ [Health Checker] (Pings HTTP/TCP endpoints periodically)
-                  └── Instance unhealthy ➔ Autohealing automatically deletes & recreates it
+         └─--> [Health Checker] (Pings HTTP/TCP endpoints periodically)
+                  └── Instance unhealthy -> Autohealing automatically deletes & recreates it
 ```
 
 ---
@@ -227,8 +227,8 @@ Compute Engine   ───▶   GKE (Kubernetes)   ───▶   Cloud Run   �
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Model** | IaaS | IaaS+ | PaaS | PaaS (Docker) | Serverless CaaS | Serverless FaaS |
 | **Unit of Scale** | Single VM | Fleet of VMs | Sandbox App | Container on VM | Container Image | Single Function |
-| **Scales to Zero?** | ❌ No | ❌ No | ✅ Yes | ❌ No | ✅ Yes | ✅ Yes |
-| **Custom OS/Kernel**| ✅ Yes | ✅ Yes | ❌ No | ❌ No | ❌ No | ❌ No |
+| **Scales to Zero?** | [No] No | [No] No | [Yes] Yes | [No] No | [Yes] Yes | [Yes] Yes |
+| **Custom OS/Kernel**| [Yes] Yes | [Yes] Yes | [No] No | [No] No | [No] No | [No] No |
 | **Startup Speed** | ~30–60 sec | ~30–60 sec | Seconds | ~3–5 minutes | ~1–3 sec | Milliseconds |
 | **Best For** | Legacy, stateful | High-traffic web tier | Simple web apps | Custom runtimes | Microservices, APIs | Event processing |
 
@@ -311,9 +311,9 @@ Compute Engine   ───▶   GKE (Kubernetes)   ───▶   Cloud Run   �
 ## 13. Hands-on (Console + CLI)
 
 ### Console Walkthrough
-1. **Create VM:** Navigation Menu ➔ **Compute Engine** ➔ **VM Instances** ➔ Click **Create Instance** ➔ Set Name, Region, Machine Type ➔ Check *Allow HTTP traffic* ➔ Click **Create**.
-2. **Create Instance Template:** **Compute Engine** ➔ **Instance Templates** ➔ **Create Instance Template** ➔ Define OS image, startup script, and tags.
-3. **Create MIG:** **Compute Engine** ➔ **Instance Groups** ➔ **Create Instance Group** ➔ Select template, set autoscaling CPU target to 60%, configure health check.
+1. **Create VM:** Navigation Menu -> **Compute Engine** -> **VM Instances** -> Click **Create Instance** -> Set Name, Region, Machine Type -> Check *Allow HTTP traffic* -> Click **Create**.
+2. **Create Instance Template:** **Compute Engine** -> **Instance Templates** -> **Create Instance Template** -> Define OS image, startup script, and tags.
+3. **Create MIG:** **Compute Engine** -> **Instance Groups** -> **Create Instance Group** -> Select template, set autoscaling CPU target to 60%, configure health check.
 
 ### CLI (`gcloud`) Master Commands
 ```bash
@@ -374,7 +374,7 @@ gcloud functions deploy process-order \
 
 ---
 
-## 14. ACE Exam Focus ⭐⭐⭐⭐⭐
+## 14. ACE Exam Focus (Exam Weight: 5/5)
 
 ### Top Tested Concepts:
 - **Local SSD vs. Persistent Disk:** Local SSD data does **not** survive stopping a VM.
@@ -425,12 +425,12 @@ gcloud functions deploy process-order \
 
 ## 18. Quick Revision Sheet
 
-- **Compute Hierarchy:** Compute Engine (IaaS) ➔ GKE (Containers) ➔ Cloud Run (Serverless CaaS) ➔ Cloud Functions (Serverless FaaS).
+- **Compute Hierarchy:** Compute Engine (IaaS) -> GKE (Containers) -> Cloud Run (Serverless CaaS) -> Cloud Functions (Serverless FaaS).
 - **Mnemonic:** **C**ars **M**ove **A**pp **R**oads **F**ast (**C**ompute Engine, **M**IG, **A**pp Engine, Cloud **R**un, Cloud **F**unctions).
 - **Local SSD Golden Rule:** Fast, physically attached, but **EPHEMERAL** (data lost on VM stop).
 - **Spot VM Rule:** 60–91% discount, can be preempted anytime, perfect for batch/stateless workloads.
 - **Scale to Zero:** Cloud Run, Functions, App Engine Standard = YES. App Engine Flexible, Compute Engine = NO.
-- **MIG Architecture:** Instance Template (Immutable blueprint) ➔ MIG (Group) ➔ Autoscaler (Metric-based) ➔ Health Check (Autohealing).
+- **MIG Architecture:** Instance Template (Immutable blueprint) -> MIG (Group) -> Autoscaler (Metric-based) -> Health Check (Autohealing).
 
 ---
 
@@ -487,4 +487,4 @@ What happens to data stored on a Local SSD when the parent Compute Engine VM is 
 
 ---
 
-[⬅️ Previous: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md) | [➡️ Next: Phase 04 — Storage Services](phase-04-storage.md)
+[<- Previous: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md) | [-> Next: Phase 04 — Storage Services](phase-04-storage.md)
