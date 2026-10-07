@@ -1,12 +1,12 @@
-[⬅️ Previous: Phase 06 — Networking Services](phase-06-networking.md) | [➡️ Next: Phase 08 — Monitoring & Operations](phase-08-monitoring-operations.md)
+[<- Previous: Phase 06 — Networking Services](phase-06-networking.md) | [-> Next: Phase 08 — Monitoring & Operations](phase-08-monitoring-operations.md)
 
 ---
 
-# Phase 7 — Kubernetes Engine (GKE) ⭐⭐⭐⭐☆
+# Phase 7 — Kubernetes Engine (GKE) (Exam Weight: 4/5)
 
 > **Prerequisite:** [Phase 03 — Compute Services](phase-03-compute.md) & [Phase 06 — Networking Services](phase-06-networking.md)  
 > **Estimated Study Time:** 4–5 Hours  
-> **Exam Weight:** ⭐⭐⭐⭐☆ (High-Frequency Exam Domain)  
+> **Exam Weight:** (Exam Weight: 4/5) (High-Frequency Exam Domain)  
 > **Covers:** Kubernetes Architecture (Control Plane, Nodes, Node Pools), K8s Core Objects (Pods, Deployments, ReplicaSets, Services, Namespaces), GKE Operating Modes (Standard vs. Autopilot), Scaling Mechanics (HPA, Cluster Autoscaler), Upgrades & Auto-Repair, Workload Identity, `kubectl` essentials.
 
 **GKE is Google Cloud's flagship container orchestration platform.** On the Associate Cloud Engineer exam, GKE is tested primarily at an architectural, operational, and administrative level—specifically comparing GKE Standard vs. Autopilot, managing node pools, understanding declarative workload abstractions, and configuring secure pod-to-cloud identity.
@@ -33,10 +33,10 @@
 ### What happens if GKE doesn't exist:
 - Organizations must deploy self-managed Kubernetes control planes on Compute Engine VMs. Teams spend substantial engineering cycles operating, patching, backing up, and troubleshooting the master nodes rather than building business applications.
 
-### Remember for ACE Exam ⭐⭐⭐⭐:
+### Remember for ACE Exam (Exam Weight: 4/5):
 The ACE exam evaluates GKE from a cloud engineer's perspective, focusing on:
 1. **Selecting the right mode:** GKE Standard (full VM node control) vs. GKE Autopilot (fully hands-off, per-pod billing).
-2. **Object relationships:** Deployment ➔ ReplicaSet ➔ Pod ➔ Service.
+2. **Object relationships:** Deployment -> ReplicaSet -> Pod -> Service.
 3. **Operational automation:** Cluster Autoscaler vs. Horizontal Pod Autoscaler, Node Auto-Repair, Node Auto-Upgrades, and Workload Identity.
 
 ---
@@ -91,7 +91,7 @@ The ACE exam evaluates GKE from a cloud engineer's perspective, focusing on:
 
 ### 4.1 Kubernetes Architectural Hierarchy
 ```
-Cluster ──▶ Node Pool ──▶ Node (VM) ──▶ Pod ──▶ Container
+Cluster --> Node Pool --> Node (VM) --> Pod --> Container
 ```
 
 | Component | Technical Description | Operational Role | Real-World Analogy |
@@ -132,7 +132,7 @@ Cluster ──▶ Node Pool ──▶ Node (VM) ──▶ Pod ──▶ Containe
 | **Autoscaling Mechanics** | Must configure both HPA (Pods) AND Cluster Autoscaler (Nodes) | Automatic: Define pod resource requests; GKE scales compute seamlessly |
 | **Best Workload Fit** | Specialized workloads needing custom kernels, DaemonSets, or legacy tuning | Standard web apps, microservices, APIs, and modern containerized workloads |
 
-> ### Key Exam Differentiator ⭐⭐⭐⭐⭐
+> ### Key Exam Differentiator (Exam Weight: 5/5)
 > - **GKE Standard:** You pay for the **VM capacity provisioned**, even if your pods are only using 10% of that VM's CPU and memory.
 > - **GKE Autopilot:** You pay strictly for the **resources REQUESTED by running Pods**. There is zero billing for unallocated or idle VM capacity.
 
@@ -230,8 +230,8 @@ Cluster ──▶ Node Pool ──▶ Node (VM) ──▶ Pod ──▶ Containe
 ## 13. Hands-on (Console & CLI Walkthrough)
 
 ### Console Step-by-Step
-1. **Create an Autopilot Cluster:** Navigate to **Kubernetes Engine** ➔ **Clusters** ➔ Click **Create** ➔ Under **Autopilot**, click **Configure** ➔ Set cluster name (`prod-autopilot-cluster`), choose a **Region** (`asia-south1`) ➔ Under **Networking**, ensure a custom VPC and subnet are selected ➔ Click **Create**.
-2. **Deploy an Application Manifest:** Once the cluster is running, click the three-dots menu next to the cluster ➔ Click **Connect** ➔ Copy the `gcloud container clusters get-credentials` command into Cloud Shell ➔ Apply a deployment YAML file via `kubectl apply -f deployment.yaml`.
+1. **Create an Autopilot Cluster:** Navigate to **Kubernetes Engine** -> **Clusters** -> Click **Create** -> Under **Autopilot**, click **Configure** -> Set cluster name (`prod-autopilot-cluster`), choose a **Region** (`asia-south1`) -> Under **Networking**, ensure a custom VPC and subnet are selected -> Click **Create**.
+2. **Deploy an Application Manifest:** Once the cluster is running, click the three-dots menu next to the cluster -> Click **Connect** -> Copy the `gcloud container clusters get-credentials` command into Cloud Shell -> Apply a deployment YAML file via `kubectl apply -f deployment.yaml`.
 
 ### CLI (`gcloud` & `kubectl`) Command Reference
 
@@ -304,7 +304,7 @@ kubectl logs -f deployment/web-frontend --all-containers=true
 
 ---
 
-## 14. ACE Exam Focus ⭐⭐⭐⭐⭐
+## 14. ACE Exam Focus (Exam Weight: 5/5)
 
 ### High-Frequency Exam Core Concepts
 - **GKE Standard vs. Autopilot Selection:** If the scenario emphasizes "minimal operational overhead, no node management, or pay for actual pod resource consumption," the answer is **GKE Autopilot**. If the scenario requires "custom kernel modifications, GPU drivers, DaemonSets, or direct node configuration," the answer is **GKE Standard**.
@@ -334,7 +334,7 @@ kubectl logs -f deployment/web-frontend --all-containers=true
 | :--- | :--- | :--- | :--- |
 | **Orchestration Model** | Full Kubernetes API & Ecosystem | Fully Managed Serverless | Standalone single-VM container |
 | **Operational Overhead** | Low (Autopilot) to Medium (Standard)| **Minimal (Zero Ops)** | High (You manage VM, OS, patching) |
-| **Scale-to-Zero Capability**| Requires specialized add-ons | **Native scale-to-zero** | ❌ No scale-to-zero |
+| **Scale-to-Zero Capability**| Requires specialized add-ons | **Native scale-to-zero** | [No] No scale-to-zero |
 | **Pricing Basis** | Per Pod request (Autopilot) / VM (Standard)| Per request & CPU/RAM-second | Per VM instance per second |
 | **Networking & Ingress** | Kubernetes Services, Ingress, Mesh | HTTPS endpoint out of the box | Standard VPC firewall rules & ports |
 | **Best Architectural Fit** | Complex microservice platforms | Stateless APIs, webhooks, websites | Legacy apps needing direct VM access |
@@ -363,16 +363,16 @@ kubectl logs -f deployment/web-frontend --all-containers=true
 
 ## 18. Quick Revision Sheet
 
-- **Hierarchy:** Cluster ➔ Node Pool ➔ Node (VM) ➔ Pod ➔ Container.
+- **Hierarchy:** Cluster -> Node Pool -> Node (VM) -> Pod -> Container.
 - **Object Chain Mnemonic: "Dogs Run Past Slowly"**  
   - **D**eployment (Desired State & Updates)  
-  - ➔ **R**eplicaSet (Enforces Pod Count)  
-  - ➔ **P**od (Actual Running Container Unit)  
-  - ➔ **S**ervice (Stable IP & Traffic Routing)
+  - -> **R**eplicaSet (Enforces Pod Count)  
+  - -> **P**od (Actual Running Container Unit)  
+  - -> **S**ervice (Stable IP & Traffic Routing)
 - **Standard vs. Autopilot:**
   - *Standard:* You manage nodes/pools; billed per provisioned VM.
   - *Autopilot:* Google manages nodes completely; billed per pod resource request.
-- **Workload Identity:** Maps Kubernetes Service Account ➔ Google Cloud IAM Service Account (Keyless).
+- **Workload Identity:** Maps Kubernetes Service Account -> Google Cloud IAM Service Account (Keyless).
 - **Auto-Repair:** Replaces unhealthy nodes.  
 - **Auto-Upgrade:** Patches node Kubernetes versions automatically.
 - **HPA:** Scales pods based on metric load.  
@@ -417,10 +417,10 @@ kubectl logs -f deployment/web-frontend --all-containers=true
 *Explanation: GKE Autopilot automates node pool provisioning, security hardening, and infrastructure maintenance, allowing teams to focus purely on workloads.*
 
 #### Q2. What is the correct hierarchical order of Kubernetes workload management abstractions from highest level to lowest execution unit?
-- [ ] A. Pod ➔ ReplicaSet ➔ Deployment
-- [x] B. Deployment ➔ ReplicaSet ➔ Pod
-- [ ] C. Service ➔ Deployment ➔ Pod
-- [ ] D. ReplicaSet ➔ Deployment ➔ Pod
+- [ ] A. Pod -> ReplicaSet -> Deployment
+- [x] B. Deployment -> ReplicaSet -> Pod
+- [ ] C. Service -> Deployment -> Pod
+- [ ] D. ReplicaSet -> Deployment -> Pod
 *Explanation: A Deployment manages a ReplicaSet, which in turn manages and maintains the lifecycle of Pod replicas.*
 
 #### Q3. How does billing differ between GKE Standard and GKE Autopilot?
@@ -537,4 +537,4 @@ kubectl logs -f deployment/web-frontend --all-containers=true
 
 ---
 
-[⬅️ Previous: Phase 06 — Networking Services](phase-06-networking.md) | [➡️ Next: Phase 08 — Monitoring & Operations](phase-08-monitoring-operations.md)
+[<- Previous: Phase 06 — Networking Services](phase-06-networking.md) | [-> Next: Phase 08 — Monitoring & Operations](phase-08-monitoring-operations.md)

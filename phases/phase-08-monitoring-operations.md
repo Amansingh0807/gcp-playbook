@@ -1,12 +1,12 @@
-[⬅️ Previous: Phase 07 — Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md) | [➡️ Next: Phase 09 — DevOps & Automation](phase-09-devops-automation.md)
+[<- Previous: Phase 07 — Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md) | [-> Next: Phase 09 — DevOps & Automation](phase-09-devops-automation.md)
 
 ---
 
-# Phase 8 — Monitoring & Operations ⭐⭐⭐⭐☆
+# Phase 8 — Monitoring & Operations (Exam Weight: 4/5)
 
 > **Prerequisite:** [Phase 03 — Compute Services](phase-03-compute.md) & [Phase 06 — Networking Services](phase-06-networking.md)  
 > **Estimated Study Time:** 3–4 Hours  
-> **Exam Weight:** ⭐⭐⭐⭐☆ (High-Frequency Exam Domain)  
+> **Exam Weight:** (Exam Weight: 4/5) (High-Frequency Exam Domain)  
 > **Covers:** Cloud Monitoring (Metrics, Dashboards, Alerting Policies, Uptime Checks), Cloud Logging (Log Explorer, Log Router, Log Sinks, Log Buckets, Audit Logs), Diagnostics (Cloud Trace, Cloud Profiler, Error Reporting), Ops Agent installation and configuration.
 
 **Observability is critical on the Associate Cloud Engineer exam.** Questions consistently test which operational tool answers specific diagnostic questions (metrics vs. logs vs. traces vs. profiling), the strict immutability and default status of Audit Logs, and how to export logs to long-term storage or BigQuery via Log Router sinks.
@@ -33,7 +33,7 @@
 ### What happens if it doesn't exist:
 - Outages go unnoticed until end users report failures; security incidents cannot be audited; regulatory compliance cannot be verified; and debugging distributed latency issues requires blind guesswork.
 
-### Remember for ACE Exam ⭐⭐⭐⭐:
+### Remember for ACE Exam (Exam Weight: 4/5):
 The ACE exam tests your ability to match the exact observability tool to a technical diagnostic scenario:
 - **Cloud Monitoring:** Time-series telemetry (CPU %, memory %, disk IOPS, network egress).
 - **Cloud Logging:** Event logs, console queries, and compliance audit trails.
@@ -132,7 +132,7 @@ The ACE exam tests your ability to match the exact observability tool to a techn
 
 ## 6. Types & Variants: Audit Logs & Storage Sinks
 
-### 6.1 Google Cloud Audit Logs Taxonomy ⭐⭐⭐⭐⭐
+### 6.1 Google Cloud Audit Logs Taxonomy (Exam Weight: 5/5)
 
 | Audit Log Type | Always Enabled? | Billing Status | What It Documents | Retention |
 | :--- | :--- | :--- | :--- | :--- |
@@ -141,7 +141,7 @@ The ACE exam tests your ability to match the exact observability tool to a techn
 | **Policy Denied** | **YES (Mandatory)** | **100% FREE** | Security rejections triggered when a user violates an Organization Policy or security perimeter | 400 Days (`_Required` bucket) |
 | **Data Access** | **NO (Off by default)** | **Billable Storage**| API operations that read or write user-provided data (e.g., reading a GCS file, running a database query) | 30 Days default (`_Default` bucket) |
 
-> ### Critical Exam Rules on Audit Logs ⭐⭐⭐⭐⭐
+> ### Critical Exam Rules on Audit Logs (Exam Weight: 5/5)
 > 1. **Admin Activity, System Event, and Policy Denied logs are ALWAYS ON, FREE, and CANNOT BE DISABLED by any administrator.**
 > 2. **Data Access audit logs are OFF BY DEFAULT** (except for BigQuery). When enabled, they can produce massive data volumes and substantial billing costs.
 > 3. The **`_Required`** log bucket retains immutable compliance audit logs for **400 days** and **cannot be modified, disabled, or deleted**.
@@ -240,8 +240,8 @@ The ACE exam tests your ability to match the exact observability tool to a techn
 ## 13. Hands-on (Console & CLI Walkthrough)
 
 ### Console Step-by-Step
-1. **Create an Alert Policy:** Navigate to **Monitoring** ➔ **Alerting** ➔ Click **Create Policy** ➔ Under **Select a metric**, uncheck *Active*, search for `Compute Engine Instance > CPU utilization` ➔ Set condition: *Threshold position:* Above threshold, *Threshold value:* `0.85` (85%) ➔ Set condition duration to `5 min` ➔ Configure Notification Channels (Email/Slack) ➔ Name the policy `alert-cpu-high-prod` ➔ Click **Save Policy**.
-2. **Query Logs in Logs Explorer:** Navigate to **Logging** ➔ **Logs Explorer** ➔ In the query editor, paste:
+1. **Create an Alert Policy:** Navigate to **Monitoring** -> **Alerting** -> Click **Create Policy** -> Under **Select a metric**, uncheck *Active*, search for `Compute Engine Instance > CPU utilization` -> Set condition: *Threshold position:* Above threshold, *Threshold value:* `0.85` (85%) -> Set condition duration to `5 min` -> Configure Notification Channels (Email/Slack) -> Name the policy `alert-cpu-high-prod` -> Click **Save Policy**.
+2. **Query Logs in Logs Explorer:** Navigate to **Logging** -> **Logs Explorer** -> In the query editor, paste:
    ```sql
    resource.type="gce_instance"
    severity >= ERROR
@@ -297,15 +297,15 @@ gcloud logging metrics create http-500-error-count \
 
 ---
 
-## 14. ACE Exam Focus ⭐⭐⭐⭐⭐
+## 14. ACE Exam Focus (Exam Weight: 5/5)
 
 ### High-Frequency Exam Core Concepts
 - **Matching Tools to Questions:**
-  - *Metrics / Thresholds / Uptime:* ➔ **Cloud Monitoring**
-  - *Event records / What happened / System crashes:* ➔ **Cloud Logging**
-  - *Where is latency occurring in my microservice chain?* ➔ **Cloud Trace**
-  - *Which code function or line consumes CPU/RAM?* ➔ **Cloud Profiler**
-  - *Stack trace grouping & deduplication:* ➔ **Error Reporting**
+  - *Metrics / Thresholds / Uptime:* -> **Cloud Monitoring**
+  - *Event records / What happened / System crashes:* -> **Cloud Logging**
+  - *Where is latency occurring in my microservice chain?* -> **Cloud Trace**
+  - *Which code function or line consumes CPU/RAM?* -> **Cloud Profiler**
+  - *Stack trace grouping & deduplication:* -> **Error Reporting**
 - **The Immutability of Admin Activity Audit Logs:**
   - Admin Activity and System Event logs are **always enabled**, **free of charge**, and **cannot be turned off**.
   - They are preserved in the `_Required` bucket for **400 days**.
@@ -353,10 +353,10 @@ gcloud logging metrics create http-500-error-count \
 - **Monitoring = Numeric Metrics ("How much / How fast").**  
 - **Logging = Event Records ("What happened / Why").**  
 - **Audit Log Types Mnemonic: "Always Deny Some Policy"**  
-  - **A**dmin Activity ➔ Always ON, 100% Free, Config changes.  
-  - **D**ata Access ➔ **OFF by default**, Billable, Data read/write.  
-  - **S**ystem Event ➔ Always ON, 100% Free, Google system maintenance.  
-  - **P**olicy Denied ➔ Always ON, 100% Free, Security rejections.
+  - **A**dmin Activity -> Always ON, 100% Free, Config changes.  
+  - **D**ata Access -> **OFF by default**, Billable, Data read/write.  
+  - **S**ystem Event -> Always ON, 100% Free, Google system maintenance.  
+  - **P**olicy Denied -> Always ON, 100% Free, Security rejections.
 - **Diagnostics Breakdown:**  
   - *Trace:* Distributed microservice latency analysis.  
   - *Profiler:* In-code function CPU and memory optimization.  
@@ -522,4 +522,4 @@ gcloud logging metrics create http-500-error-count \
 
 ---
 
-[⬅️ Previous: Phase 07 — Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md) | [➡️ Next: Phase 09 — DevOps & Automation](phase-09-devops-automation.md)
+[<- Previous: Phase 07 — Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md) | [-> Next: Phase 09 — DevOps & Automation](phase-09-devops-automation.md)

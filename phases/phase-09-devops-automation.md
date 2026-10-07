@@ -1,12 +1,12 @@
-[⬅️ Previous: Phase 08 — Monitoring & Operations](phase-08-monitoring-operations.md) | [➡️ Next: Phase 10 — Billing & Cost Optimization](phase-10-billing-cost-optimization.md)
+[<- Previous: Phase 08 — Monitoring & Operations](phase-08-monitoring-operations.md) | [-> Next: Phase 10 — Billing & Cost Optimization](phase-10-billing-cost-optimization.md)
 
 ---
 
-# Phase 9 — DevOps & Automation ⭐⭐⭐☆☆
+# Phase 9 — DevOps & Automation (Exam Weight: 3/5)
 
 > **Prerequisite:** [Phase 03 — Compute Services](phase-03-compute.md) & [Phase 07 — Kubernetes GKE](phase-07-kubernetes-gke.md)  
 > **Estimated Study Time:** 2–3 Hours  
-> **Exam Weight:** ⭐⭐⭐☆☆ (Targeted Conceptual & Operational Domain)  
+> **Exam Weight:** (Exam Weight: 3/5) (Targeted Conceptual & Operational Domain)  
 > **Covers:** Cloud Build (Pipelines, Triggers, `cloudbuild.yaml`, Build Steps), Artifact Registry (Container Images, Package Repositories, Vulnerability Scanning), CI/CD Principles (Continuous Integration vs. Continuous Delivery vs. Continuous Deployment), Infrastructure as Code (Terraform Architecture, Remote State, Google Cloud Provider), Gemini Cloud Assist (awareness).
 
 **Automation and deployment pipelines are essential tools for modern cloud engineering.** On the Associate Cloud Engineer exam, Phase 9 questions test your conceptual mastery of automated delivery pipelines, securing Artifact Registry container repositories, distinguishing between Continuous Delivery and Continuous Deployment, and provisioning repeatable infrastructure using Infrastructure as Code (Terraform).
@@ -42,7 +42,7 @@ Key Google Cloud services in this domain include:
 ### What happens if it doesn't exist:
 - Teams must manage their own persistent Jenkins or build VMs, patch operating systems, manage build-slave auto-scaling, and accept significant operational overhead. Infrastructure becomes a fragile snowflake that cannot be reliably replicated in another region.
 
-### Remember for ACE Exam ⭐⭐⭐:
+### Remember for ACE Exam (Exam Weight: 3/5):
 While this phase has an exam weight of 3 stars (compared to 5 stars for IAM, Compute, and Storage), exam questions test sharp conceptual boundaries:
 1. **Cloud Build Config:** Understanding that `cloudbuild.yaml` executes each build step within an independent container environment.
 2. **Artifact Registry vs. Container Registry:** Artifact Registry is the modern standard supporting multiple package formats (Docker, Maven, npm, Python) and regional repositories.
@@ -346,7 +346,7 @@ terraform {
 ### 13.1 Google Cloud Console Navigation
 
 **Configuring a Cloud Build Trigger:**
-1. Open the Navigation Menu ➔ **Cloud Build** ➔ **Triggers**.
+1. Open the Navigation Menu -> **Cloud Build** -> **Triggers**.
 2. Click **Create Trigger**.
 3. Specify a Name (e.g., `deploy-web-service-on-push`).
 4. Select the Event: **Push to a branch** (e.g., `^main$`).
@@ -355,7 +355,7 @@ terraform {
 7. Click **Create**.
 
 **Creating an Artifact Registry Repository:**
-1. Open the Navigation Menu ➔ **Artifact Registry** ➔ **Repositories**.
+1. Open the Navigation Menu -> **Artifact Registry** -> **Repositories**.
 2. Click **Create Repository**.
 3. Specify a Name (e.g., `app-containers`).
 4. Select Format: **Docker**.
@@ -422,7 +422,7 @@ terraform apply -auto-approve
 
 ---
 
-## 14. ACE Exam Focus ⭐⭐⭐⭐⭐
+## 14. ACE Exam Focus (Exam Weight: 5/5)
 
 ### Most Tested Concepts:
 1. **Continuous Delivery vs. Continuous Deployment:**
@@ -446,8 +446,8 @@ terraform apply -auto-approve
 ┌──────────────────────────────────────────────┬──────────────────────────────────────────────┐
 │ CONTINUOUS DELIVERY                          │ CONTINUOUS DEPLOYMENT                        │
 ├──────────────────────────────────────────────┼──────────────────────────────────────────────┤
-│ Code commit ➔ Auto Build ➔ Auto Test ➔       │ Code commit ➔ Auto Build ➔ Auto Test ➔       │
-│ Auto Staging ➔ [ MANUAL HUMAN APPROVAL ] ➔   │ Auto Staging ➔ [ AUTOMATED DEPLOYMENT ] ➔    │
+│ Code commit -> Auto Build -> Auto Test ->       │ Code commit -> Auto Build -> Auto Test ->       │
+│ Auto Staging -> [ MANUAL HUMAN APPROVAL ] ->   │ Auto Staging -> [ AUTOMATED DEPLOYMENT ] ->    │
 │ Production Deployment                        │ Production Deployment                        │
 │ Best for: Regulated industries, banking,     │ Best for: High-velocity SaaS, microservices, │
 │ enterprise applications needing sign-off.    │ cloud-native continuous delivery teams.      │
@@ -528,7 +528,7 @@ terraform apply -auto-approve
 - **Continuous Deployment:** **Zero human intervention**; fully automated straight to live users.
 - **Terraform = Multi-Cloud Declarative IaC:** Created by HashiCorp. Uses declarative HCL. Tracks infrastructure via state file. State belongs in a private GCS bucket with locking.
 - **Naming Rule for Artifact Registry:** `REGION-docker.pkg.dev/PROJECT-ID/REPO-NAME/IMAGE:TAG`.
-- **Golden Exam Rule:** "Multi-cloud infrastructure code" ➔ **Terraform**. "Manual approval gate before release" ➔ **Continuous Delivery**. "Serverless pipeline execution" ➔ **Cloud Build**. "Store Docker images with granular IAM" ➔ **Artifact Registry**.
+- **Golden Exam Rule:** "Multi-cloud infrastructure code" -> **Terraform**. "Manual approval gate before release" -> **Continuous Delivery**. "Serverless pipeline execution" -> **Cloud Build**. "Store Docker images with granular IAM" -> **Artifact Registry**.
 
 ---
 
@@ -711,4 +711,4 @@ terraform apply -auto-approve
 
 ---
 
-[⬅️ Previous: Phase 08 — Monitoring & Operations](phase-08-monitoring-operations.md) | [➡️ Next: Phase 10 — Billing & Cost Optimization](phase-10-billing-cost-optimization.md)
+[<- Previous: Phase 08 — Monitoring & Operations](phase-08-monitoring-operations.md) | [-> Next: Phase 10 — Billing & Cost Optimization](phase-10-billing-cost-optimization.md)
