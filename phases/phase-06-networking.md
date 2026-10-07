@@ -1,12 +1,12 @@
-[⬅️ Previous: Phase 05 — Databases & Analytics](phase-05-databases.md) | [➡️ Next: Phase 07 — Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md)
+[<- Previous: Phase 05 — Databases & Analytics](phase-05-databases.md) | [-> Next: Phase 07 — Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md)
 
 ---
 
-# Phase 6 — Networking Services ⭐⭐⭐⭐⭐
+# Phase 6 — Networking Services (Exam Weight: 5/5)
 
 > **Prerequisite:** [Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md) & [Phase 03 — Compute Services](phase-03-compute.md)  
 > **Estimated Study Time:** 5–6 Hours  
-> **Exam Weight:** ⭐⭐⭐⭐⭐ (Highest Priority Exam Domain)  
+> **Exam Weight:** (Exam Weight: 5/5) (Highest Priority Exam Domain)  
 > **Covers:** VPC (Global Scope, Auto Mode, Custom Mode, Shared VPC), Subnets (Regional Scope, CIDR, Alias IPs, Private Google Access), Routes (Default, Custom, Static), Firewall Rules (Ingress, Egress, Priority, Targets, Tags, Service Accounts, Stateful Behavior), Hybrid Connectivity (VPC Peering, Cloud VPN, Cloud Interconnect, Cloud NAT, Cloud DNS), Cloud Load Balancing (Internal vs. External, Regional vs. Global, Application vs. Network Proxy).
 
 **Networking is a cornerstone domain on the Associate Cloud Engineer exam.** Expect deep, scenario-driven questions testing subnet IP allocation, firewall rule evaluation precedence, non-transitive VPC peering behaviors, outbound NAT requirements, and load balancer topology selection.
@@ -34,7 +34,7 @@
 ### What happens if VPC doesn't exist:
 - Cloud resources would lack network boundaries, exposing virtual machines directly to internet threats. Organizations would have no mechanism to implement subnetting, define stateful egress/ingress access controls, or connect private corporate data centers to cloud resources.
 
-### Remember for ACE Exam ⭐⭐⭐⭐⭐:
+### Remember for ACE Exam (Exam Weight: 5/5):
 Google Cloud's **VPC is a GLOBAL resource**, whereas **Subnets are always REGIONAL**. A single VPC network spans all Google Cloud regions worldwide. Instances residing in different continents can communicate across internal RFC 1918 private IP addresses by default, without configuring VPN tunnels or VPC peering.
 
 ---
@@ -120,7 +120,7 @@ Google Cloud's **VPC is a GLOBAL resource**, whereas **Subnets are always REGION
 | **Custom Mode VPC** | VPC where subnets, regions, and CIDR blocks are defined manually by network engineers | Prevents IP collisions; mandatory standard for production enterprise environments | A custom-architected campus built to precise engineering blueprints |
 | **Shared VPC** | Architectural pattern where a centralized **Host Project** shares VPC subnets with multiple **Service Projects** | Centralizes network governance, firewall policy, and IP management under a single platform team | An enterprise IT department that owns network infrastructure while departments deploy applications |
 
-> **ACE Exam Rule ⭐⭐⭐⭐⭐:** **Google explicitly mandates Custom Mode VPC for all production environments.** Auto Mode utilizes predefined overlapping ranges that will conflict with on-premises networks during VPN/Interconnect hybrid integrations or VPC peering.
+> **ACE Exam Rule (Exam Weight: 5/5):** **Google explicitly mandates Custom Mode VPC for all production environments.** Auto Mode utilizes predefined overlapping ranges that will conflict with on-premises networks during VPN/Interconnect hybrid integrations or VPC peering.
 
 ### 4.2 Subnets
 | Component | Technical Description | Operational Purpose | Real-World Analogy |
@@ -148,7 +148,7 @@ Google Cloud's **VPC is a GLOBAL resource**, whereas **Subnets are always REGION
 | **Target Tags** | Metadata string labels attached to VMs to bind firewall rules to specific instances | Groups instances logically for firewall targeting without tracking dynamic IPs | Color-coded visitor badges granting access to specific project wings |
 | **Target Service Accounts**| Binding firewall rules directly to an instance's IAM Service Account identity | Provides tamper-resistant security targeting governed by IAM permissions | An employee cryptographic smart card that cannot be forged or edited |
 
-> **Critical Firewall Axiom ⭐⭐⭐⭐⭐:** Google Cloud firewalls are **STATEFUL**. If an Ingress connection is allowed, return/response traffic is automatically permitted, regardless of egress rules. Furthermore, every VPC possesses two immutable default implied rules:
+> **Critical Firewall Axiom (Exam Weight: 5/5):** Google Cloud firewalls are **STATEFUL**. If an Ingress connection is allowed, return/response traffic is automatically permitted, regardless of egress rules. Furthermore, every VPC possesses two immutable default implied rules:
 > - **Implied Deny Ingress (`priority: 65535`):** Blocks all inbound traffic unless explicitly permitted.
 > - **Implied Allow Egress (`priority: 65535`):** Permits all outbound traffic unless explicitly denied.
 
@@ -161,7 +161,7 @@ Google Cloud's **VPC is a GLOBAL resource**, whereas **Subnets are always REGION
 | **Cloud NAT** | Managed, distributed Network Address Translation service for outbound internet traffic | Enables private instances to download updates without exposing external IP addresses | A secure one-way exit gate allowing employees out while blocking external entry |
 | **Cloud DNS** | 100% SLA, globally distributed managed Domain Name System service | Resolves public internet domain names and internal private VPC service names | An international telephone directory translating names into physical numbers |
 
-> **VPC Peering Non-Transitivity Law ⭐⭐⭐⭐⭐:** **VPC Peering is NOT transitive.**  
+> **VPC Peering Non-Transitivity Law (Exam Weight: 5/5):** **VPC Peering is NOT transitive.**  
 > If VPC A is peered with VPC B, and VPC B is peered with VPC C, **VPC A cannot communicate with VPC C**. To establish connectivity, an explicit peering relationship must be established directly between VPC A and VPC C.
 
 ---
@@ -193,10 +193,10 @@ Google Cloud Load Balancing is a fully distributed, software-defined managed ser
 | :--- | :--- | :--- |
 | **Subnet Provisioning** | Automatic (1 `/20` subnet per region) | Manual (Engineer specifies region and CIDR) |
 | **IP Range Control** | Fixed predefined ranges (`10.128.0.0/9`) | Complete architectural freedom |
-| **Enterprise Hybrid Ready?**| ❌ No (high probability of IP collisions) | ✅ Yes (Mandatory Google Best Practice) |
+| **Enterprise Hybrid Ready?**| [No] No (high probability of IP collisions) | [Yes] Yes (Mandatory Google Best Practice) |
 | **Switching Modes** | Can be converted from Auto to Custom Mode | **Cannot be converted to Auto Mode** |
 
-### 6.2 Cloud Load Balancer Decision Matrix ⭐⭐⭐⭐⭐
+### 6.2 Cloud Load Balancer Decision Matrix (Exam Weight: 5/5)
 
 | Load Balancer Type | Scope | Layer | Traffic Source | Key Capabilities & Protocols |
 | :--- | :--- | :--- | :--- | :--- |
@@ -211,10 +211,10 @@ Google Cloud Load Balancing is a fully distributed, software-defined managed ser
 ### 6.3 Hybrid Connectivity Comparison Matrix
 | Connectivity Option | Traverses Public Internet? | Bandwidth Capacity | Provisioning Velocity | Encryption Protocol |
 | :--- | :--- | :--- | :--- | :--- |
-| **VPC Peering** | ❌ No (Google internal fiber) | Full line-rate fabric | Near-instantaneous | Google private network encryption |
-| **Cloud VPN (HA VPN)**| ✅ Yes (Public Internet) | Up to 3 Gbps / tunnel | Minutes | IPsec (IKEv1 / IKEv2) |
-| **Cloud Interconnect**| ❌ No (Dedicated physical link)| 10 Gbps – 100 Gbps circuits | Weeks (physical cross-connect)| Optional MACsec encryption |
-| **Cloud NAT** | ✅ Yes (Outbound-only) | Elastic SDN scaling | Minutes | Standard TLS/application-level |
+| **VPC Peering** | [No] No (Google internal fiber) | Full line-rate fabric | Near-instantaneous | Google private network encryption |
+| **Cloud VPN (HA VPN)**| [Yes] Yes (Public Internet) | Up to 3 Gbps / tunnel | Minutes | IPsec (IKEv1 / IKEv2) |
+| **Cloud Interconnect**| [No] No (Dedicated physical link)| 10 Gbps – 100 Gbps circuits | Weeks (physical cross-connect)| Optional MACsec encryption |
+| **Cloud NAT** | [Yes] Yes (Outbound-only) | Elastic SDN scaling | Minutes | Standard TLS/application-level |
 
 ---
 
@@ -274,7 +274,7 @@ Google Cloud Load Balancing is a fully distributed, software-defined managed ser
 | **DNS Administration** | `roles/dns.admin` | Full control over Cloud DNS managed zones and recordsets |
 | **Load Balancer Operations**| `roles/compute.loadBalancerAdmin`| Full configuration of load balancers, proxies, and URL maps |
 
-> **Separation of Duties Principle ⭐⭐⭐⭐⭐:** In enterprise production, `roles/compute.networkAdmin` and `roles/compute.securityAdmin` must be separated. Network administrators create subnets and routes, while security administrators audit and approve firewall rules.
+> **Separation of Duties Principle (Exam Weight: 5/5):** In enterprise production, `roles/compute.networkAdmin` and `roles/compute.securityAdmin` must be separated. Network administrators create subnets and routes, while security administrators audit and approve firewall rules.
 
 ### Production Security Best Practices
 1. **Never Create Broad Ingress Rules:** Avoid opening `0.0.0.0/0` on all ports (`tcp:0-65535`). Always restrict source ranges to specific corporate IP blocks or load balancer proxy subnets.
@@ -326,9 +326,9 @@ Google Cloud Load Balancing is a fully distributed, software-defined managed ser
 ## 13. Hands-on (Console & CLI Walkthrough)
 
 ### Console Step-by-Step
-1. **Create a Custom Mode VPC & Subnet:** Navigate to **VPC network** ➔ **Create VPC Network** ➔ Name: `prod-vpc` ➔ Under **Subnet creation mode**, choose **Custom** ➔ Add Subnet: Name: `asia-app-subnet`, Region: `asia-south1`, IPv4 range: `10.10.1.0/24` ➔ Under **Private Google Access**, select **On** ➔ Click **Create**.
-2. **Create a Stateful Firewall Rule:** Navigate to **Firewall** ➔ **Create Firewall Rule** ➔ Name: `allow-web-ingress` ➔ Network: `prod-vpc` ➔ Direction: **Ingress** ➔ Action: **Allow** ➔ Targets: **Specified target tags** (`web-server`) ➔ Source IPv4 ranges: `0.0.0.0/0` ➔ Protocols and ports: Check **tcp**, specify `80, 443` ➔ Priority: `1000` ➔ Click **Create**.
-3. **Deploy Cloud NAT:** Navigate to **Network Services** ➔ **Cloud NAT** ➔ **Get Started** ➔ Gateway name: `prod-nat-gw` ➔ VPC network: `prod-vpc` ➔ Region: `asia-south1` ➔ Cloud Router: Select **Create new router** ➔ NAT mapping: **All subnet ranges** ➔ Click **Create**.
+1. **Create a Custom Mode VPC & Subnet:** Navigate to **VPC network** -> **Create VPC Network** -> Name: `prod-vpc` -> Under **Subnet creation mode**, choose **Custom** -> Add Subnet: Name: `asia-app-subnet`, Region: `asia-south1`, IPv4 range: `10.10.1.0/24` -> Under **Private Google Access**, select **On** -> Click **Create**.
+2. **Create a Stateful Firewall Rule:** Navigate to **Firewall** -> **Create Firewall Rule** -> Name: `allow-web-ingress` -> Network: `prod-vpc` -> Direction: **Ingress** -> Action: **Allow** -> Targets: **Specified target tags** (`web-server`) -> Source IPv4 ranges: `0.0.0.0/0` -> Protocols and ports: Check **tcp**, specify `80, 443` -> Priority: `1000` -> Click **Create**.
+3. **Deploy Cloud NAT:** Navigate to **Network Services** -> **Cloud NAT** -> **Get Started** -> Gateway name: `prod-nat-gw` -> VPC network: `prod-vpc` -> Region: `asia-south1` -> Cloud Router: Select **Create new router** -> NAT mapping: **All subnet ranges** -> Click **Create**.
 
 ### CLI (`gcloud`) Command Reference
 
@@ -429,7 +429,7 @@ gcloud dns record-sets create db.corp.internal. \
 
 ---
 
-## 14. ACE Exam Focus ⭐⭐⭐⭐⭐
+## 14. ACE Exam Focus (Exam Weight: 5/5)
 
 ### High-Frequency Exam Core Concepts
 - **VPC Scope vs. Subnet Scope:** VPC is global; Subnet is regional. Subnets span all zones within a region.
@@ -467,8 +467,8 @@ gcloud dns record-sets create db.corp.internal. \
 | :--- | :--- | :--- |
 | **Default Subnet Creation**| 1 subnet automatically created per region | No subnets created by default |
 | **IP Address Control** | Google assigns fixed `/20` CIDR blocks | Architect defines specific CIDR ranges |
-| **Hybrid Connectivity** | ❌ Prone to overlap with on-premises IP space | ✅ Designed to prevent IP collisions |
-| **Production Standard** | ❌ Strictly discouraged | ✅ **Google Cloud Recommended Standard** |
+| **Hybrid Connectivity** | [No] Prone to overlap with on-premises IP space | [Yes] Designed to prevent IP collisions |
+| **Production Standard** | [No] Strictly discouraged | [Yes] **Google Cloud Recommended Standard** |
 
 ### Shared VPC vs. VPC Network Peering
 | Feature / Characteristic | Shared VPC | VPC Network Peering |
@@ -509,7 +509,7 @@ gcloud dns record-sets create db.corp.internal. \
 - **Firewall Mnemonic:** **"In Deny, Out Allow"**  
   - Implied Default Deny Ingress (priority 65535).  
   - Implied Default Allow Egress (priority 65535).
-- **Firewalls are Stateful:** Ingress allowed ➔ return traffic automatically allowed without matching egress rule.
+- **Firewalls are Stateful:** Ingress allowed -> return traffic automatically allowed without matching egress rule.
 - **VPC Peering:** Private, internal, high performance, **NEVER transitive**.
 - **Cloud NAT:** Outbound-only internet access for private VMs without external public IPs.
 - **Private Google Access:** Lets private VMs reach Google APIs internally without internet exposure.
@@ -673,4 +673,4 @@ gcloud dns record-sets create db.corp.internal. \
 
 ---
 
-[⬅️ Previous: Phase 05 — Databases & Analytics](phase-05-databases.md) | [➡️ Next: Phase 07 — Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md)
+[<- Previous: Phase 05 — Databases & Analytics](phase-05-databases.md) | [-> Next: Phase 07 — Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md)

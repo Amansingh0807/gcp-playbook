@@ -1,12 +1,12 @@
-[⬅️ Previous: Phase 04 — Storage Services](phase-04-storage.md) | [➡️ Next: Phase 06 — Networking Services](phase-06-networking.md)
+[<- Previous: Phase 04 — Storage Services](phase-04-storage.md) | [-> Next: Phase 06 — Networking Services](phase-06-networking.md)
 
 ---
 
-# Phase 5 — Databases & Analytics ⭐⭐⭐⭐☆
+# Phase 5 — Databases & Analytics (Exam Weight: 4/5)
 
 > **Prerequisite:** [Phase 04 — Storage Services](phase-04-storage.md)  
 > **Estimated Study Time:** 3–4 Hours  
-> **Exam Weight:** ⭐⭐⭐⭐☆ (High Frequency Exam Domain)  
+> **Exam Weight:** (Exam Weight: 4/5) (High Frequency Exam Domain)  
 > **Covers:** Cloud SQL (MySQL, PostgreSQL, SQL Server), Firestore, Cloud Bigtable, Cloud Spanner, Memorystore (Redis, Memcached), BigQuery (Datasets, Tables, Partitioning, Clustering, Pricing Models), Master Database Comparison Matrix.
 
 **The single most important skill in this phase:** Given a workload description (data shape, transaction requirements, scale, latency), instantly identify and justify the **RIGHT** database. This scenario-matching pattern is tested continuously on the ACE exam.
@@ -33,7 +33,7 @@
 ### What happens if these don't exist:
 - Organizations must maintain dedicated Database Administrator (DBA) teams to manually install, patch, replicate, shard, and scale database engines. This increases operational risk, extends release cycles, and results in costly downtime during hardware failures.
 
-### Remember for ACE Exam ⭐⭐⭐⭐⭐:
+### Remember for ACE Exam (Exam Weight: 5/5):
 The ACE exam tests your ability to evaluate a scenario's technical requirements—data model (relational vs. NoSQL), geographic scope (regional vs. global), consistency requirements (strong vs. eventual), and transaction model (multi-row ACID vs. single-row)—and select the exact matching GCP database.
 
 ---
@@ -45,28 +45,28 @@ The ACE exam tests your ability to evaluate a scenario's technical requirements�
 ```
 Is your data primarily for ANALYTICS (scanning billions of rows, BI dashboards, data warehouse)?
    │
-   ├── YES ──▶ BigQuery (Serverless OLAP Data Warehouse)
+   ├── YES --> BigQuery (Serverless OLAP Data Warehouse)
    │
    └── NO (Live Application / OLTP / Operational Workload)
           │
           ├── Do you need RELATIONAL structure (SQL, tables, JOINs, ACID transactions)?
           │      │
           │      ├── YES: Do you need GLOBAL, horizontally-scalable, strongly-consistent SQL?
-          │      │      ├── YES ──▶ Cloud Spanner
-          │      │      └── NO  ──▶ Cloud SQL (Regional, traditional relational: MySQL/Postgres/SQL Server)
+          │      │      ├── YES --> Cloud Spanner
+          │      │      └── NO  --> Cloud SQL (Regional, traditional relational: MySQL/Postgres/SQL Server)
           │      │
           │      └── NO (NoSQL / Flexible Schema)
           │             │
           │             ├── Do you need an ultra-fast in-memory cache or session store (sub-millisecond)?
-          │             │      └── YES ──▶ Memorystore (Redis / Memcached)
+          │             │      └── YES --> Memorystore (Redis / Memcached)
           │             │
           │             └── NO (Persistent NoSQL Storage)
           │                    │
           │                    ├── Mobile / Web app needing document model & real-time client sync?
-          │                    │      └── YES ──▶ Firestore (Document NoSQL)
+          │                    │      └── YES --> Firestore (Document NoSQL)
           │                    │
           │                    └── Massive-scale, high-throughput, low-latency time-series / IoT (petabytes)?
-          │                           └── YES ──▶ Cloud Bigtable (Wide-column NoSQL, single-row ACID)
+          │                           └── YES --> Cloud Bigtable (Wide-column NoSQL, single-row ACID)
 ```
 
 ### 3.2 How a Query Travels (Cloud SQL Architectural Flow)
@@ -258,7 +258,7 @@ Is your data primarily for ANALYTICS (scanning billions of rows, BI dashboards, 
 | **Memorystore** | Per-GB provisioned cache capacity | Included in memory allocation | Cross-zone / egress rates |
 | **BigQuery** | Per TB scanned (On-Demand) OR Slot/hr | Per-GB active storage ($0.02) & long-term ($0.01)| Standard egress rates |
 
-### BigQuery Cost Model (Critical Exam Concept ⭐⭐⭐⭐⭐)
+### BigQuery Cost Model (Critical Exam Concept (Exam Weight: 5/5))
 - **On-Demand Billing:** You are billed strictly based on the **volume of data SCANNED by the query**, NOT the number of rows returned to your terminal or console.
 - **The `LIMIT` Trap:** Executing `SELECT * FROM large_table LIMIT 10` on an unpartitioned 2 TB table **still scans and charges for the complete 2 TB**. The `LIMIT` clause limits query output display, not the underlying columnar disk scan.
 - **Long-Term Storage Discount:** If a table or partition remains unmodified for 90 consecutive days, its storage rate drops automatically by **50%** (from ~$0.020/GB to ~$0.010/GB) with zero degradation in performance or availability.
@@ -336,8 +336,8 @@ Is your data primarily for ANALYTICS (scanning billions of rows, BI dashboards, 
 ## 13. Hands-on (Console & CLI Walkthrough)
 
 ### Console Step-by-Step
-1. **Create a Cloud SQL Instance:** Navigate to **SQL** ➔ **Create Instance** ➔ Select **PostgreSQL** ➔ Configure instance ID, admin password, and region ➔ Under **Configuration options**, select **Enterprise** edition, set **High Availability (Multiple zones)**, and under **Connections** configure **Private IP**. Click **Create**.
-2. **Create a BigQuery Partitioned Table:** Open **BigQuery Studio** ➔ In the Explorer panel, click project kebab menu ➔ **Create Dataset** (`ecommerce_data`) ➔ Open dataset ➔ Click **Create Table** ➔ Select source as **Upload** or **Empty table** ➔ Under **Partitioning**, choose **Partition by field** ➔ Select your `transaction_timestamp` column.
+1. **Create a Cloud SQL Instance:** Navigate to **SQL** -> **Create Instance** -> Select **PostgreSQL** -> Configure instance ID, admin password, and region -> Under **Configuration options**, select **Enterprise** edition, set **High Availability (Multiple zones)**, and under **Connections** configure **Private IP**. Click **Create**.
+2. **Create a BigQuery Partitioned Table:** Open **BigQuery Studio** -> In the Explorer panel, click project kebab menu -> **Create Dataset** (`ecommerce_data`) -> Open dataset -> Click **Create Table** -> Select source as **Upload** or **Empty table** -> Under **Partitioning**, choose **Partition by field** -> Select your `transaction_timestamp` column.
 
 ### CLI (`gcloud` & `bq`) Command Reference
 
@@ -431,10 +431,10 @@ bq query --use_legacy_sql=false \
 
 ---
 
-## 14. ACE Exam Focus ⭐⭐⭐⭐⭐
+## 14. ACE Exam Focus (Exam Weight: 5/5)
 
 ### High-Frequency Exam Core Concepts
-- **Database Selection by Scenario:** Instantly identify the target service based on keywords: "globally distributed SQL" ➔ **Spanner**; "sub-millisecond in-memory cache" ➔ **Memorystore**; "mobile real-time sync document store" ➔ **Firestore**; "petabyte-scale sensor stream" ➔ **Bigtable**; "data warehouse / SQL over historical terabytes" ➔ **BigQuery**.
+- **Database Selection by Scenario:** Instantly identify the target service based on keywords: "globally distributed SQL" -> **Spanner**; "sub-millisecond in-memory cache" -> **Memorystore**; "mobile real-time sync document store" -> **Firestore**; "petabyte-scale sensor stream" -> **Bigtable**; "data warehouse / SQL over historical terabytes" -> **BigQuery**.
 - **BigQuery Pricing Behavior:** BigQuery on-demand pricing bills by **data scanned**, never by rows returned. Appending `LIMIT 10` does NOT reduce scan volume on columnar data.
 - **Bigtable Single-Row Constraint:** Bigtable guarantees atomic transactions strictly across a single row. It does not support multi-row ACID transactions.
 - **Cloud SQL Availability vs. Read Scaling:**
@@ -453,7 +453,7 @@ bq query --use_legacy_sql=false \
 
 ---
 
-## 15. Master Database Comparison Matrix ⭐⭐⭐⭐⭐
+## 15. Master Database Comparison Matrix (Exam Weight: 5/5)
 
 | Feature / Metric | **Cloud SQL** | **Firestore** | **Cloud Bigtable** | **Cloud Spanner** | **BigQuery** | **Memorystore** |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -468,11 +468,11 @@ bq query --use_legacy_sql=false \
 | **Max Scale** | 64 TB storage | Petabyte scale | Multi-Petabyte | Multi-Petabyte | Virtually Unlimited | Terabyte cache |
 
 > ### The 5-Letter Selection Mnemonic: **"S-F-B-S-B"**
-> - **S**QL regional standard ➔ **Cloud SQL**
-> - **F**lexible mobile document sync ➔ **Firestore**
-> - **B**ig-volume operational time-series ➔ **Bigtable**
-> - **S**trong global consistency SQL ➔ **Spanner**
-> - **B**ig data analytics warehouse ➔ **BigQuery**
+> - **S**QL regional standard -> **Cloud SQL**
+> - **F**lexible mobile document sync -> **Firestore**
+> - **B**ig-volume operational time-series -> **Bigtable**
+> - **S**trong global consistency SQL -> **Spanner**
+> - **B**ig data analytics warehouse -> **BigQuery**
 
 ---
 
@@ -504,7 +504,7 @@ bq query --use_legacy_sql=false \
 - **Spanner:** Globally distributed relational database. Combines horizontal NoSQL scale with multi-row ACID external consistency powered by TrueTime.
 - **BigQuery:** Serverless enterprise OLAP data warehouse. Storage and compute decoupled. On-Demand pricing charges strictly per **data bytes scanned**.
 - **Memorystore:** Managed in-memory caching engine (Redis/Memcached). Delivers sub-millisecond response latency.
-- **The Golden Exam Rule:** For analytics over historical datasets ➔ **BigQuery**. For global multi-region ACID SQL ➔ **Spanner**. For millions of sensor writes per second ➔ **Bigtable**. For mobile apps needing live sync ➔ **Firestore**. For traditional regional SQL ➔ **Cloud SQL**.
+- **The Golden Exam Rule:** For analytics over historical datasets -> **BigQuery**. For global multi-region ACID SQL -> **Spanner**. For millions of sensor writes per second -> **Bigtable**. For mobile apps needing live sync -> **Firestore**. For traditional regional SQL -> **Cloud SQL**.
 
 ---
 
@@ -662,4 +662,4 @@ bq query --use_legacy_sql=false \
 
 ---
 
-[⬅️ Previous: Phase 04 — Storage Services](phase-04-storage.md) | [➡️ Next: Phase 06 — Networking Services](phase-06-networking.md)
+[<- Previous: Phase 04 — Storage Services](phase-04-storage.md) | [-> Next: Phase 06 — Networking Services](phase-06-networking.md)

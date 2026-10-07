@@ -1,12 +1,12 @@
-[⬅️ Previous: Phase 03 — Compute Services](phase-03-compute.md) | [➡️ Next: Phase 05 — Databases & Analytics](phase-05-databases.md)
+[<- Previous: Phase 03 — Compute Services](phase-03-compute.md) | [-> Next: Phase 05 — Databases & Analytics](phase-05-databases.md)
 
 ---
 
-# Phase 4 — Storage Services ⭐⭐⭐⭐⭐
+# Phase 4 — Storage Services (Exam Weight: 5/5)
 
 > **Prerequisite:** [Phase 03 — Compute Services](phase-03-compute.md)  
 > **Estimated Study Time:** 3–4 Hours  
-> **Exam Weight:** ⭐⭐⭐⭐⭐ (One of the Most Heavily Tested Domains)  
+> **Exam Weight:** (Exam Weight: 5/5) (One of the Most Heavily Tested Domains)  
 > **Covers:** Cloud Storage (Buckets, Objects, Naming, Locations, Storage Classes, Versioning, Lifecycle Rules, Retention Policies, Uniform Bucket Access, Signed URLs, Encryption/CMEK), Persistent Disk (Standard/Balanced/SSD/Local SSD), Filestore (awareness).
 
 **Storage is one of the most heavily tested domains in ACE — especially Storage Classes and Lifecycle Rules.**
@@ -49,7 +49,7 @@ A **bucket** is the top-level container in Cloud Storage. Every object (file) mu
 
 > **Analogy:** Think of a bucket like a root folder, but with one critical distinction: its name must be unique across the entire global Google Cloud namespace, not just within your project.
 
-#### Bucket Naming Rules (⚠️ Exam Favorite):
+#### Bucket Naming Rules (Note: Exam Favorite):
 | Rule | Detail |
 |------|--------|
 | **Globally Unique** | No two buckets in the world can have the same name |
@@ -87,16 +87,16 @@ An **object** is the individual file stored inside a bucket. Each object consist
 
 > **Core Concept:** An object represents your raw file bytes paired with descriptor metadata and a unique key that functions as its address within the bucket.
 
-### 3.3 Storage Classes (⚠️ Most Tested Topic)
+### 3.3 Storage Classes (Note: Most Tested Topic)
 
 Storage classes define the **cost**, **availability**, and **minimum storage duration** for objects.
 
 | Storage Class | Use Case | Min Storage Duration | Availability SLA | Relative Cost (Storage) | Relative Cost (Access) |
 |--------------|----------|---------------------|-------------------|------------------------|----------------------|
-| **Standard** | Frequently accessed ("hot") data | None | 99.99% (Region), 99.95% (Multi) | 💰💰💰💰 Highest | 💰 Lowest |
-| **Nearline** | Accessed less than once per 30 days | **30 days** | 99.9% (Region), 99.0% (Multi) | 💰💰💰 | 💰💰 |
-| **Coldline** | Accessed less than once per 90 days | **90 days** | 99.9% (Region), 99.0% (Multi) | 💰💰 | 💰💰💰 |
-| **Archive** | Accessed less than once per 365 days | **365 days** | 99.9% (Region), 99.0% (Multi) | 💰 Lowest | 💰💰💰💰 Highest |
+| **Standard** | Frequently accessed ("hot") data | None | 99.99% (Region), 99.95% (Multi) | Cost: Cost: Cost: Cost: Highest | Cost: Lowest |
+| **Nearline** | Accessed less than once per 30 days | **30 days** | 99.9% (Region), 99.0% (Multi) | Cost: Cost: Cost: | Cost: Cost: |
+| **Coldline** | Accessed less than once per 90 days | **90 days** | 99.9% (Region), 99.0% (Multi) | Cost: Cost: | Cost: Cost: Cost: |
+| **Archive** | Accessed less than once per 365 days | **365 days** | 99.9% (Region), 99.0% (Multi) | Cost: Lowest | Cost: Cost: Cost: Cost: Highest |
 
 #### The Golden Rule of Storage Classes:
 > **As storage cost goes DOWN ↓, access/retrieval cost goes UP ↑**
@@ -134,7 +134,7 @@ gsutil ls -a gs://my-bucket/my-file.txt
 gsutil cp gs://my-bucket/my-file.txt#1234567890 gs://my-bucket/my-file.txt
 ```
 
-### 3.5 Lifecycle Rules (⚠️ Heavily Tested)
+### 3.5 Lifecycle Rules (Note: Heavily Tested)
 
 **Lifecycle rules** automatically perform actions on objects based on conditions you define — most commonly, transitioning storage classes or deleting old objects.
 
@@ -202,8 +202,8 @@ A **retention policy** specifies a minimum period of time that objects must be s
 
 | Access Control Model | How It Works | Recommended? |
 |---------------------|--------------|-------------|
-| **Fine-Grained (ACLs)** | Per-object access control lists — each object can have different permissions | ❌ Legacy — being deprecated |
-| **Uniform Bucket-Level Access** | ALL objects in the bucket inherit the bucket's IAM policy — no per-object ACLs | ✅ **Recommended** (Google best practice) |
+| **Fine-Grained (ACLs)** | Per-object access control lists — each object can have different permissions | [No] Legacy — being deprecated |
+| **Uniform Bucket-Level Access** | ALL objects in the bucket inherit the bucket's IAM policy — no per-object ACLs | [Yes] **Recommended** (Google best practice) |
 
 > **Exam Trap:** Once Uniform Bucket-Level Access is enabled and the 90-day lock period passes, it becomes **permanent** and cannot be reverted to fine-grained ACLs.
 
@@ -280,18 +280,18 @@ gsutil signurl -d 1h /path/to/service-account-key.json gs://my-bucket/my-file.pd
 
 | Feature | Description | Exam Relevance |
 |---------|-------------|----------------|
-| **Global Namespace** | Bucket names are globally unique across all of Google Cloud | ⭐⭐⭐⭐⭐ |
-| **Storage Classes** | Standard, Nearline, Coldline, Archive — cost vs access tradeoff | ⭐⭐⭐⭐⭐ |
-| **Lifecycle Rules** | Auto-transition or delete objects based on age/conditions | ⭐⭐⭐⭐⭐ |
-| **Object Versioning** | Keep historical copies of every object version | ⭐⭐⭐⭐ |
-| **Retention Policies** | Prevent deletion for compliance (lockable) | ⭐⭐⭐⭐ |
-| **Uniform Bucket Access** | Bucket-level IAM only (no per-object ACLs) | ⭐⭐⭐⭐ |
-| **Signed URLs** | Temporary, time-limited access for external users | ⭐⭐⭐⭐ |
-| **CMEK/CSEK** | Customer-managed or customer-supplied encryption keys | ⭐⭐⭐ |
-| **Object Notifications** | Pub/Sub notifications when objects change | ⭐⭐⭐ |
-| **Transfer Service** | Bulk transfer from AWS S3, Azure, or on-prem | ⭐⭐⭐ |
-| **Autoclass** | Automatic storage class management based on access patterns | ⭐⭐⭐ |
-| **Requester Pays** | Requester pays for data access instead of bucket owner | ⭐⭐ |
+| **Global Namespace** | Bucket names are globally unique across all of Google Cloud | (Exam Weight: 5/5) |
+| **Storage Classes** | Standard, Nearline, Coldline, Archive — cost vs access tradeoff | (Exam Weight: 5/5) |
+| **Lifecycle Rules** | Auto-transition or delete objects based on age/conditions | (Exam Weight: 5/5) |
+| **Object Versioning** | Keep historical copies of every object version | (Exam Weight: 4/5) |
+| **Retention Policies** | Prevent deletion for compliance (lockable) | (Exam Weight: 4/5) |
+| **Uniform Bucket Access** | Bucket-level IAM only (no per-object ACLs) | (Exam Weight: 4/5) |
+| **Signed URLs** | Temporary, time-limited access for external users | (Exam Weight: 4/5) |
+| **CMEK/CSEK** | Customer-managed or customer-supplied encryption keys | (Exam Weight: 3/5) |
+| **Object Notifications** | Pub/Sub notifications when objects change | (Exam Weight: 3/5) |
+| **Transfer Service** | Bulk transfer from AWS S3, Azure, or on-prem | (Exam Weight: 3/5) |
+| **Autoclass** | Automatic storage class management based on access patterns | (Exam Weight: 3/5) |
+| **Requester Pays** | Requester pays for data access instead of bucket owner | (Exam Weight: 2/5) |
 
 ---
 
@@ -431,8 +431,8 @@ gcloud compute disks delete my-disk --zone=us-central1-a
 | **Data Persistence** | Survives VM stop/delete | **Data LOST on VM stop, terminate, or maintenance** |
 | **Performance** | Good to Excellent | **Extreme** (highest IOPS) |
 | **Size** | 10 GB to 64 TB | Fixed 375 GB per device (up to 24 devices = 9 TB) |
-| **Snapshots** | ✅ Supported | ❌ NOT supported |
-| **Encryption** | ✅ All types | ✅ Google-managed only |
+| **Snapshots** | [Yes] Supported | [No] NOT supported |
+| **Encryption** | [Yes] All types | [Yes] Google-managed only |
 | **Use Case** | Permanent storage | Caching, scratch space, temp data, high-performance computing |
 
 > **Exam Trap:** Local SSD data is **EPHEMERAL** — it is permanently lost when the VM stops, is deleted, or undergoes maintenance migration. Never use Local SSD for data you need to keep.
@@ -455,17 +455,17 @@ gcloud compute disks delete my-disk --zone=us-central1-a
 
 ---
 
-## 9. Storage Type Comparison (⚠️ Exam Favorite)
+## 9. Storage Type Comparison (Note: Exam Favorite)
 
 | Feature | Cloud Storage | Persistent Disk | Local SSD | Filestore |
 |---------|--------------|-----------------|-----------|-----------|
 | **Type** | Object Storage | Block Storage | Block Storage | File Storage |
 | **Protocol** | HTTP/HTTPS (REST API) | Attached to VM | Attached to VM | NFS |
-| **Persistence** | ✅ Durable | ✅ Durable | ❌ Ephemeral | ✅ Durable |
-| **Shared Access** | ✅ Global | Read-only multi-attach | ❌ Single VM | ✅ Multi-VM NFS |
+| **Persistence** | [Yes] Durable | [Yes] Durable | [No] Ephemeral | [Yes] Durable |
+| **Shared Access** | [Yes] Global | Read-only multi-attach | [No] Single VM | [Yes] Multi-VM NFS |
 | **Max Size** | Unlimited | 64 TB | 9 TB (24 × 375GB) | Up to 100 TB |
 | **Use Case** | Unstructured data, backups, media | VM boot/data disks | Cache, temp, scratch | Shared filesystems |
-| **Exam Focus** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ |
+| **Exam Focus** | (Exam Weight: 5/5) | (Exam Weight: 4/5) | (Exam Weight: 3/5) | (Exam Weight: 2/5) |
 
 ---
 
@@ -517,9 +517,9 @@ gcloud compute disks delete my-disk --zone=us-central1-a
 |---------|---------------------|--------|-------------------|
 | **Storage Classes** | Standard, Nearline, Coldline, Archive | Standard, IA, One-Zone IA, Glacier, Deep Archive | Hot, Cool, Archive |
 | **Archive Retrieval** | **Instant** (milliseconds) | Hours (Glacier) | Hours |
-| **Lifecycle Rules** | ✅ | ✅ | ✅ |
-| **Object Versioning** | ✅ | ✅ | ✅ (Soft Delete) |
-| **Signed URLs** | ✅ | ✅ (Pre-signed URLs) | ✅ (SAS Tokens) |
+| **Lifecycle Rules** | [Yes] | [Yes] | [Yes] |
+| **Object Versioning** | [Yes] | [Yes] | [Yes] (Soft Delete) |
+| **Signed URLs** | [Yes] | [Yes] (Pre-signed URLs) | [Yes] (SAS Tokens) |
 | **Key Advantage** | Instant archive retrieval, simple pricing | Mature ecosystem | Azure integration |
 
 > **Key GCP Advantage:** Google Cloud Storage Archive class has **NO retrieval delay** — data is available in milliseconds. AWS Glacier takes minutes to hours. This is a frequent exam differentiator.
@@ -545,15 +545,15 @@ gcloud compute disks delete my-disk --zone=us-central1-a
 
 | Trap | Truth |
 |------|-------|
-| ❌ "You can rename a bucket" | ✅ **NO** — must create new, copy, delete old |
-| ❌ "You can change bucket location" | ✅ **NO** — location is permanent at creation |
-| ❌ "Archive class has retrieval delay like AWS Glacier" | ✅ **NO** — GCS Archive has instant (millisecond) retrieval |
-| ❌ "Lifecycle rules can transition from Coldline to Standard" | ✅ **NO** — lifecycle only goes colder, never warmer |
-| ❌ "Persistent disks can be decreased in size" | ✅ **NO** — only increased, never decreased |
-| ❌ "Local SSD data persists after VM stop" | ✅ **NO** — data is lost on stop/delete/maintenance |
-| ❌ "Locked retention policy can be removed by admin" | ✅ **NO** — locked is permanent and irreversible |
-| ❌ "Storage Object Creator can read existing objects" | ✅ **NO** — can only create/upload, not read/list/delete |
-| ❌ "Object names must be globally unique" | ✅ **NO** — only bucket names are globally unique; object names are unique within a bucket |
+| [No] "You can rename a bucket" | [Yes] **NO** — must create new, copy, delete old |
+| [No] "You can change bucket location" | [Yes] **NO** — location is permanent at creation |
+| [No] "Archive class has retrieval delay like AWS Glacier" | [Yes] **NO** — GCS Archive has instant (millisecond) retrieval |
+| [No] "Lifecycle rules can transition from Coldline to Standard" | [Yes] **NO** — lifecycle only goes colder, never warmer |
+| [No] "Persistent disks can be decreased in size" | [Yes] **NO** — only increased, never decreased |
+| [No] "Local SSD data persists after VM stop" | [Yes] **NO** — data is lost on stop/delete/maintenance |
+| [No] "Locked retention policy can be removed by admin" | [Yes] **NO** — locked is permanent and irreversible |
+| [No] "Storage Object Creator can read existing objects" | [Yes] **NO** — can only create/upload, not read/list/delete |
+| [No] "Object names must be globally unique" | [Yes] **NO** — only bucket names are globally unique; object names are unique within a bucket |
 
 ---
 
@@ -561,7 +561,7 @@ gcloud compute disks delete my-disk --zone=us-central1-a
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│         ⚡ PHASE 04 STORAGE QUICK REVISION          │
+│         PHASE 04 STORAGE QUICK REVISION          │
 ├─────────────────────────────────────────────────────┤
 │                                                     │
 │  CLOUD STORAGE = Object Storage (HTTP/HTTPS)        │
@@ -600,9 +600,9 @@ gcloud compute disks delete my-disk --zone=us-central1-a
 
 ## 16. Navigation & What's Next
 
-[⬅️ Previous: Phase 03 — Compute Services](phase-03-compute.md) | [➡️ Next: Phase 05 — Databases & Analytics](phase-05-databases.md)
+[<- Previous: Phase 03 — Compute Services](phase-03-compute.md) | [-> Next: Phase 05 — Databases & Analytics](phase-05-databases.md)
 
 ---
 
 *Last Updated: October 2026*  
-*Phase Status: ✅ Complete*
+*Phase Status: [Yes] Complete*
