@@ -19,7 +19,7 @@
 - D) Compute Engine Managed Instance Groups
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) GKE Autopilot Mode**
 
@@ -30,15 +30,15 @@
 
 ### Q2. What is the correct hierarchical order of Kubernetes workload management abstractions from highest level to lowest execution unit?
 
-- A) Pod ➔ ReplicaSet ➔ Deployment
-- B) Deployment ➔ ReplicaSet ➔ Pod
-- C) Service ➔ Deployment ➔ Pod
-- D) ReplicaSet ➔ Deployment ➔ Pod
+- A) Pod -> ReplicaSet -> Deployment
+- B) Deployment -> ReplicaSet -> Pod
+- C) Service -> Deployment -> Pod
+- D) ReplicaSet -> Deployment -> Pod
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
-**B) Deployment ➔ ReplicaSet ➔ Pod**
+**B) Deployment -> ReplicaSet -> Pod**
 
 **Explanation:** In Kubernetes workload management, you declare desired application state in a **Deployment**. The Deployment automatically creates and manages a **ReplicaSet**, which in turn enforces the desired quantity and health of **Pod** instances. A Service is a network abstraction that routes to Pods, not a controller in this lifecycle hierarchy.
 </details>
@@ -53,7 +53,7 @@
 - D) GKE Autopilot is free; customers pay only for network egress.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) GKE Standard bills for provisioned Compute Engine VM nodes; GKE Autopilot bills for resources requested by active Pods.**
 
@@ -70,7 +70,7 @@
 - D) Services are required to enforce IAM access policies on Compute Engine.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Pods are ephemeral with dynamic IP addresses; a Service provides a stable IP and load balances across them.**
 
@@ -87,7 +87,7 @@
 - D) Workload Identity
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Node Auto-Repair**
 
@@ -104,7 +104,7 @@
 - D) An external load balancer forwarding traffic into the cluster.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) A group of worker nodes within a cluster that share identical hardware and machine configurations.**
 
@@ -121,7 +121,7 @@
 - D) Allocate persistent SSD disks to every pod.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Configure a node pool using Spot VMs.**
 
@@ -138,7 +138,7 @@
 - D) Prevents developers from executing kubectl commands.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Allows pods to authenticate to Google Cloud APIs securely without storing static service account JSON key files.**
 
@@ -155,7 +155,7 @@
 - D) ReplicaSet
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Cluster Autoscaler (CA)**
 
@@ -172,7 +172,7 @@
 - D) Automatically encrypting pod storage volumes.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Logically partitioning cluster resources and access control across teams or environments.**
 
@@ -194,7 +194,7 @@
 - E) Customers can SSH directly into underlying worker node virtual machines.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Google completely manages worker node provisioning, maintenance, and security hardening, C) Billing is calculated based on the CPU, memory, and storage requested by running Pods.**
 
@@ -212,7 +212,7 @@
 - E) VPC Subnet
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Pod, B) Deployment, C) Service**
 
@@ -230,7 +230,7 @@
 - E) Automated client DNS registration
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Node Auto-Upgrade, B) Node Auto-Repair**
 
@@ -248,7 +248,7 @@
 - E) Pods can only run directly on bare metal physical servers.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) It is the smallest deployable computing unit in Kubernetes, B) It can encapsulate one or more tightly coupled containers sharing network and storage.**
 
@@ -266,7 +266,7 @@
 - E) High-performance computing workloads requiring bare-metal host access.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) A simple stateless web microservice that benefits from automatic scale-to-zero, C) An application team wanting minimal operational complexity with zero cluster configuration.**
 
@@ -275,11 +275,11 @@
 
 ---
 
-## 📊 Score Tracker
+## Score Tracker
 
 | Score | Verdict |
 | :---: | :--- |
-| **15/15** | 🏆 **Kubernetes Master:** Fully prepared for GKE exam scenarios. |
-| **13–14** | ✅ **Solid Readiness:** Minor review of Workload Identity or scaling mechanics needed. |
-| **10–12** | ⚠️ **Needs Review:** Re-read Section 6 (Standard vs. Autopilot) and Section 4 (Object Hierarchy). |
-| **< 10** | 🔄 **Re-study Phase 07:** Thoroughly study the Deployment ➔ ReplicaSet ➔ Pod ➔ Service chain. |
+| **15/15** | **Kubernetes Master:** Fully prepared for GKE exam scenarios. |
+| **13–14** | [Yes] **Solid Readiness:** Minor review of Workload Identity or scaling mechanics needed. |
+| **10–12** | Note: **Needs Review:** Re-read Section 6 (Standard vs. Autopilot) and Section 4 (Object Hierarchy). |
+| **< 10** | **Re-study Phase 07:** Thoroughly study the Deployment -> ReplicaSet -> Pod -> Service chain. |

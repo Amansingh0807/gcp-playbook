@@ -19,7 +19,7 @@
 - D) The project will be automatically unlinked from the billing account.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) An alert notification will be sent to billing administrators, but resources will continue running and accruing charges.**
 
@@ -36,7 +36,7 @@
 - D) Running the database on Spot VMs
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Purchasing a 3-year Committed Use Discount (CUD)**
 
@@ -53,7 +53,7 @@
 - D) Projects can only accrue costs if they are hosted in the same region as the billing account.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) One billing account can be linked to multiple projects, but each project can only link to one billing account at a time.**
 
@@ -70,7 +70,7 @@
 - D) The Google Cloud Pricing Calculator
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) A regional Allocation Quota**
 
@@ -87,7 +87,7 @@
 - D) Cloud Monitoring Dashboards
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Google Cloud Pricing Calculator**
 
@@ -104,7 +104,7 @@
 - D) Request a quota decrease to zero from Google Support.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Connect the Budget to a Pub/Sub topic that triggers a Cloud Function to disable billing on the project.**
 
@@ -121,7 +121,7 @@
 - D) `roles/billing.viewer`
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) `roles/billing.costsManager`**
 
@@ -138,7 +138,7 @@
 - D) By attaching the label `discount: sustained-use` to the VM instance.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Automatically applied by Google at the end of the billing cycle based on continuous runtime during the month.**
 
@@ -155,7 +155,7 @@
 - D) Google Cloud Ops Agent on all virtual machines
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Cloud Billing Export to BigQuery**
 
@@ -172,7 +172,7 @@
 - D) The billing account has not synchronized with the project.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) The attached Persistent Disk was not set to auto-delete and remains provisioned as an orphaned disk.**
 
@@ -194,7 +194,7 @@
 - E) Budgets cannot send programmatic notifications to Cloud Pub/Sub.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Budgets can be scoped to specific projects, products, or resource labels, B) Budget alerts can be evaluated against both Actual Spend and Forecasted Spend.**
 
@@ -212,7 +212,7 @@
 - E) Network Bandwidth Ingress Quotas
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Rate Quotas (limiting API requests over a short time window), B) Allocation Quotas (limiting the number of provisioned resources in a region).**
 
@@ -230,7 +230,7 @@
 - E) They only apply to Cloud Storage buckets and cannot be used for Compute Engine.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) They require an upfront contractual commitment of either 1 year or 3 years, B) The customer is financially obligated to pay for the committed capacity even if actual resource usage is lower.**
 
@@ -248,7 +248,7 @@
 - E) `roles/resourcemanager.organizationAdmin`
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) `roles/billing.admin`, B) `roles/billing.costsManager`, C) `roles/billing.user`.**
 
@@ -266,7 +266,7 @@
 - E) Relying exclusively on standard on-demand pricing for predictable 24/7 production workloads.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Applying consistent resource labels to enable granular cost attribution in BigQuery billing exports, B) Deleting unassigned static external IP addresses and detached persistent disks.**
 
@@ -275,11 +275,11 @@
 
 ---
 
-## 📊 Score Tracker
+## Score Tracker
 
 | Score | Verdict |
 | :---: | :--- |
-| **15/15** | 🏆 **FinOps Master:** 100% prepared for Cloud Billing, Budgets, Quotas, and Discount models. |
-| **13–14** | ✅ **Solid Readiness:** Excellent grasp of billing concepts; minor review of IAM roles or automated spend caps needed. |
-| **10–12** | ⚠️ **Needs Review:** Re-read Section 6 (Discounts Comparison) and Section 14 (Exam Focus & Traps). |
-| **< 10** | 🔄 **Re-study Phase 10:** Review the core distinction between Budgets (alerts) and Quotas (hard limits). |
+| **15/15** | **FinOps Master:** 100% prepared for Cloud Billing, Budgets, Quotas, and Discount models. |
+| **13–14** | [Yes] **Solid Readiness:** Excellent grasp of billing concepts; minor review of IAM roles or automated spend caps needed. |
+| **10–12** | Note: **Needs Review:** Re-read Section 6 (Discounts Comparison) and Section 14 (Exam Focus & Traps). |
+| **< 10** | **Re-study Phase 10:** Review the core distinction between Budgets (alerts) and Quotas (hard limits). |

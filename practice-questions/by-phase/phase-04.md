@@ -19,7 +19,7 @@
 - D) Store everything in Nearline from the start
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Standard → Nearline at 30 days → Coldline at 90 days → Archive at 365 days**
 
@@ -38,7 +38,7 @@
 - D) Add the contractor's email to the bucket's ACL
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Generate a Signed URL with a 24-hour expiry**
 
@@ -55,7 +55,7 @@
 - D) Remove the `storage.objectAdmin` role from all users
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Set a Retention Policy of 7 years and lock it**
 
@@ -72,7 +72,7 @@
 - D) Data is saved to a snapshot
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Data is permanently lost**
 
@@ -89,7 +89,7 @@
 - D) Bucket names can contain uppercase letters
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Bucket names are globally unique across all of Google Cloud**
 
@@ -106,7 +106,7 @@
 - D) Balanced Persistent Disk (`pd-balanced`)
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) SSD Persistent Disk (`pd-ssd`)**
 
@@ -123,7 +123,7 @@
 - D) The file is archived to Coldline storage automatically
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) A delete marker is placed; the previous version is preserved and retrievable**
 
@@ -140,7 +140,7 @@
 - D) Delete objects older than 365 days
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Transition objects from Archive to Standard**
 
@@ -157,7 +157,7 @@
 - D) Delete the disk and recreate with 50 GB
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Create a new 50 GB disk, copy data, detach the old disk, attach the new one**
 
@@ -174,7 +174,7 @@
 - D) Data is encrypted only if stored in Archive class
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Data is encrypted at rest using Google-managed AES-256 encryption keys**
 
@@ -196,7 +196,7 @@
 - E) Global
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Region, C) Dual-Region, D) Multi-Region**
 
@@ -214,7 +214,7 @@
 - E) They can grant both read and write access
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) They provide temporary access to private objects, B) The accessor does NOT need a Google account, D) Maximum validity for V4 signing is 7 days, E) They can grant both read and write access**
 
@@ -234,7 +234,7 @@
 - E) Persistent Disks can be resized; Local SSDs have fixed 375 GB per device
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Persistent Disks support snapshots; Local SSDs do not, B) Persistent Disks survive VM stops; Local SSD data is lost, C) Local SSDs provide higher IOPS than Persistent Disks, E) Persistent Disks can be resized; Local SSDs have fixed 375 GB per device**
 
@@ -252,7 +252,7 @@
 - E) It replaces the need for encryption
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) All objects inherit the bucket's IAM policy, C) After the 90-day lock period, it becomes permanent**
 
@@ -270,7 +270,7 @@
 - E) Archiving data for long-term compliance
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Providing shared file storage accessible by multiple VMs via NFS, D) Shared filesystem for GKE pods that need ReadWriteMany access**
 
@@ -279,11 +279,11 @@
 
 ---
 
-## 📊 Score Tracker
+## Score Tracker
 
 | Score | Verdict |
 |-------|---------|
-| 15/15 | 🏆 Storage Master — You're exam-ready for this domain |
-| 13–14 | ✅ Solid — Minor review needed |
-| 10–12 | ⚠️ Re-read Storage Classes, Lifecycle Rules, and PD vs Local SSD |
-| Below 10 | 🔄 Re-study Phase 04 completely, focus on the Gotchas & Traps section |
+| 15/15 | Storage Master — You're exam-ready for this domain |
+| 13–14 | [Yes] Solid — Minor review needed |
+| 10–12 | Note: Re-read Storage Classes, Lifecycle Rules, and PD vs Local SSD |
+| Below 10 | Re-study Phase 04 completely, focus on the Gotchas & Traps section |

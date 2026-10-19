@@ -1,14 +1,14 @@
-# 🏆 Google Cloud ACE — High-Frequency & Recurring Exam Questions
+# Google Cloud ACE — High-Frequency & Recurring Exam Questions
 
 > **Value Note:** These questions represent scenarios, architectural patterns, and tricky edge cases that candidates consistently report encountering on the Google Cloud Associate Cloud Engineer (ACE) exam year after year. Drill these thoroughly before your test.
 
 ---
 
-## ⚡ Quick-Hit Trap Master Table
+## Quick-Hit Trap Master Table
 
 | Concept Area | The Trap / Misconception | The Golden Rule / Reality |
 | :--- | :--- | :--- |
-| **Billing Budgets** | Thinking setting a budget will stop VMs or cap spending | **Budgets only notify!** Automatic shutdown requires `Pub/Sub` ➔ `Cloud Function` to detach billing. |
+| **Billing Budgets** | Thinking setting a budget will stop VMs or cap spending | **Budgets only notify!** Automatic shutdown requires `Pub/Sub` -> `Cloud Function` to detach billing. |
 | **IAM Inheritance** | Believing you can revoke an Org-level permission at the Project level | **IAM is strictly ADDITIVE (Union).** Permissions granted at parent nodes cannot be removed lower down. |
 | **Static External IPs** | Believing you only pay for static IPs when instances are active | **Unattached static external IPs incur hourly charges** to prevent hoarding. Attached IPs to running VMs are free (or lower cost depending on tier). |
 | **Network Traffic** | Assuming cross-region data transfer is free | **Ingress is FREE; Egress is CHARGED.** Moving data out of GCP or between regions incurs egress bandwidth costs. |
@@ -21,7 +21,7 @@
 
 ---
 
-## 🔥 Top Recurring Scenario Questions
+## Top Recurring Scenario Questions
 
 ### High-Frequency Scenario 1: Automated Spend Capping
 **Scenario:**  
@@ -144,9 +144,9 @@ Your compliance department mandates that financial transaction logs stored in a 
 
 **Why it's correct:**  
 **Object Lifecycle Management** provides automated, rule-based tiering:
-- Standard ➔ Nearline (accessed < once/month)
-- Nearline ➔ Coldline (accessed < once/quarter)
-- Coldline ➔ Archive (accessed < once/year, lowest cost per GB-month).
+- Standard -> Nearline (accessed < once/month)
+- Nearline -> Coldline (accessed < once/quarter)
+- Coldline -> Archive (accessed < once/year, lowest cost per GB-month).
 
 **Why other options are incorrect:**  
 - **A:** Manual scripting adds operational overhead and risks silent failure.

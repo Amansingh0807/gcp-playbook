@@ -19,7 +19,7 @@
 - D) Custom Ops Agent Logs
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Admin Activity Audit Logs**
 
@@ -36,7 +36,7 @@
 - D) Cloud Logging sink routing to Pub/Sub
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Cloud Monitoring Uptime Check paired with an Alert Policy**
 
@@ -53,7 +53,7 @@
 - D) Error Reporting
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Cloud Trace**
 
@@ -70,7 +70,7 @@
 - D) BigQuery partitioned dataset
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Cloud Storage bucket configured with Coldline or Archive storage**
 
@@ -87,7 +87,7 @@
 - D) Data Access logs disable Google Cloud committed use discounts.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Data Access logs record every read and write of user data, generating massive log volumes and substantial ingestion charges.**
 
@@ -104,7 +104,7 @@
 - D) Cloud Monitoring only functions on Google Kubernetes Engine.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Cloud Monitoring captures numeric time-series metrics; Cloud Logging captures discrete event records.**
 
@@ -121,7 +121,7 @@
 - D) Compute Engine metadata server
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) The immutable `_Required` log bucket in Cloud Logging**
 
@@ -138,7 +138,7 @@
 - D) Cloud Logging
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Cloud Profiler**
 
@@ -155,7 +155,7 @@
 - D) Ops Agent
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Log Router**
 
@@ -172,7 +172,7 @@
 - D) They force Data Access logs to become free of charge.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) They discard high-volume, low-value logs at ingestion, preventing unwanted storage and ingestion fees.**
 
@@ -194,7 +194,7 @@
 - E) Cloud Profiler Execution
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Admin Activity, C) System Event, D) Policy Denied**
 
@@ -212,7 +212,7 @@
 - E) Compute Engine persistent disk
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) BigQuery dataset, B) Cloud Storage bucket, C) Cloud Pub/Sub topic**
 
@@ -230,7 +230,7 @@
 - E) Running Process Table Memory Footprint
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Hypervisor CPU Utilization, C) Network Egress Packet Count**
 
@@ -248,7 +248,7 @@
 - E) Cloud Trace only functions on on-premises bare metal servers.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Cloud Trace inspects distributed latency across microservices in a request path, B) Cloud Profiler inspects CPU and memory allocation within application source code.**
 
@@ -266,7 +266,7 @@
 - E) Converting all monitoring metrics into text logs.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Implementing log exclusion filters to drop repetitive load balancer health-check entries, C) Routing long-term compliance logs to Cloud Storage Nearline/Coldline buckets.**
 
@@ -275,11 +275,11 @@
 
 ---
 
-## 📊 Score Tracker
+## Score Tracker
 
 | Score | Verdict |
 | :---: | :--- |
-| **15/15** | 🏆 **Observability Master:** Completely prepared for monitoring and logging exam questions. |
-| **13–14** | ✅ **Solid Readiness:** Minor review of audit log billing or Ops Agent capabilities needed. |
-| **10–12** | ⚠️ **Needs Review:** Re-read Section 6 (Audit Logs Matrix) and Section 4.2 (Log Router & Sinks). |
-| **< 10** | 🔄 **Re-study Phase 08:** Review the distinction between Monitoring (metrics) and Logging (events). |
+| **15/15** | **Observability Master:** Completely prepared for monitoring and logging exam questions. |
+| **13–14** | [Yes] **Solid Readiness:** Minor review of audit log billing or Ops Agent capabilities needed. |
+| **10–12** | Note: **Needs Review:** Re-read Section 6 (Audit Logs Matrix) and Section 4.2 (Log Router & Sinks). |
+| **< 10** | **Re-study Phase 08:** Review the distinction between Monitoring (metrics) and Logging (events). |

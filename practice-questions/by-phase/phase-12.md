@@ -19,7 +19,7 @@
 - D) App Engine Flexible environment with a minimum of 1 instance
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Cloud Run configured to scale to zero**
 
@@ -36,7 +36,7 @@
 - D) Firestore in Datastore mode
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Cloud Spanner with a Multi-Region configuration**
 
@@ -53,7 +53,7 @@
 - D) Configure VPC Network Peering to an external network
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Deploy a Cloud NAT gateway on the subnet**
 
@@ -70,7 +70,7 @@
 - D) Grant the Compute Engine default node service account the `roles/bigquery.admin` role
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Configure GKE Workload Identity to bind the Kubernetes Service Account to a Google Service Account**
 
@@ -87,7 +87,7 @@
 - D) Cloud Build substitution macros
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) HashiCorp Terraform**
 
@@ -104,7 +104,7 @@
 - D) GKE clusters scale down to zero worker nodes
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Resources continue running and accruing charges uninterrupted**
 
@@ -121,7 +121,7 @@
 - D) Local SSD array
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Filestore**
 
@@ -138,7 +138,7 @@
 - D) Nobody; Admin Activity audit logs are permanently enabled and cannot be disabled
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **D) Nobody; Admin Activity audit logs are permanently enabled and cannot be disabled**
 
@@ -155,7 +155,7 @@
 - D) External Passthrough Network Load Balancer
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Global External Application Load Balancer**
 
@@ -172,7 +172,7 @@
 - D) Manual Infrastructure as Code
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Continuous Delivery (CD)**
 
@@ -194,7 +194,7 @@
 - E) VPC firewall rules are applied at the project level and cannot filter traffic by network tags.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) VPC networks in Google Cloud are global resources that span all geographical regions, B) Subnets are regional resources that reside entirely within a single specified region.**
 
@@ -212,7 +212,7 @@
 - E) Reserving static external IP addresses and leaving them unattached to virtual machines.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Utilizing Spot VMs for fault-tolerant, batch rendering workloads, B) Purchasing Committed Use Discounts (CUDs) for predictable 24/7 database instances, C) Configuring automated snapshot schedules with retention expiration rules to clean old backups.**
 
@@ -230,7 +230,7 @@
 - E) App Engine Flexible
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Cloud Run, B) App Engine Standard.**
 
@@ -248,7 +248,7 @@
 - E) Cloud Storage Transfer Service
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Cloud Dedicated Interconnect, B) High Availability (HA) Cloud VPN.**
 
@@ -266,7 +266,7 @@
 - E) Custom roles should be created for every single user in an organization.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Predefined roles should always be prioritized over Primitive roles (Owner, Editor, Viewer), B) Workloads and applications should authenticate using dedicated Service Accounts rather than human user credentials.**
 
@@ -275,11 +275,11 @@
 
 ---
 
-## 📊 Score Tracker
+## Score Tracker
 
 | Score | Verdict |
 | :---: | :--- |
-| **15/15** | 🏆 **ACE Grandmaster:** Fully prepared to pass the Google Cloud Associate Cloud Engineer exam with distinction! |
-| **13–14** | ✅ **Exam-Ready:** Outstanding score; review any missed battlecard nuances before taking the test. |
-| **11–12** | ⚠️ **Near Passing:** Review the 5 Decision Trees and 10 Exam Gotchas in Phase 12. |
-| **< 11** | 🔄 **Targeted Review:** Revisit the specific domain chapters (Compute, Networking, IAM, or Storage) where mistakes occurred. |
+| **15/15** | **ACE Grandmaster:** Fully prepared to pass the Google Cloud Associate Cloud Engineer exam with distinction! |
+| **13–14** | [Yes] **Exam-Ready:** Outstanding score; review any missed battlecard nuances before taking the test. |
+| **11–12** | Note: **Near Passing:** Review the 5 Decision Trees and 10 Exam Gotchas in Phase 12. |
+| **< 11** | **Targeted Review:** Revisit the specific domain chapters (Compute, Networking, IAM, or Storage) where mistakes occurred. |

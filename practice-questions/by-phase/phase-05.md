@@ -19,7 +19,7 @@
 - D) Cloud Spanner
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **D) Cloud Spanner**
 
@@ -36,7 +36,7 @@
 - D) The query fails because LIMIT is unsupported in on-demand mode.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) The analyst is billed for scanning the full 3 TB of data.**
 
@@ -53,7 +53,7 @@
 - D) Memorystore for Memcached
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Firestore in Native Mode**
 
@@ -70,7 +70,7 @@
 - D) BigQuery
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Cloud Bigtable**
 
@@ -87,7 +87,7 @@
 - D) HA and Read Replicas are identical configurations with differing administrative names.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) HA maintains a standby instance in a secondary zone for automatic failover; Read Replicas offload read traffic.**
 
@@ -104,7 +104,7 @@
 - D) Enable High Availability on the BigQuery dataset.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Partition the BigQuery table by the `order_date` column.**
 
@@ -121,7 +121,7 @@
 - D) Cloud Spanner
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Cloud Bigtable**
 
@@ -138,7 +138,7 @@
 - D) Providing cold disaster recovery storage for disk snapshots.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Serving as an in-memory caching tier to reduce read latency and primary database CPU utilization.**
 
@@ -155,7 +155,7 @@
 - D) BigQuery
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Cloud SQL**
 
@@ -172,7 +172,7 @@
 - D) Spot analytical pricing
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Capacity-based commitment reservations (Slots)**
 
@@ -194,7 +194,7 @@
 - E) Cloud Storage
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Firestore, C) Cloud Bigtable**
 
@@ -212,7 +212,7 @@
 - E) It enforces a strict single-row transaction constraint.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) It delivers external consistency globally using TrueTime technology, B) It supports multi-row, multi-table ACID transactions, D) It can scale compute and storage horizontally without maintenance downtime.**
 
@@ -229,7 +229,7 @@
 - D) The workload requires frequent low-latency single-row UPDATE and DELETE operations.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) The primary workload consists of complex analytical aggregations across terabytes of historical records, C) The team requires a serverless architecture where storage and compute scale and bill independently.**
 
@@ -247,7 +247,7 @@
 - E) Hash-based key partitioning
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Time-unit column partitioning, B) Ingestion-time partitioning, C) Integer-range partitioning**
 
@@ -264,7 +264,7 @@
 - D) It utilizes a hierarchical document-collection data model identical to Firestore.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) It scales linearly by adding worker nodes to the cluster, C) It is compatible with the Apache HBase open-source API standard.**
 
@@ -273,11 +273,11 @@
 
 ---
 
-## 📊 Score Tracker
+## Score Tracker
 
 | Score | Verdict |
 | :---: | :--- |
-| **15/15** | 🏆 **Database Architect Master:** Completely exam-ready for this domain. |
-| **13–14** | ✅ **Solid Readiness:** Minor review of BigQuery cost model or Spanner TrueTime needed. |
-| **10–12** | ⚠️ **Needs Review:** Re-read the Master Database Comparison Matrix and Bigtable vs. BigQuery traps. |
-| **< 10** | 🔄 **Re-study Phase 05:** Carefully review Section 3 (Decision Tree) and Section 15 (Master Comparison Table). |
+| **15/15** | **Database Architect Master:** Completely exam-ready for this domain. |
+| **13–14** | [Yes] **Solid Readiness:** Minor review of BigQuery cost model or Spanner TrueTime needed. |
+| **10–12** | Note: **Needs Review:** Re-read the Master Database Comparison Matrix and Bigtable vs. BigQuery traps. |
+| **< 10** | **Re-study Phase 05:** Carefully review Section 3 (Decision Tree) and Section 15 (Master Comparison Table). |

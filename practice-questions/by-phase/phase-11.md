@@ -19,7 +19,7 @@
 - D) A Zonal Persistent Disk attached to a Compute Engine VM
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Cloud SQL High Availability (Regional configuration)**
 
@@ -36,7 +36,7 @@
 - D) Replication is free of charge, whereas backups incur network egress fees.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) A Backup is a static point-in-time copy used for restoration, whereas Replication is a continuous copy designed for rapid failover.**
 
@@ -53,7 +53,7 @@
 - D) Cold Standby
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Fault Tolerance**
 
@@ -70,7 +70,7 @@
 - D) Cloud Storage Archive bucket
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Regional Persistent Disk**
 
@@ -87,7 +87,7 @@
 - D) The network throughput speed between two regional data centers.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) The maximum acceptable amount of data loss measured backward in time from an incident.**
 
@@ -104,7 +104,7 @@
 - D) Unmanaged Instance Group
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Regional Managed Instance Group**
 
@@ -121,7 +121,7 @@
 - D) Warm Standby with auto-scaling compute pools
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Backup & Restore using daily automated snapshots**
 
@@ -138,7 +138,7 @@
 - D) Regional Persistent Disks only support magnetic hard drives.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Physical distance between distant regions introduces speed-of-light network latency, delaying transaction confirmation.**
 
@@ -155,7 +155,7 @@
 - D) Private Cluster
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Regional Cluster**
 
@@ -172,7 +172,7 @@
 - D) In BigQuery analytical datasets
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) In Google Cloud Storage across a Multi-Region location**
 
@@ -194,7 +194,7 @@
 - E) Compute Engine virtual machine instances can be configured as native regional resources directly without instance groups.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) A Zonal resource exists exclusively within a single physical availability zone, B) Zonal resources are generally less expensive than their Regional equivalents.**
 
@@ -212,7 +212,7 @@
 - E) Cloud Shell development environment
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Persistent Disk (Regional Persistent Disk), B) Cloud SQL (High Availability Regional configuration), C) Google Kubernetes Engine (Regional Cluster).**
 
@@ -230,7 +230,7 @@
 - E) High Availability and Fault Tolerance are identical terms with no technical distinction.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) High Availability minimizes downtime but may experience a brief, transient failover interruption, B) Fault Tolerance guarantees continuous operation with zero noticeable interruption to end users.**
 
@@ -248,7 +248,7 @@
 - E) Unmanaged Instance Group Cycling
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Backup & Restore (Cold), B) Warm Standby, C) Hot Standby (Active-Active).**
 
@@ -266,7 +266,7 @@
 - E) Synchronous replication is only supported on Cloud Storage Archive buckets.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Synchronous replication guarantees zero data loss (RPO = 0) between primary and replica, B) Asynchronous replication is generally preferred across long geographical distances to minimize write latency.**
 
@@ -275,11 +275,11 @@
 
 ---
 
-## 📊 Score Tracker
+## Score Tracker
 
 | Score | Verdict |
 | :---: | :--- |
-| **15/15** | 🏆 **Reliability Architect:** 100% prepared for HA, DR, and cross-zone replication exam questions. |
-| **13–14** | ✅ **Solid Readiness:** Excellent grasp of resilience principles; minor review of RTO/RPO or Cloud SQL HA needed. |
-| **10–12** | ⚠️ **Needs Review:** Re-read Section 6 (DR Strategies) and Section 14 (Exam Focus & Traps). |
-| **< 10** | 🔄 **Re-study Phase 11:** Review the difference between Zonal, Regional, and Multi-Regional resource scopes. |
+| **15/15** | **Reliability Architect:** 100% prepared for HA, DR, and cross-zone replication exam questions. |
+| **13–14** | [Yes] **Solid Readiness:** Excellent grasp of resilience principles; minor review of RTO/RPO or Cloud SQL HA needed. |
+| **10–12** | Note: **Needs Review:** Re-read Section 6 (DR Strategies) and Section 14 (Exam Focus & Traps). |
+| **< 10** | **Re-study Phase 11:** Review the difference between Zonal, Regional, and Multi-Regional resource scopes. |

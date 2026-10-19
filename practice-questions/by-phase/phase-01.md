@@ -11,10 +11,10 @@
 
 ### Question 1 [Resource Hierarchy Sequence]
 What is the correct structural hierarchy of Google Cloud resources, ordered from the top (broadest scope) to the bottom (most specific scope)?
-- [ ] A. Project ➔ Folder ➔ Organization ➔ Resource
-- [ ] B. Organization ➔ Folder ➔ Project ➔ Resource
-- [ ] C. Folder ➔ Organization ➔ Project ➔ Resource
-- [ ] D. Organization ➔ Project ➔ Folder ➔ Resource
+- [ ] A. Project -> Folder -> Organization -> Resource
+- [ ] B. Organization -> Folder -> Project -> Resource
+- [ ] C. Folder -> Organization -> Project -> Resource
+- [ ] D. Organization -> Project -> Folder -> Resource
 
 <details>
 <summary><b>View Answer & Detailed Explanation</b></summary>
@@ -23,12 +23,12 @@ What is the correct structural hierarchy of Google Cloud resources, ordered from
 
 **Why it's correct:**
 The standard Google Cloud Resource Hierarchy is strictly structured as:
-`Organization (root)` ➔ `Folders (optional, can nest up to 10 deep)` ➔ `Projects (mandatory container)` ➔ `Resources (leaf nodes like VMs, Buckets, DBs)`.
+`Organization (root)` -> `Folders (optional, can nest up to 10 deep)` -> `Projects (mandatory container)` -> `Resources (leaf nodes like VMs, Buckets, DBs)`.
 
 **Why other options are incorrect:**
 - **A, C, D:** These represent invalid or inverted hierarchy sequences. Folders can never contain an Organization, and Resources always reside inside Projects.
 
-> **Key Exam Takeaway:** Mnemonic: **O**h **F**ine, **P**lease **R**elax (Organization ➔ Folder ➔ Project ➔ Resource).
+> **Key Exam Takeaway:** Mnemonic: **O**h **F**ine, **P**lease **R**elax (Organization -> Folder -> Project -> Resource).
 </details>
 
 ---
@@ -251,7 +251,7 @@ In Google Cloud, **one Cloud Billing Account can be linked to multiple projects*
 - **C:** A project can only be linked to **one** billing account at a time.
 - **D:** Billing accounts are linked to Projects, not directly to Folders.
 
-> **Key Exam Takeaway:** 1 Billing Account ➔ Many Projects. 1 Project ➔ Exactly 1 Billing Account.
+> **Key Exam Takeaway:** 1 Billing Account -> Many Projects. 1 Project -> Exactly 1 Billing Account.
 </details>
 
 ---
@@ -278,7 +278,7 @@ The Resource Hierarchy strictly consists of Organization, Folders, Projects, and
 - **C (Subnet):** A networking resource inside a project.
 - **E (Region):** A physical geographic infrastructure designation, not a resource hierarchy node.
 
-> **Key Exam Takeaway:** Hierarchy tree nodes: Organization ➔ Folder ➔ Project.
+> **Key Exam Takeaway:** Hierarchy tree nodes: Organization -> Folder -> Project.
 </details>
 
 ---

@@ -19,7 +19,7 @@
 - D) Configure an Ingress firewall rule allowing `0.0.0.0/0` on port 80.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Deploy a Cloud NAT gateway on a Cloud Router in the subnet's region.**
 
@@ -36,7 +36,7 @@
 - D) The connection succeeds only if dynamic BGP routing is enabled.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) The connection fails because VPC peering is strictly non-transitive.**
 
@@ -53,7 +53,7 @@
 - D) Dynamic Mesh VPC
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Custom Mode VPC**
 
@@ -70,7 +70,7 @@
 - D) Egress rules always evaluate before Ingress rules regardless of priority.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) The lowest numerical value (e.g., Priority 100 beats Priority 1000).**
 
@@ -87,7 +87,7 @@
 - D) Cloud NAT
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Shared VPC**
 
@@ -104,7 +104,7 @@
 - D) Internal Passthrough Network Load Balancer
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Global External Application Load Balancer**
 
@@ -121,7 +121,7 @@
 - D) Only traffic from the same subnet is accepted.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) All inbound traffic is dropped by the implied Deny Ingress rule.**
 
@@ -138,7 +138,7 @@
 - D) Cloud NAT Gateway
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Dedicated Cloud Interconnect**
 
@@ -155,7 +155,7 @@
 - D) The return traffic is routed through Cloud NAT automatically.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) The return traffic is automatically allowed because GCP firewalls are stateful.**
 
@@ -172,7 +172,7 @@
 - D) External Passthrough Load Balancing
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Private Google Access**
 
@@ -194,7 +194,7 @@
 - E) Subnets can be shrunk in size dynamically after creation.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) A VPC network is a global resource spanning all regions worldwide, C) A subnet is a regional resource that spans all zones within its region.**
 
@@ -212,7 +212,7 @@
 - E) Cloud Storage bucket names
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Network Tags applied to VM instances, B) Service Accounts attached to VM instances**
 
@@ -230,7 +230,7 @@
 - E) It can only translate traffic within a single availability zone.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) It provides outbound-only internet connectivity for instances lacking external IP addresses, C) It is a fully managed, software-defined service requiring no proxy instances.**
 
@@ -248,7 +248,7 @@
 - E) SSL Proxy Load Balancer
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Global External Application Load Balancer, B) Internal Application Load Balancer**
 
@@ -266,7 +266,7 @@
 - E) Peering requires provisioning an intermediate Cloud Router in every zone.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Peered networks exchange internal RFC 1918 traffic without traversing the public internet, C) Peered VPC networks cannot possess overlapping subnet CIDR blocks.**
 
@@ -275,11 +275,11 @@
 
 ---
 
-## 📊 Score Tracker
+## Score Tracker
 
 | Score | Verdict |
 | :---: | :--- |
-| **15/15** | 🏆 **Network Architect Master:** Completely exam-ready for Google Cloud networking. |
-| **13–14** | ✅ **Solid Readiness:** Minor review of load balancer types or stateful firewall rules needed. |
-| **10–12** | ⚠️ **Needs Review:** Re-read Section 4 (VPC Peering & Cloud NAT) and Section 6.2 (Load Balancer Matrix). |
-| **< 10** | 🔄 **Re-study Phase 06:** Carefully study firewall priority rules, peering non-transitivity, and Load Balancing layers. |
+| **15/15** | **Network Architect Master:** Completely exam-ready for Google Cloud networking. |
+| **13–14** | [Yes] **Solid Readiness:** Minor review of load balancer types or stateful firewall rules needed. |
+| **10–12** | Note: **Needs Review:** Re-read Section 4 (VPC Peering & Cloud NAT) and Section 6.2 (Load Balancer Matrix). |
+| **< 10** | **Re-study Phase 06:** Carefully study firewall priority rules, peering non-transitivity, and Load Balancing layers. |

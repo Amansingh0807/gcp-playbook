@@ -19,7 +19,7 @@
 - D) Continuous Delivery is open source, whereas Continuous Deployment is proprietary to Google Cloud.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) Continuous Delivery requires a manual approval step before releasing to production, whereas Continuous Deployment is fully automated.**
 
@@ -36,7 +36,7 @@
 - D) Compute Engine Custom Images
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Artifact Registry**
 
@@ -53,7 +53,7 @@
 - D) Google Cloud Build triggers
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) HashiCorp Terraform**
 
@@ -70,7 +70,7 @@
 - D) To allow Terraform to run offline without an active network connection.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) To provide a centralized source of truth, prevent race conditions during concurrent executions, and preserve recovery history.**
 
@@ -87,7 +87,7 @@
 - D) `roles/compute.networkAdmin` on the VPC
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) `roles/iam.serviceAccountUser` on the Cloud Run runtime service account**
 
@@ -104,7 +104,7 @@
 - D) `storage.googleapis.com/my-project/my-repo/my-image:v1`
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) `asia-south1-docker.pkg.dev/my-project/my-repo/my-image:v1`**
 
@@ -121,7 +121,7 @@
 - D) `pom.xml`
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) `cloudbuild.yaml`**
 
@@ -138,7 +138,7 @@
 - D) Compute Engine Persistent Disks
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Artifact Registry via Container Analysis**
 
@@ -155,7 +155,7 @@
 - D) Billed per gigabyte of RAM allocated to the source code repository.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **C) Billed per active build-minute based on the machine type, with 120 free build-minutes per day.**
 
@@ -172,7 +172,7 @@
 - D) A specialized physical server installed inside customer data centers.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **B) An integrated AI assistant providing natural language guidance, CLI syntax generation, and troubleshooting insights.**
 
@@ -194,7 +194,7 @@
 - E) Raw tape drive backup formats
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Docker / OCI container images, B) npm (Node.js) packages, C) Maven / Gradle (Java) artifacts**
 
@@ -212,7 +212,7 @@
 - E) Cloud Build cannot connect to private on-premises code repositories.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Every single build step runs inside an isolated, containerized environment, B) Build steps can be configured to run concurrently in parallel using the `waitFor` attribute.**
 
@@ -230,7 +230,7 @@
 - E) Commit unencrypted `terraform.tfstate` files containing plaintext secrets to public GitHub repositories.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Create a dedicated, least-privileged Service Account for Cloud Build rather than relying on the broad default Editor service account, B) Store sensitive deployment credentials in Google Cloud Secret Manager and reference them dynamically during the build.**
 
@@ -248,7 +248,7 @@
 - E) Google Cloud charges hourly licensing fees for downloading and running the Terraform CLI binary.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) It uses a declarative configuration syntax to express the desired end-state of infrastructure, B) It maintains a centralized state file mapping code resources to real-world cloud resources.**
 
@@ -266,7 +266,7 @@
 - E) Provisioning 32-core custom build pools for trivial linting checks.
 
 <details>
-<summary>✅ Answer</summary>
+<summary>[Yes] Answer</summary>
 
 **A) Setting up automated Cleanup Policies in Artifact Registry to delete obsolete untagged container images, B) Creating Artifact Registry repositories in the same region as the target GKE or Cloud Run deployment runtimes.**
 
@@ -275,11 +275,11 @@
 
 ---
 
-## 📊 Score Tracker
+## Score Tracker
 
 | Score | Verdict |
 | :---: | :--- |
-| **15/15** | 🏆 **DevOps & Automation Master:** 100% prepared for Cloud Build, Artifact Registry, and Terraform exam questions. |
-| **13–14** | ✅ **Solid Readiness:** Excellent grasp of CI/CD concepts; minor review of IAM roles or naming syntax needed. |
-| **10–12** | ⚠️ **Needs Review:** Re-read Section 6 (CI/CD Spectrum) and Section 9 (IAM Roles & Security). |
-| **< 10** | 🔄 **Re-study Phase 09:** Review the distinction between Continuous Delivery and Continuous Deployment, and Terraform remote state. |
+| **15/15** | **DevOps & Automation Master:** 100% prepared for Cloud Build, Artifact Registry, and Terraform exam questions. |
+| **13–14** | [Yes] **Solid Readiness:** Excellent grasp of CI/CD concepts; minor review of IAM roles or naming syntax needed. |
+| **10–12** | Note: **Needs Review:** Re-read Section 6 (CI/CD Spectrum) and Section 9 (IAM Roles & Security). |
+| **< 10** | **Re-study Phase 09:** Review the distinction between Continuous Delivery and Continuous Deployment, and Terraform remote state. |
