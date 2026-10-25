@@ -1,8 +1,8 @@
--> [Next: Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md)
+-> [Next: Phase 01 - GCP Fundamentals](phase-01-gcp-fundamentals.md)
 
 ---
 
-# Phase 0 — Cloud Computing Fundamentals (Exam Weight: 3/5)
+# Phase 0 - Cloud Computing Fundamentals (Exam Weight: 3/5)
 
 > **Prerequisite:** None (Absolute Beginner Friendly)  
 > **Estimated Study Time:** 2–3 Hours  
@@ -13,7 +13,7 @@
 
 ## 1. Definition
 
-**Cloud Computing** is the delivery of computing resources — servers, storage, databases, networking, and software — over the internet ("the cloud"), instead of owning and running physical hardware yourself. You rent computing power from a provider (like Google, AWS, Microsoft) and pay only for what you use.
+**Cloud Computing** is the delivery of computing resources - servers, storage, databases, networking, and software - over the internet ("the cloud"), instead of owning and running physical hardware yourself. You rent computing power from a provider (like Google, AWS, Microsoft) and pay only for what you use.
 
 > **Core Concept:** Instead of buying capital-intensive physical servers and data center racks, organizations rent compute capacity and managed platforms on-demand over the internet, converting fixed capital expenditures (CapEx) into flexible operational expenditures (OpEx).
 
@@ -35,7 +35,7 @@
 - Global scaling, rapid experimentation, and multi-region disaster recovery would be impossible for smaller teams.
 
 > [!IMPORTANT]
-> **Remember for ACE Exam:** Cloud computing's fundamental value proposition is converting **CapEx (Capital Expenditure)** into **OpEx (Operational Expenditure)** — you stop buying physical hardware upfront and start paying an ongoing operational bill based strictly on measured consumption.
+> **Remember for ACE Exam:** Cloud computing's fundamental value proposition is converting **CapEx (Capital Expenditure)** into **OpEx (Operational Expenditure)** - you stop buying physical hardware upfront and start paying an ongoing operational bill based strictly on measured consumption.
 
 ---
 
@@ -74,7 +74,7 @@
 4. **Scaling (if configured):** Managed Instance Groups (MIGs) automatically spin up extra VMs when CPU/HTTP load spikes and tear them down when demand recedes.
 5. **Termination:** When deleted, virtual resources are unmapped, memory is scrubbed, and hardware is returned to Google's shared pool for other tenants.
 
-> **Analogy:** When you request cloud resources, Google maintains massive pre-provisioned hardware pools. The hypervisor dynamically allocates a secure slice in seconds—comparable to booking a hotel room instantly without constructing a new building.
+> **Analogy:** When you request cloud resources, Google maintains massive pre-provisioned hardware pools. The hypervisor dynamically allocates a secure slice in seconds - comparable to booking a hotel room instantly without constructing a new building.
 
 ---
 
@@ -454,11 +454,11 @@ Under the Google Cloud Shared Responsibility Model, which of the following is AL
 ## 21. Related Topics & Navigation
 
 - **Study Before This:** None (This is the starting phase of the playbook).
-- **Study After This:** [Phase 01 — GCP Fundamentals, Projects, Billing & Resource Hierarchy](phase-01-gcp-fundamentals.md).
+- **Study After This:** [Phase 01 - GCP Fundamentals, Projects, Billing & Resource Hierarchy](phase-01-gcp-fundamentals.md).
 - **Directly Related GCP Services:** Compute Engine, App Engine, Cloud Functions, Cloud Run, Cloud Storage, VPC Networks.
 - **Official ACE Exam Guide Mappings:**
   - *Section 1:* Setting up a cloud solution environment (understanding cloud architecture & resource deployment scopes).
 
 ---
 
--> [Next: Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md)
+-> [Next: Phase 01 - GCP Fundamentals](phase-01-gcp-fundamentals.md)

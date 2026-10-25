@@ -1,4 +1,4 @@
-# Phase 12 Practice Drill — Capstone Scenario Mastery
+# Phase 12 Practice Drill - Capstone Scenario Mastery
 
 > **Total Questions:** 15 (10 MCQs + 5 MSQs)  
 > **Topic Tag:** `#phase-12-scenario-mastery`  
@@ -11,7 +11,7 @@
 
 ---
 
-### Q1. A media company wants to run a containerized microservice that handles sporadic webhooks from external vendors. Webhooks arrive irregularly—sometimes 500 per minute, sometimes zero for several hours. Which compute service provides the lowest cost and least operational overhead?
+### Q1. A media company wants to run a containerized microservice that handles sporadic webhooks from external vendors. Webhooks arrive irregularly - sometimes 500 per minute, sometimes zero for several hours. Which compute service provides the lowest cost and least operational overhead?
 
 - A) Compute Engine VM running Docker on an e2-standard-4 instance
 - B) GKE Standard cluster with a 3-node pool

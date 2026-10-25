@@ -1,21 +1,21 @@
-[<- Previous: Phase 03 — Compute Services](phase-03-compute.md) | [-> Next: Phase 05 — Databases & Analytics](phase-05-databases.md)
+[<- Previous: Phase 03 - Compute Services](phase-03-compute.md) | [-> Next: Phase 05 - Databases & Analytics](phase-05-databases.md)
 
 ---
 
-# Phase 4 — Storage Services (Exam Weight: 5/5)
+# Phase 4 - Storage Services (Exam Weight: 5/5)
 
-> **Prerequisite:** [Phase 03 — Compute Services](phase-03-compute.md)  
+> **Prerequisite:** [Phase 03 - Compute Services](phase-03-compute.md)  
 > **Estimated Study Time:** 3–4 Hours  
 > **Exam Weight:** (Exam Weight: 5/5) (One of the Most Heavily Tested Domains)  
 > **Covers:** Cloud Storage (Buckets, Objects, Naming, Locations, Storage Classes, Versioning, Lifecycle Rules, Retention Policies, Uniform Bucket Access, Signed URLs, Encryption/CMEK), Persistent Disk (Standard/Balanced/SSD/Local SSD), Filestore (awareness).
 
-**Storage is one of the most heavily tested domains in ACE — especially Storage Classes and Lifecycle Rules.**
+**Storage is one of the most heavily tested domains in ACE - especially Storage Classes and Lifecycle Rules.**
 
 ---
 
 ## 1. Definition
 
-**Cloud Storage** is Google's fully managed **object storage** service — a place to store any type of file (images, videos, backups, logs, documents) as "objects" inside containers called "buckets," accessible from anywhere via the internet, at massive scale, without managing any servers.
+**Cloud Storage** is Google's fully managed **object storage** service - a place to store any type of file (images, videos, backups, logs, documents) as "objects" inside containers called "buckets," accessible from anywhere via the internet, at massive scale, without managing any servers.
 
 > **Core Concept:** Cloud Storage acts as an infinitely scalable online object locker. You store unstructured data (media files, backups, logs, archives), and Google guarantees durability, replication, and global HTTP/HTTPS accessibility with zero infrastructure management.
 
@@ -25,7 +25,7 @@
 
 ### Problem it solves:
 - On-premises storage is **expensive**, requires hardware procurement, capacity planning, and physical maintenance.
-- Traditional file servers have **limited capacity** — when they fill up, you must buy more hardware.
+- Traditional file servers have **limited capacity** - when they fill up, you must buy more hardware.
 - Backup, replication, and disaster recovery require **complex manual configuration**.
 - Sharing large files across global teams is **slow and unreliable**.
 
@@ -34,10 +34,10 @@
 - Scaling storage would take weeks/months of procurement cycles.
 
 ### How it solves the problem:
-- **Unlimited capacity** — store petabytes without worrying about running out of space.
-- **99.999999999% (11 nines) durability** — Google replicates your data across multiple facilities.
-- **Global accessibility** — any authorized user/application can access files from anywhere via HTTP/HTTPS.
-- **Zero maintenance** — no servers to manage, no disks to replace, no firmware to update.
+- **Unlimited capacity** - store petabytes without worrying about running out of space.
+- **99.999999999% (11 nines) durability** - Google replicates your data across multiple facilities.
+- **Global accessibility** - any authorized user/application can access files from anywhere via HTTP/HTTPS.
+- **Zero maintenance** - no servers to manage, no disks to replace, no firmware to update.
 
 ---
 
@@ -58,7 +58,7 @@ A **bucket** is the top-level container in Cloud Storage. Every object (file) mu
 | **Lowercase only** | No uppercase letters allowed |
 | **No spaces or special chars** | Only letters, numbers, hyphens (-), underscores (_), and dots (.) |
 | **Cannot be IP format** | Cannot look like an IP address (e.g., 192.168.1.1) |
-| **Immutable name** | Once created, a bucket name CANNOT be changed — you must delete and recreate |
+| **Immutable name** | Once created, a bucket name CANNOT be changed - you must delete and recreate |
 
 > **Exam Trap:** "Can you rename a bucket?" → **NO.** You must create a new bucket with the desired name, copy all objects, then delete the old bucket.
 
@@ -103,9 +103,9 @@ Storage classes define the **cost**, **availability**, and **minimum storage dur
 
 #### Critical Exam Points:
 - **Minimum storage duration** means you pay for at least that many days, even if you delete the object earlier.
-- **There is NO retrieval delay** — unlike AWS Glacier, ALL Cloud Storage classes provide **millisecond access**. Objects are immediately available.
+- **There is NO retrieval delay** - unlike AWS Glacier, ALL Cloud Storage classes provide **millisecond access**. Objects are immediately available.
 - You **CAN** change the storage class of an existing object (via rewriting) or set it automatically via **Lifecycle Rules**.
-- **Autoclass** — A feature that automatically transitions objects between storage classes based on access patterns.
+- **Autoclass** - A feature that automatically transitions objects between storage classes based on access patterns.
 
 > **Exam Trap:** "Archive class objects take hours to retrieve" → **FALSE.** Google Cloud Archive storage has NO retrieval delay. Data is available immediately.
 
@@ -136,7 +136,7 @@ gsutil cp gs://my-bucket/my-file.txt#1234567890 gs://my-bucket/my-file.txt
 
 ### 3.5 Lifecycle Rules (Note: Heavily Tested)
 
-**Lifecycle rules** automatically perform actions on objects based on conditions you define — most commonly, transitioning storage classes or deleting old objects.
+**Lifecycle rules** automatically perform actions on objects based on conditions you define - most commonly, transitioning storage classes or deleting old objects.
 
 #### Common Lifecycle Actions:
 
@@ -182,7 +182,7 @@ gsutil cp gs://my-bucket/my-file.txt#1234567890 gs://my-bucket/my-file.txt
 }
 ```
 
-> **Exam Trap:** Lifecycle rules can only transition objects to **colder** storage classes (Standard → Nearline → Coldline → Archive). You CANNOT transition backwards (e.g., Archive → Standard) via lifecycle rules — you must manually rewrite the object.
+> **Exam Trap:** Lifecycle rules can only transition objects to **colder** storage classes (Standard → Nearline → Coldline → Archive). You CANNOT transition backwards (e.g., Archive → Standard) via lifecycle rules - you must manually rewrite the object.
 
 ### 3.6 Retention Policies
 
@@ -191,10 +191,10 @@ A **retention policy** specifies a minimum period of time that objects must be s
 | Concept | Description |
 |---------|-------------|
 | **Retention Period** | Minimum time (in seconds) objects must be retained (e.g., 1 year = 31536000 seconds) |
-| **Retention Policy Lock** | Once locked, the policy CANNOT be removed or shortened — only lengthened |
+| **Retention Policy Lock** | Once locked, the policy CANNOT be removed or shortened - only lengthened |
 | **Bucket Lock** | Makes the retention policy permanent and irreversible (for compliance) |
 
-> **Compliance Rule:** A retention policy enforces an immutable lock window during which no user—including project owners—can delete or overwrite the data.
+> **Compliance Rule:** A retention policy enforces an immutable lock window during which no user - including project owners - can delete or overwrite the data.
 
 > **Exam Trap:** A **locked** retention policy is **PERMANENT** and **IRREVERSIBLE**. Even a project owner or organization admin cannot remove it. The only way to get rid of the data is to wait until the retention period expires.
 
@@ -202,8 +202,8 @@ A **retention policy** specifies a minimum period of time that objects must be s
 
 | Access Control Model | How It Works | Recommended? |
 |---------------------|--------------|-------------|
-| **Fine-Grained (ACLs)** | Per-object access control lists — each object can have different permissions | [No] Legacy — being deprecated |
-| **Uniform Bucket-Level Access** | ALL objects in the bucket inherit the bucket's IAM policy — no per-object ACLs | [Yes] **Recommended** (Google best practice) |
+| **Fine-Grained (ACLs)** | Per-object access control lists - each object can have different permissions | [No] Legacy - being deprecated |
+| **Uniform Bucket-Level Access** | ALL objects in the bucket inherit the bucket's IAM policy - no per-object ACLs | [Yes] **Recommended** (Google best practice) |
 
 > **Exam Trap:** Once Uniform Bucket-Level Access is enabled and the 90-day lock period passes, it becomes **permanent** and cannot be reverted to fine-grained ACLs.
 
@@ -215,7 +215,7 @@ A **Signed URL** gives time-limited read or write access to a specific object, w
 |---------|--------|
 | **Purpose** | Share private objects with external users temporarily |
 | **Expiry** | You set a maximum duration (up to 7 days for V4 signing) |
-| **Authentication** | The URL itself contains the credentials — anyone with the URL can access |
+| **Authentication** | The URL itself contains the credentials - anyone with the URL can access |
 | **Use Cases** | Shareable download links, temporary upload endpoints, CDN-backed delivery |
 
 ```bash
@@ -229,11 +229,11 @@ gsutil signurl -d 1h /path/to/service-account-key.json gs://my-bucket/my-file.pd
 
 | Encryption Type | Who Manages Keys | Description |
 |----------------|-------------------|-------------|
-| **Google-Managed (Default)** | Google | Automatic AES-256 encryption — no configuration needed |
-| **CMEK (Customer-Managed Encryption Keys)** | You (via Cloud KMS) | You create and manage the encryption key in Cloud KMS — Google uses YOUR key to encrypt |
-| **CSEK (Customer-Supplied Encryption Keys)** | You (completely) | You supply the raw encryption key with every API call — Google never stores it |
+| **Google-Managed (Default)** | Google | Automatic AES-256 encryption - no configuration needed |
+| **CMEK (Customer-Managed Encryption Keys)** | You (via Cloud KMS) | You create and manage the encryption key in Cloud KMS - Google uses YOUR key to encrypt |
+| **CSEK (Customer-Supplied Encryption Keys)** | You (completely) | You supply the raw encryption key with every API call - Google never stores it |
 
-> **Exam Trap:** By default, ALL data in Cloud Storage is encrypted at rest using Google-managed keys. You do NOT need to do anything to enable encryption — it's automatic.
+> **Exam Trap:** By default, ALL data in Cloud Storage is encrypted at rest using Google-managed keys. You do NOT need to do anything to enable encryption - it's automatic.
 
 ---
 
@@ -281,7 +281,7 @@ gsutil signurl -d 1h /path/to/service-account-key.json gs://my-bucket/my-file.pd
 | Feature | Description | Exam Relevance |
 |---------|-------------|----------------|
 | **Global Namespace** | Bucket names are globally unique across all of Google Cloud | (Exam Weight: 5/5) |
-| **Storage Classes** | Standard, Nearline, Coldline, Archive — cost vs access tradeoff | (Exam Weight: 5/5) |
+| **Storage Classes** | Standard, Nearline, Coldline, Archive - cost vs access tradeoff | (Exam Weight: 5/5) |
 | **Lifecycle Rules** | Auto-transition or delete objects based on age/conditions | (Exam Weight: 5/5) |
 | **Object Versioning** | Keep historical copies of every object version | (Exam Weight: 4/5) |
 | **Retention Policies** | Prevent deletion for compliance (lockable) | (Exam Weight: 4/5) |
@@ -416,7 +416,7 @@ gcloud compute disks delete my-disk --zone=us-central1-a
 |---------|--------|
 | **Zonal Resource** | PDs exist in a specific zone |
 | **Regional Persistent Disk** | Replicated across 2 zones in the same region (for HA) |
-| **Resize** | Can be increased while attached and running — CANNOT be decreased |
+| **Resize** | Can be increased while attached and running - CANNOT be decreased |
 | **Multi-Attach** | PDs can be attached to multiple VMs in READ-ONLY mode |
 | **Snapshots** | Incremental backups that can be used to create new disks |
 | **Encryption** | Automatically encrypted at rest (Google-managed, CMEK, or CSEK) |
@@ -435,7 +435,7 @@ gcloud compute disks delete my-disk --zone=us-central1-a
 | **Encryption** | [Yes] All types | [Yes] Google-managed only |
 | **Use Case** | Permanent storage | Caching, scratch space, temp data, high-performance computing |
 
-> **Exam Trap:** Local SSD data is **EPHEMERAL** — it is permanently lost when the VM stops, is deleted, or undergoes maintenance migration. Never use Local SSD for data you need to keep.
+> **Exam Trap:** Local SSD data is **EPHEMERAL** - it is permanently lost when the VM stops, is deleted, or undergoes maintenance migration. Never use Local SSD for data you need to keep.
 
 ---
 
@@ -448,7 +448,7 @@ gcloud compute disks delete my-disk --zone=us-central1-a
 | **Protocol** | NFS (Network File System) |
 | **Use Case** | Shared file systems for VMs, GKE, legacy applications |
 | **Tiers** | Basic HDD, Basic SSD, High Scale SSD, Enterprise |
-| **Managed** | Fully managed — no server OS to maintain |
+| **Managed** | Fully managed - no server OS to maintain |
 | **Key Difference** | File storage (hierarchical) vs. Object storage (flat) vs. Block storage (disk) |
 
 > **Analogy:** Filestore functions like a traditional shared network drive (NAS/NFS), allowing multiple VMs and GKE pods to read and write to the same hierarchical file system simultaneously.
@@ -491,7 +491,7 @@ gcloud compute disks delete my-disk --zone=us-central1-a
 ### Scenario 2: Protect against accidental deletion
 **Solution:** Enable **Object Versioning** on the bucket. Deleted objects will have a delete marker, and previous versions can be restored.
 
-### Scenario 3: Compliance requirement — data must be retained for 7 years
+### Scenario 3: Compliance requirement - data must be retained for 7 years
 **Solution:** Set a **Retention Policy** with a 7-year period and **lock** the policy. Once locked, no one (not even admins) can delete data before the retention period expires.
 
 ### Scenario 4: Share a private file with an external vendor temporarily
@@ -522,22 +522,22 @@ gcloud compute disks delete my-disk --zone=us-central1-a
 | **Signed URLs** | [Yes] | [Yes] (Pre-signed URLs) | [Yes] (SAS Tokens) |
 | **Key Advantage** | Instant archive retrieval, simple pricing | Mature ecosystem | Azure integration |
 
-> **Key GCP Advantage:** Google Cloud Storage Archive class has **NO retrieval delay** — data is available in milliseconds. AWS Glacier takes minutes to hours. This is a frequent exam differentiator.
+> **Key GCP Advantage:** Google Cloud Storage Archive class has **NO retrieval delay** - data is available in milliseconds. AWS Glacier takes minutes to hours. This is a frequent exam differentiator.
 
 ---
 
 ## 13. Best Practices & Production Tips
 
-1. **Always use Uniform Bucket-Level Access** — simpler, more secure, Google-recommended.
+1. **Always use Uniform Bucket-Level Access** - simpler, more secure, Google-recommended.
 2. **Enable Object Versioning** on critical buckets to protect against accidental deletes.
-3. **Implement Lifecycle Rules** from day one — don't let Standard-class data sit forever burning money.
+3. **Implement Lifecycle Rules** from day one - don't let Standard-class data sit forever burning money.
 4. **Use CMEK** for sensitive data where your organization needs key rotation control.
 5. **Set Retention Policies** for compliance-sensitive data (healthcare, finance, government).
-6. **Use `gsutil -m`** (parallel mode) for large uploads — dramatically faster than sequential.
-7. **Use `gsutil rsync`** instead of `gsutil cp` for ongoing synchronization — only transfers changes.
+6. **Use `gsutil -m`** (parallel mode) for large uploads - dramatically faster than sequential.
+7. **Use `gsutil rsync`** instead of `gsutil cp` for ongoing synchronization - only transfers changes.
 8. **Prefer Regional storage** for latency-sensitive workloads co-located with Compute/GKE resources.
 9. **Use Multi-Region** for globally accessed content like static websites, CDN origins, and public datasets.
-10. **Monitor with Cloud Monitoring** — set alerts on bucket size, request rates, and error rates.
+10. **Monitor with Cloud Monitoring** - set alerts on bucket size, request rates, and error rates.
 
 ---
 
@@ -545,15 +545,15 @@ gcloud compute disks delete my-disk --zone=us-central1-a
 
 | Trap | Truth |
 |------|-------|
-| [No] "You can rename a bucket" | [Yes] **NO** — must create new, copy, delete old |
-| [No] "You can change bucket location" | [Yes] **NO** — location is permanent at creation |
-| [No] "Archive class has retrieval delay like AWS Glacier" | [Yes] **NO** — GCS Archive has instant (millisecond) retrieval |
-| [No] "Lifecycle rules can transition from Coldline to Standard" | [Yes] **NO** — lifecycle only goes colder, never warmer |
-| [No] "Persistent disks can be decreased in size" | [Yes] **NO** — only increased, never decreased |
-| [No] "Local SSD data persists after VM stop" | [Yes] **NO** — data is lost on stop/delete/maintenance |
-| [No] "Locked retention policy can be removed by admin" | [Yes] **NO** — locked is permanent and irreversible |
-| [No] "Storage Object Creator can read existing objects" | [Yes] **NO** — can only create/upload, not read/list/delete |
-| [No] "Object names must be globally unique" | [Yes] **NO** — only bucket names are globally unique; object names are unique within a bucket |
+| [No] "You can rename a bucket" | [Yes] **NO** - must create new, copy, delete old |
+| [No] "You can change bucket location" | [Yes] **NO** - location is permanent at creation |
+| [No] "Archive class has retrieval delay like AWS Glacier" | [Yes] **NO** - GCS Archive has instant (millisecond) retrieval |
+| [No] "Lifecycle rules can transition from Coldline to Standard" | [Yes] **NO** - lifecycle only goes colder, never warmer |
+| [No] "Persistent disks can be decreased in size" | [Yes] **NO** - only increased, never decreased |
+| [No] "Local SSD data persists after VM stop" | [Yes] **NO** - data is lost on stop/delete/maintenance |
+| [No] "Locked retention policy can be removed by admin" | [Yes] **NO** - locked is permanent and irreversible |
+| [No] "Storage Object Creator can read existing objects" | [Yes] **NO** - can only create/upload, not read/list/delete |
+| [No] "Object names must be globally unique" | [Yes] **NO** - only bucket names are globally unique; object names are unique within a bucket |
 
 ---
 
@@ -600,7 +600,7 @@ gcloud compute disks delete my-disk --zone=us-central1-a
 
 ## 16. Navigation & What's Next
 
-[<- Previous: Phase 03 — Compute Services](phase-03-compute.md) | [-> Next: Phase 05 — Databases & Analytics](phase-05-databases.md)
+[<- Previous: Phase 03 - Compute Services](phase-03-compute.md) | [-> Next: Phase 05 - Databases & Analytics](phase-05-databases.md)
 
 ---
 

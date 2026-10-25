@@ -1,10 +1,10 @@
-[<- Previous: Phase 07 — Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md) | [-> Next: Phase 09 — DevOps & Automation](phase-09-devops-automation.md)
+[<- Previous: Phase 07 - Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md) | [-> Next: Phase 09 - DevOps & Automation](phase-09-devops-automation.md)
 
 ---
 
-# Phase 8 — Monitoring & Operations (Exam Weight: 4/5)
+# Phase 8 - Monitoring & Operations (Exam Weight: 4/5)
 
-> **Prerequisite:** [Phase 03 — Compute Services](phase-03-compute.md) & [Phase 06 — Networking Services](phase-06-networking.md)  
+> **Prerequisite:** [Phase 03 - Compute Services](phase-03-compute.md) & [Phase 06 - Networking Services](phase-06-networking.md)  
 > **Estimated Study Time:** 3–4 Hours  
 > **Exam Weight:** (Exam Weight: 4/5) (High-Frequency Exam Domain)  
 > **Covers:** Cloud Monitoring (Metrics, Dashboards, Alerting Policies, Uptime Checks), Cloud Logging (Log Explorer, Log Router, Log Sinks, Log Buckets, Audit Logs), Diagnostics (Cloud Trace, Cloud Profiler, Error Reporting), Ops Agent installation and configuration.
@@ -467,7 +467,7 @@ gcloud logging metrics create http-500-error-count \
 
 ---
 
-### MSQs (Multiple Correct Answers — Select ALL that apply)
+### MSQs (Multiple Correct Answers - Select ALL that apply)
 
 #### Q11. Which of the following Audit Log types in Google Cloud are ALWAYS enabled by default and free of charge? (Select THREE)
 - [x] A. Admin Activity
@@ -513,8 +513,8 @@ gcloud logging metrics create http-500-error-count \
 
 ## 21. Related Topics & Navigation
 
-- **Study Before This:** [Phase 07 — Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md)
-- **Study After This:** [Phase 09 — DevOps & Automation](phase-09-devops-automation.md)
+- **Study Before This:** [Phase 07 - Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md)
+- **Study After This:** [Phase 09 - DevOps & Automation](phase-09-devops-automation.md)
 - **Directly Related GCP Services:** Cloud Monitoring, Cloud Logging, Cloud Trace, Cloud Profiler, Error Reporting, Cloud Pub/Sub, BigQuery.
 - **Official ACE Exam Guide Mappings:**
   - *Section 4.2:* Monitoring and logging (creating alerts, managing log sinks, viewing audit logs, monitoring VM and container metrics).
@@ -522,4 +522,4 @@ gcloud logging metrics create http-500-error-count \
 
 ---
 
-[<- Previous: Phase 07 — Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md) | [-> Next: Phase 09 — DevOps & Automation](phase-09-devops-automation.md)
+[<- Previous: Phase 07 - Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md) | [-> Next: Phase 09 - DevOps & Automation](phase-09-devops-automation.md)

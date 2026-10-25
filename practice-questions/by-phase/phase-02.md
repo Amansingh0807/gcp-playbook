@@ -1,4 +1,4 @@
-# Phase 02 Practice Drill — Identity & Security (Cloud IAM)
+# Phase 02 Practice Drill - Identity & Security (Cloud IAM)
 
 > **Total Questions:** 15 (10 MCQs + 5 MSQs)  
 > **Topic Tag:** `#phase-02-iam`  
@@ -7,7 +7,7 @@
 
 ---
 
-## Multiple Choice Questions (MCQs — Single Answer)
+## Multiple Choice Questions (MCQs - Single Answer)
 
 ### Question 1 [IAM Formula]
 Which combination correctly represents the fundamental Google Cloud IAM formula for granting access?
@@ -257,7 +257,7 @@ Google actively manages Predefined roles. When a service adds new API capabiliti
 
 ---
 
-## Multiple Select Questions (MSQs — Multiple Correct Answers)
+## Multiple Select Questions (MSQs - Multiple Correct Answers)
 
 ### Question 11 [Valid Principal Types]
 Which of the following are valid IAM Principal types in Google Cloud? (Select THREE)

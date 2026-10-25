@@ -1,15 +1,15 @@
-[<- Previous: Phase 06 — Networking Services](phase-06-networking.md) | [-> Next: Phase 08 — Monitoring & Operations](phase-08-monitoring-operations.md)
+[<- Previous: Phase 06 - Networking Services](phase-06-networking.md) | [-> Next: Phase 08 - Monitoring & Operations](phase-08-monitoring-operations.md)
 
 ---
 
-# Phase 7 — Kubernetes Engine (GKE) (Exam Weight: 4/5)
+# Phase 7 - Kubernetes Engine (GKE) (Exam Weight: 4/5)
 
-> **Prerequisite:** [Phase 03 — Compute Services](phase-03-compute.md) & [Phase 06 — Networking Services](phase-06-networking.md)  
+> **Prerequisite:** [Phase 03 - Compute Services](phase-03-compute.md) & [Phase 06 - Networking Services](phase-06-networking.md)  
 > **Estimated Study Time:** 4–5 Hours  
 > **Exam Weight:** (Exam Weight: 4/5) (High-Frequency Exam Domain)  
 > **Covers:** Kubernetes Architecture (Control Plane, Nodes, Node Pools), K8s Core Objects (Pods, Deployments, ReplicaSets, Services, Namespaces), GKE Operating Modes (Standard vs. Autopilot), Scaling Mechanics (HPA, Cluster Autoscaler), Upgrades & Auto-Repair, Workload Identity, `kubectl` essentials.
 
-**GKE is Google Cloud's flagship container orchestration platform.** On the Associate Cloud Engineer exam, GKE is tested primarily at an architectural, operational, and administrative level—specifically comparing GKE Standard vs. Autopilot, managing node pools, understanding declarative workload abstractions, and configuring secure pod-to-cloud identity.
+**GKE is Google Cloud's flagship container orchestration platform.** On the Associate Cloud Engineer exam, GKE is tested primarily at an architectural, operational, and administrative level - specifically comparing GKE Standard vs. Autopilot, managing node pools, understanding declarative workload abstractions, and configuring secure pod-to-cloud identity.
 
 ---
 
@@ -168,7 +168,7 @@ Cluster --> Node Pool --> Node (VM) --> Pod --> Container
 ### Cost Optimization Guidelines
 - **Use GKE Autopilot for Variable Workloads:** Avoids paying for idle compute headroom caused by inefficient pod bin-packing.
 - **Leverage Spot VMs for Fault-Tolerant Node Pools:** In Standard mode, configure secondary node pools with Spot VMs for 60%–91% compute discounts on stateless batch or processing pods.
-- **Configure Accurate Pod Resource Requests:** In Autopilot, set accurate `requests` in your deployment YAML—setting excessively inflated requests inflates Autopilot billing.
+- **Configure Accurate Pod Resource Requests:** In Autopilot, set accurate `requests` in your deployment YAML - setting excessively inflated requests inflates Autopilot billing.
 - **Enable Cluster Autoscaler & Scale Down:** In Standard mode, set minimum node counts to zero for non-production development clusters during off-hours.
 
 ---
@@ -481,7 +481,7 @@ kubectl logs -f deployment/web-frontend --all-containers=true
 
 ---
 
-### MSQs (Multiple Correct Answers — Select ALL that apply)
+### MSQs (Multiple Correct Answers - Select ALL that apply)
 
 #### Q11. Which of the following statements regarding GKE Autopilot are TRUE? (Select TWO)
 - [x] A. Google completely manages worker node provisioning, maintenance, and security hardening.
@@ -527,8 +527,8 @@ kubectl logs -f deployment/web-frontend --all-containers=true
 
 ## 21. Related Topics & Navigation
 
-- **Study Before This:** [Phase 03 — Compute Services](phase-03-compute.md) & [Phase 06 — Networking Services](phase-06-networking.md)
-- **Study After This:** [Phase 08 — Monitoring & Operations](phase-08-monitoring-operations.md)
+- **Study Before This:** [Phase 03 - Compute Services](phase-03-compute.md) & [Phase 06 - Networking Services](phase-06-networking.md)
+- **Study After This:** [Phase 08 - Monitoring & Operations](phase-08-monitoring-operations.md)
 - **Directly Related GCP Services:** Google Kubernetes Engine, Artifact Registry, Cloud Load Balancing, Cloud Logging, Cloud Monitoring, Workload Identity.
 - **Official ACE Exam Guide Mappings:**
   - *Section 2.1:* Planning and configuring compute resources (GKE cluster architecture, Autopilot vs Standard, node pools).
@@ -537,4 +537,4 @@ kubectl logs -f deployment/web-frontend --all-containers=true
 
 ---
 
-[<- Previous: Phase 06 — Networking Services](phase-06-networking.md) | [-> Next: Phase 08 — Monitoring & Operations](phase-08-monitoring-operations.md)
+[<- Previous: Phase 06 - Networking Services](phase-06-networking.md) | [-> Next: Phase 08 - Monitoring & Operations](phase-08-monitoring-operations.md)

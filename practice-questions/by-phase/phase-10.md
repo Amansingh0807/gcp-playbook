@@ -1,4 +1,4 @@
-# Phase 10 Practice Drill — Billing & Cost Optimization
+# Phase 10 Practice Drill - Billing & Cost Optimization
 
 > **Total Questions:** 15 (10 MCQs + 5 MSQs)  
 > **Topic Tag:** `#phase-10-billing-cost-optimization`  

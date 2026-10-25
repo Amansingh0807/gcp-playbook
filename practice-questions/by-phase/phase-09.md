@@ -1,4 +1,4 @@
-# Phase 09 Practice Drill — DevOps & Automation
+# Phase 09 Practice Drill - DevOps & Automation
 
 > **Total Questions:** 15 (10 MCQs + 5 MSQs)  
 > **Topic Tag:** `#phase-09-devops-automation`  

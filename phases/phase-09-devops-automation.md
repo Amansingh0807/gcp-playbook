@@ -1,10 +1,10 @@
-[<- Previous: Phase 08 — Monitoring & Operations](phase-08-monitoring-operations.md) | [-> Next: Phase 10 — Billing & Cost Optimization](phase-10-billing-cost-optimization.md)
+[<- Previous: Phase 08 - Monitoring & Operations](phase-08-monitoring-operations.md) | [-> Next: Phase 10 - Billing & Cost Optimization](phase-10-billing-cost-optimization.md)
 
 ---
 
-# Phase 9 — DevOps & Automation (Exam Weight: 3/5)
+# Phase 9 - DevOps & Automation (Exam Weight: 3/5)
 
-> **Prerequisite:** [Phase 03 — Compute Services](phase-03-compute.md) & [Phase 07 — Kubernetes GKE](phase-07-kubernetes-gke.md)  
+> **Prerequisite:** [Phase 03 - Compute Services](phase-03-compute.md) & [Phase 07 - Kubernetes GKE](phase-07-kubernetes-gke.md)  
 > **Estimated Study Time:** 2–3 Hours  
 > **Exam Weight:** (Exam Weight: 3/5) (Targeted Conceptual & Operational Domain)  
 > **Covers:** Cloud Build (Pipelines, Triggers, `cloudbuild.yaml`, Build Steps), Artifact Registry (Container Images, Package Repositories, Vulnerability Scanning), CI/CD Principles (Continuous Integration vs. Continuous Delivery vs. Continuous Deployment), Infrastructure as Code (Terraform Architecture, Remote State, Google Cloud Provider), Gemini Cloud Assist (awareness).
@@ -701,8 +701,8 @@ terraform apply -auto-approve
 
 ## 21. Related Topics & Navigation
 
-- **Study Before This:** [Phase 03 — Compute Services](phase-03-compute.md) & [Phase 07 — Kubernetes GKE](phase-07-kubernetes-gke.md)
-- **Study After This:** [Phase 10 — Billing & Cost Optimization](phase-10-billing-cost-optimization.md)
+- **Study Before This:** [Phase 03 - Compute Services](phase-03-compute.md) & [Phase 07 - Kubernetes GKE](phase-07-kubernetes-gke.md)
+- **Study After This:** [Phase 10 - Billing & Cost Optimization](phase-10-billing-cost-optimization.md)
 - **Directly Related GCP Services:** Cloud Build, Artifact Registry, Secret Manager, Cloud Run, Google Kubernetes Engine, Container Analysis, Gemini Cloud Assist.
 - **Official ACE Exam Guide Mappings:**
   - *Section 2.4:* Planning and configuring deployment and automation (Cloud Build triggers, Artifact Registry repositories).
@@ -711,4 +711,4 @@ terraform apply -auto-approve
 
 ---
 
-[<- Previous: Phase 08 — Monitoring & Operations](phase-08-monitoring-operations.md) | [-> Next: Phase 10 — Billing & Cost Optimization](phase-10-billing-cost-optimization.md)
+[<- Previous: Phase 08 - Monitoring & Operations](phase-08-monitoring-operations.md) | [-> Next: Phase 10 - Billing & Cost Optimization](phase-10-billing-cost-optimization.md)

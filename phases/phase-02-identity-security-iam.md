@@ -1,10 +1,10 @@
-[<- Previous: Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md) | [-> Next: Phase 03 — Compute Services](phase-03-compute.md)
+[<- Previous: Phase 01 - GCP Fundamentals](phase-01-gcp-fundamentals.md) | [-> Next: Phase 03 - Compute Services](phase-03-compute.md)
 
 ---
 
-# Phase 2 — Identity & Security (Cloud IAM) (Exam Weight: 5/5)
+# Phase 2 - Identity & Security (Cloud IAM) (Exam Weight: 5/5)
 
-> **Prerequisite:** [Phase 01 — Google Cloud Platform Fundamentals](phase-01-gcp-fundamentals.md)  
+> **Prerequisite:** [Phase 01 - Google Cloud Platform Fundamentals](phase-01-gcp-fundamentals.md)  
 > **Estimated Study Time:** 4–5 Hours  
 > **Exam Weight:** (Exam Weight: 5/5) (The Single Most Heavily Tested Domain on the ACE Exam)  
 > **Covers:** IAM Fundamentals (Identity, Principal, User, Group, Domain, Service Account), Permissions/Role/Policy/Binding, IAM Roles (Basic/Predefined/Custom), IAM Policies (Attach/Remove/Inheritance/Conditions), Service Accounts (Creation/Keys/Impersonation), Workload Identity, Security Best Practices, IAM Analyzer, Organization Policies.
@@ -20,7 +20,7 @@
 ## 2. Why does this service exist?
 
 ### Problem it solves:
-- Without access control, any person with a Google account could create, delete, or inspect any resource in your cloud project — resulting in operational anarchy and catastrophic security breaches.
+- Without access control, any person with a Google account could create, delete, or inspect any resource in your cloud project - resulting in operational anarchy and catastrophic security breaches.
 - Enterprises must enforce role-based access: a junior intern must not delete production databases; a finance manager must not alter VM network firewall rules.
 - Applications and backend microservices need identities to communicate securely with cloud APIs (e.g., a web app backend reading files from a private Cloud Storage bucket).
 
@@ -422,8 +422,8 @@ A junior data analyst requires access to run queries against BigQuery datasets i
 
 ## 21. Related Topics & Navigation
 
-- **Study Before This:** [Phase 01 — GCP Fundamentals & Resource Hierarchy](phase-01-gcp-fundamentals.md).
-- **Study After This:** [Phase 03 — Compute Services](phase-03-compute.md).
+- **Study Before This:** [Phase 01 - GCP Fundamentals & Resource Hierarchy](phase-01-gcp-fundamentals.md).
+- **Study After This:** [Phase 03 - Compute Services](phase-03-compute.md).
 - **Directly Related GCP Services:** Cloud IAM, Resource Manager, Service Accounts, Cloud KMS, Security Command Center, Policy Analyzer, Cloud Asset Inventory.
 - **Official ACE Exam Guide Mappings:**
   - *Section 5.1:* Managing Identity and Access Management (IAM) (Managing IAM role bindings, custom roles, service accounts).
@@ -431,4 +431,4 @@ A junior data analyst requires access to run queries against BigQuery datasets i
 
 ---
 
-[<- Previous: Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md) | [-> Next: Phase 03 — Compute Services](phase-03-compute.md)
+[<- Previous: Phase 01 - GCP Fundamentals](phase-01-gcp-fundamentals.md) | [-> Next: Phase 03 - Compute Services](phase-03-compute.md)

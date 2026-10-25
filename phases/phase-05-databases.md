@@ -1,10 +1,10 @@
-[<- Previous: Phase 04 — Storage Services](phase-04-storage.md) | [-> Next: Phase 06 — Networking Services](phase-06-networking.md)
+[<- Previous: Phase 04 - Storage Services](phase-04-storage.md) | [-> Next: Phase 06 - Networking Services](phase-06-networking.md)
 
 ---
 
-# Phase 5 — Databases & Analytics (Exam Weight: 4/5)
+# Phase 5 - Databases & Analytics (Exam Weight: 4/5)
 
-> **Prerequisite:** [Phase 04 — Storage Services](phase-04-storage.md)  
+> **Prerequisite:** [Phase 04 - Storage Services](phase-04-storage.md)  
 > **Estimated Study Time:** 3–4 Hours  
 > **Exam Weight:** (Exam Weight: 4/5) (High Frequency Exam Domain)  
 > **Covers:** Cloud SQL (MySQL, PostgreSQL, SQL Server), Firestore, Cloud Bigtable, Cloud Spanner, Memorystore (Redis, Memcached), BigQuery (Datasets, Tables, Partitioning, Clustering, Pricing Models), Master Database Comparison Matrix.
@@ -34,7 +34,7 @@
 - Organizations must maintain dedicated Database Administrator (DBA) teams to manually install, patch, replicate, shard, and scale database engines. This increases operational risk, extends release cycles, and results in costly downtime during hardware failures.
 
 ### Remember for ACE Exam (Exam Weight: 5/5):
-The ACE exam tests your ability to evaluate a scenario's technical requirements—data model (relational vs. NoSQL), geographic scope (regional vs. global), consistency requirements (strong vs. eventual), and transaction model (multi-row ACID vs. single-row)—and select the exact matching GCP database.
+The ACE exam tests your ability to evaluate a scenario's technical requirements - data model (relational vs. NoSQL), geographic scope (regional vs. global), consistency requirements (strong vs. eventual), and transaction model (multi-row ACID vs. single-row) - and select the exact matching GCP database.
 
 ---
 
@@ -228,7 +228,7 @@ Is your data primarily for ANALYTICS (scanning billions of rows, BI dashboards, 
 - **Network Connectivity:** **Private IP** (via Private Services Access in VPC) is strongly recommended over Public IP. Public IP connections require explicit **Authorized Networks** CIDR allowlisting or the **Cloud SQL Auth Proxy**.
 
 ### Firestore
-- **Location Setting:** Selected during database creation (Regional vs. Multi-Region). **Immutable after creation**—cannot be altered without creating a new database and exporting data.
+- **Location Setting:** Selected during database creation (Regional vs. Multi-Region). **Immutable after creation** - cannot be altered without creating a new database and exporting data.
 - **Security Rules:** Granular access control rules defined directly on collections and document paths to validate client identity, token claims, and request field payloads.
 
 ### Cloud Bigtable
@@ -609,7 +609,7 @@ bq query --use_legacy_sql=false \
 
 ---
 
-### MSQs (Multiple Correct Answers — Select ALL that apply)
+### MSQs (Multiple Correct Answers - Select ALL that apply)
 
 #### Q11. Which of the following database services in Google Cloud are categorized as NoSQL databases? (Select TWO)
 - [x] A. Firestore
@@ -653,8 +653,8 @@ bq query --use_legacy_sql=false \
 
 ## 21. Related Topics & Navigation
 
-- **Study Before This:** [Phase 04 — Storage Services](phase-04-storage.md)
-- **Study After This:** [Phase 06 — Networking Services](phase-06-networking.md)
+- **Study Before This:** [Phase 04 - Storage Services](phase-04-storage.md)
+- **Study After This:** [Phase 06 - Networking Services](phase-06-networking.md)
 - **Directly Related GCP Services:** Cloud SQL, Cloud Spanner, Cloud Bigtable, Firestore, BigQuery, Memorystore, Cloud KMS (CMEK), VPC Service Controls.
 - **Official ACE Exam Guide Mappings:**
   - *Section 2.2:* Planning and configuring data storage and database options (choosing database services, sizing, pricing models).
@@ -662,4 +662,4 @@ bq query --use_legacy_sql=false \
 
 ---
 
-[<- Previous: Phase 04 — Storage Services](phase-04-storage.md) | [-> Next: Phase 06 — Networking Services](phase-06-networking.md)
+[<- Previous: Phase 04 - Storage Services](phase-04-storage.md) | [-> Next: Phase 06 - Networking Services](phase-06-networking.md)

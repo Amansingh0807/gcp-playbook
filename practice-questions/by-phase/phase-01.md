@@ -1,4 +1,4 @@
-# Phase 01 Practice Drill — Google Cloud Platform Fundamentals
+# Phase 01 Practice Drill - Google Cloud Platform Fundamentals
 
 > **Total Questions:** 15 (10 MCQs + 5 MSQs)  
 > **Topic Tag:** `#phase-01-gcp-fundamentals`  
@@ -7,7 +7,7 @@
 
 ---
 
-## Multiple Choice Questions (MCQs — Single Answer)
+## Multiple Choice Questions (MCQs - Single Answer)
 
 ### Question 1 [Resource Hierarchy Sequence]
 What is the correct structural hierarchy of Google Cloud resources, ordered from the top (broadest scope) to the bottom (most specific scope)?
@@ -256,7 +256,7 @@ In Google Cloud, **one Cloud Billing Account can be linked to multiple projects*
 
 ---
 
-## Multiple Select Questions (MSQs — Multiple Correct Answers)
+## Multiple Select Questions (MSQs - Multiple Correct Answers)
 
 ### Question 11 [Resource Hierarchy Components]
 Which of the following are valid nodes in the Google Cloud Resource Manager hierarchy? (Select THREE)

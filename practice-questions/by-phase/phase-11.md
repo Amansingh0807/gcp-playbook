@@ -1,4 +1,4 @@
-# Phase 11 Practice Drill — High Availability & Reliability
+# Phase 11 Practice Drill - High Availability & Reliability
 
 > **Total Questions:** 15 (10 MCQs + 5 MSQs)  
 > **Topic Tag:** `#phase-11-high-availability-reliability`  

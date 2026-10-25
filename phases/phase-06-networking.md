@@ -1,10 +1,10 @@
-[<- Previous: Phase 05 — Databases & Analytics](phase-05-databases.md) | [-> Next: Phase 07 — Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md)
+[<- Previous: Phase 05 - Databases & Analytics](phase-05-databases.md) | [-> Next: Phase 07 - Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md)
 
 ---
 
-# Phase 6 — Networking Services (Exam Weight: 5/5)
+# Phase 6 - Networking Services (Exam Weight: 5/5)
 
-> **Prerequisite:** [Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md) & [Phase 03 — Compute Services](phase-03-compute.md)  
+> **Prerequisite:** [Phase 01 - GCP Fundamentals](phase-01-gcp-fundamentals.md) & [Phase 03 - Compute Services](phase-03-compute.md)  
 > **Estimated Study Time:** 5–6 Hours  
 > **Exam Weight:** (Exam Weight: 5/5) (Highest Priority Exam Domain)  
 > **Covers:** VPC (Global Scope, Auto Mode, Custom Mode, Shared VPC), Subnets (Regional Scope, CIDR, Alias IPs, Private Google Access), Routes (Default, Custom, Static), Firewall Rules (Ingress, Egress, Priority, Targets, Tags, Service Accounts, Stateful Behavior), Hybrid Connectivity (VPC Peering, Cloud VPN, Cloud Interconnect, Cloud NAT, Cloud DNS), Cloud Load Balancing (Internal vs. External, Regional vs. Global, Application vs. Network Proxy).
@@ -168,7 +168,7 @@ Google Cloud's **VPC is a GLOBAL resource**, whereas **Subnets are always REGION
 
 ## 5. Cloud Load Balancing (Deep Dive)
 
-Google Cloud Load Balancing is a fully distributed, software-defined managed service. It is not an appliance running on a virtual machine—traffic is handled directly by Google's global Maglev network edge.
+Google Cloud Load Balancing is a fully distributed, software-defined managed service. It is not an appliance running on a virtual machine - traffic is handled directly by Google's global Maglev network edge.
 
 ### Core Load Balancing Architectural Axes
 
@@ -618,7 +618,7 @@ gcloud dns record-sets create db.corp.internal. \
 
 ---
 
-### MSQs (Multiple Correct Answers — Select ALL that apply)
+### MSQs (Multiple Correct Answers - Select ALL that apply)
 
 #### Q11. Which of the following statements regarding Google Cloud VPC networks and subnets are TRUE? (Select TWO)
 - [x] A. A VPC network is a global resource spanning all regions worldwide.
@@ -664,8 +664,8 @@ gcloud dns record-sets create db.corp.internal. \
 
 ## 21. Related Topics & Navigation
 
-- **Study Before This:** [Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md) & [Phase 03 — Compute Services](phase-03-compute.md)
-- **Study After This:** [Phase 07 — Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md)
+- **Study Before This:** [Phase 01 - GCP Fundamentals](phase-01-gcp-fundamentals.md) & [Phase 03 - Compute Services](phase-03-compute.md)
+- **Study After This:** [Phase 07 - Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md)
 - **Directly Related GCP Services:** VPC Network, Cloud Load Balancing, Cloud Armor, Cloud NAT, Cloud DNS, Cloud Interconnect, HA VPN, Network Intelligence Center.
 - **Official ACE Exam Guide Mappings:**
   - *Section 2.3:* Planning and configuring network resources (VPC design, firewall rules, hybrid connectivity, load balancers).
@@ -673,4 +673,4 @@ gcloud dns record-sets create db.corp.internal. \
 
 ---
 
-[<- Previous: Phase 05 — Databases & Analytics](phase-05-databases.md) | [-> Next: Phase 07 — Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md)
+[<- Previous: Phase 05 - Databases & Analytics](phase-05-databases.md) | [-> Next: Phase 07 - Kubernetes Engine (GKE)](phase-07-kubernetes-gke.md)

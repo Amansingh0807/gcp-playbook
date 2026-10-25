@@ -1,10 +1,10 @@
-[<- Previous: Phase 09 — DevOps & Automation](phase-09-devops-automation.md) | [-> Next: Phase 11 — High Availability & Reliability](phase-11-high-availability-reliability.md)
+[<- Previous: Phase 09 - DevOps & Automation](phase-09-devops-automation.md) | [-> Next: Phase 11 - High Availability & Reliability](phase-11-high-availability-reliability.md)
 
 ---
 
-# Phase 10 — Billing & Cost Optimization (Exam Weight: 4/5)
+# Phase 10 - Billing & Cost Optimization (Exam Weight: 4/5)
 
-> **Prerequisite:** [Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md) & [Phase 03 — Compute Services](phase-03-compute.md)  
+> **Prerequisite:** [Phase 01 - GCP Fundamentals](phase-01-gcp-fundamentals.md) & [Phase 03 - Compute Services](phase-03-compute.md)  
 > **Estimated Study Time:** 3–4 Hours  
 > **Exam Weight:** (Exam Weight: 4/5) (High-Frequency Practical Domain)  
 > **Covers:** Cloud Billing Accounts (Self-Serve vs. Invoiced), Project Billing Links, Budgets & Threshold Alerts, Programmatic Spend Capping (Pub/Sub + Cloud Functions), GCP Pricing Calculator, Quotas (Rate vs. Allocation), Resource Labels vs. Tags for FinOps, Sustained Use Discounts (SUD), Committed Use Discounts (CUD), Cost Export to BigQuery.
@@ -678,8 +678,8 @@ gcloud compute regions describe asia-south1 \
 
 ## 21. Related Topics & Navigation
 
-- **Study Before This:** [Phase 01 — GCP Fundamentals](phase-01-gcp-fundamentals.md) & [Phase 03 — Compute Services](phase-03-compute.md)
-- **Study After This:** [Phase 11 — High Availability & Reliability](phase-11-high-availability-reliability.md)
+- **Study Before This:** [Phase 01 - GCP Fundamentals](phase-01-gcp-fundamentals.md) & [Phase 03 - Compute Services](phase-03-compute.md)
+- **Study After This:** [Phase 11 - High Availability & Reliability](phase-11-high-availability-reliability.md)
 - **Directly Related GCP Services:** Cloud Billing, Cloud Budgets, Cloud Pub/Sub, Cloud Functions, BigQuery Billing Export, Pricing Calculator, Compute Engine Quotas.
 - **Official ACE Exam Guide Mappings:**
   - *Section 1.3:* Managing billing configuration (creating billing accounts, linking projects, setting budgets and alerts, setting up billing export to BigQuery).
@@ -687,4 +687,4 @@ gcloud compute regions describe asia-south1 \
 
 ---
 
-[<- Previous: Phase 09 — DevOps & Automation](phase-09-devops-automation.md) | [-> Next: Phase 11 — High Availability & Reliability](phase-11-high-availability-reliability.md)
+[<- Previous: Phase 09 - DevOps & Automation](phase-09-devops-automation.md) | [-> Next: Phase 11 - High Availability & Reliability](phase-11-high-availability-reliability.md)

@@ -1,4 +1,4 @@
-# Phase 08 Practice Drill — Monitoring & Operations
+# Phase 08 Practice Drill - Monitoring & Operations
 
 > **Total Questions:** 15 (10 MCQs + 5 MSQs)  
 > **Topic Tag:** `#phase-08-monitoring-operations`  
@@ -159,7 +159,7 @@
 
 **B) Log Router**
 
-**Explanation:** The Log Router checks every log entry against inclusion and exclusion filter rules to determine where to deliver the record—routing entries to the `_Default` or `_Required` buckets, or exporting them via sinks to BigQuery, Cloud Storage, or Pub/Sub.
+**Explanation:** The Log Router checks every log entry against inclusion and exclusion filter rules to determine where to deliver the record - routing entries to the `_Default` or `_Required` buckets, or exporting them via sinks to BigQuery, Cloud Storage, or Pub/Sub.
 </details>
 
 ---
@@ -181,7 +181,7 @@
 
 ---
 
-## MSQ Section (Multiple Correct Answers — Select ALL that apply)
+## MSQ Section (Multiple Correct Answers - Select ALL that apply)
 
 ---
 

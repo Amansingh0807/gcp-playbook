@@ -1,4 +1,4 @@
-# Phase 06 Practice Drill — Networking Services
+# Phase 06 Practice Drill - Networking Services
 
 > **Total Questions:** 15 (10 MCQs + 5 MSQs)  
 > **Topic Tag:** `#phase-06-networking`  
@@ -181,7 +181,7 @@
 
 ---
 
-## MSQ Section (Multiple Correct Answers — Select ALL that apply)
+## MSQ Section (Multiple Correct Answers - Select ALL that apply)
 
 ---
 

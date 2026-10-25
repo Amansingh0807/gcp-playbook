@@ -1,10 +1,10 @@
-[<- Previous: Phase 10 — Billing & Cost Optimization](phase-10-billing-cost-optimization.md) | [-> Next: Phase 12 — ACE Scenario Mastery & Battlecards](phase-12-scenario-mastery.md)
+[<- Previous: Phase 10 - Billing & Cost Optimization](phase-10-billing-cost-optimization.md) | [-> Next: Phase 12 - ACE Scenario Mastery & Battlecards](phase-12-scenario-mastery.md)
 
 ---
 
-# Phase 11 — High Availability & Reliability (Exam Weight: 4/5)
+# Phase 11 - High Availability & Reliability (Exam Weight: 4/5)
 
-> **Prerequisite:** [Phase 03 — Compute Services](phase-03-compute.md), [Phase 04 — Storage Services](phase-04-storage.md), & [Phase 06 — Networking Services](phase-06-networking.md)  
+> **Prerequisite:** [Phase 03 - Compute Services](phase-03-compute.md), [Phase 04 - Storage Services](phase-04-storage.md), & [Phase 06 - Networking Services](phase-06-networking.md)  
 > **Estimated Study Time:** 3–4 Hours  
 > **Exam Weight:** (Exam Weight: 4/5) (High-Frequency Architecture & Design Domain)  
 > **Covers:** GCP Physical Hierarchy (Zones, Regions, Multi-Regions), Zonal vs. Regional vs. Multi-Regional Resources, High Availability (HA) vs. Fault Tolerance (FT) vs. Disaster Recovery (DR), RTO & RPO Objectives, Regional Managed Instance Groups (MIGs), Regional Persistent Disks (Synchronous Replication), Cloud SQL HA (Regional Failover) vs. Cross-Region Read Replicas (Asynchronous DR), Disaster Recovery Strategies (Backup & Restore, Pilot Light, Warm Standby, Hot Standby).
@@ -664,8 +664,8 @@ They are critical because they dictate the required technology and financial inv
 
 ## 21. Related Topics & Navigation
 
-- **Study Before This:** [Phase 03 — Compute Services](phase-03-compute.md), [Phase 04 — Storage Services](phase-04-storage.md), & [Phase 06 — Networking Services](phase-06-networking.md)
-- **Study After This:** [Phase 12 — ACE Scenario Mastery & Battlecards](phase-12-scenario-mastery.md)
+- **Study Before This:** [Phase 03 - Compute Services](phase-03-compute.md), [Phase 04 - Storage Services](phase-04-storage.md), & [Phase 06 - Networking Services](phase-06-networking.md)
+- **Study After This:** [Phase 12 - ACE Scenario Mastery & Battlecards](phase-12-scenario-mastery.md)
 - **Directly Related GCP Services:** Compute Engine (Regional MIGs), Persistent Disk (Regional PD), Cloud SQL (HA & Read Replicas), Cloud Storage (Dual/Multi-Region), Google Kubernetes Engine (Regional Clusters), Cloud Spanner.
 - **Official ACE Exam Guide Mappings:**
   - *Section 2.1:* Planning and configuring compute resources (configuring high availability and disaster recovery).
@@ -674,4 +674,4 @@ They are critical because they dictate the required technology and financial inv
 
 ---
 
-[<- Previous: Phase 10 — Billing & Cost Optimization](phase-10-billing-cost-optimization.md) | [-> Next: Phase 12 — ACE Scenario Mastery & Battlecards](phase-12-scenario-mastery.md)
+[<- Previous: Phase 10 - Billing & Cost Optimization](phase-10-billing-cost-optimization.md) | [-> Next: Phase 12 - ACE Scenario Mastery & Battlecards](phase-12-scenario-mastery.md)

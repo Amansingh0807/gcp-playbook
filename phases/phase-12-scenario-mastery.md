@@ -1,15 +1,15 @@
-[<- Previous: Phase 11 — High Availability & Reliability](phase-11-high-availability-reliability.md)
+[<- Previous: Phase 11 - High Availability & Reliability](phase-11-high-availability-reliability.md)
 
 ---
 
-# Phase 12 — ACE Scenario Mastery & Battlecards (Exam Weight: 5/5)
+# Phase 12 - ACE Scenario Mastery & Battlecards (Exam Weight: 5/5)
 
 > **Prerequisite:** All prior phases ([Phase 00](phase-00-cloud-fundamentals.md) through [Phase 11](phase-11-high-availability-reliability.md))  
 > **Estimated Study Time:** 6–8 Hours  
 > **Exam Weight:** (Exam Weight: 5/5) (The Capstone for Exam Success)  
 > **Covers:** 15 Comprehensive Head-to-Head Exam Battlecards, 5 Architectural Decision Trees, Exam Trap Deconstruction, High-Probability Scenario Solving Framework.
 
-**This is the ultimate capstone phase of the Google Cloud Associate Cloud Engineer Master Handbook.** Rather than introducing new theory, Phase 12 synthesizes all computing, storage, networking, database, identity, monitoring, and billing domains into decision-making matrices. Real ACE exam questions do not ask for dictionary definitions—they place you in complex, ambiguous architectural scenarios and test your ability to pick the single best service based on constraints like cost, operational overhead, latency, and compliance.
+**This is the ultimate capstone phase of the Google Cloud Associate Cloud Engineer Master Handbook.** Rather than introducing new theory, Phase 12 synthesizes all computing, storage, networking, database, identity, monitoring, and billing domains into decision-making matrices. Real ACE exam questions do not ask for dictionary definitions - they place you in complex, ambiguous architectural scenarios and test your ability to pick the single best service based on constraints like cost, operational overhead, latency, and compliance.
 
 ---
 
@@ -405,7 +405,7 @@ Start: Granting permissions to an identity:
 
 ### Part 1: Multiple Choice Questions (MCQs)
 
-#### Q1. A media company wants to run a containerized microservice that handles sporadic webhooks from external vendors. Webhooks arrive irregularly—sometimes 500 per minute, sometimes zero for several hours. Which compute service provides the lowest cost and least operational overhead?
+#### Q1. A media company wants to run a containerized microservice that handles sporadic webhooks from external vendors. Webhooks arrive irregularly - sometimes 500 per minute, sometimes zero for several hours. Which compute service provides the lowest cost and least operational overhead?
 - [ ] A. Compute Engine VM running Docker on an e2-standard-4 instance
 - [ ] B. GKE Standard cluster with a 3-node pool
 - [x] C. Cloud Run configured to scale to zero
@@ -523,20 +523,20 @@ Start: Granting permissions to an identity:
 
 ## 7. Complete Curriculum Revision Checklist
 
-- [x] **Phase 00 — Cloud Computing Fundamentals:** Service models (IaaS, PaaS, SaaS), deployment architectures, Shared Responsibility Model.
-- [x] **Phase 01 — GCP Fundamentals & Organization:** Resource Hierarchy (Org -> Folders -> Projects -> Resources), Resource Manager Tags vs. Labels, Cloud Shell.
-- [x] **Phase 02 — Identity & Access Management (IAM):** Principles, Predefined vs. Primitive vs. Custom roles, Service Accounts, Workload Identity, IAM Conditions.
-- [x] **Phase 03 — Compute Services:** Compute Engine, Managed Instance Groups, Autoscaling, Cloud Run, App Engine Standard vs. Flexible, Cloud Functions.
-- [x] **Phase 04 — Storage Services:** Cloud Storage classes (Standard, Nearline, Coldline, Archive), Lifecycle Rules, Retention Policies (Bucket Lock), Persistent Disks, Filestore.
-- [x] **Phase 05 — Database Services:** Cloud SQL (HA & Read Replicas), Cloud Spanner, Firestore, Cloud Bigtable, BigQuery (OLAP vs. OLTP).
-- [x] **Phase 06 — Networking Services:** VPC Architecture, Subnets, Firewall Rules, Cloud NAT, Cloud Router, Private Google Access, Cloud VPN, Cloud Interconnect, VPC Peering, Cloud Load Balancing.
-- [x] **Phase 07 — Kubernetes Engine (GKE):** Standard vs. Autopilot, Pods, Deployments, Services, Cluster Autoscaler, Horizontal Pod Autoscaler, Workload Identity.
-- [x] **Phase 08 — Monitoring & Operations:** Cloud Monitoring, Cloud Logging, Log Router & Sinks, Audit Logs (`_Required` vs `_Default`), Cloud Trace, Cloud Profiler, Ops Agent.
-- [x] **Phase 09 — DevOps & Automation:** Cloud Build (`cloudbuild.yaml`), Artifact Registry, CI/CD spectrum (CI vs. Delivery vs. Deployment), Terraform (IaC, remote state in GCS).
-- [x] **Phase 10 — Billing & Cost Optimization:** Billing Accounts, Budgets & Threshold Alerts, Programmatic Spend Capping, Pricing Calculator, Quotas, SUD vs. CUD.
-- [x] **Phase 11 — High Availability & Reliability:** Physical Hierarchy, Zonal vs. Regional vs. Multi-Regional, High Availability vs. Fault Tolerance, Disaster Recovery (RTO & RPO), Replication.
-- [x] **Phase 12 — Scenario Mastery & Battlecards:** 15 Battlecards, 5 Decision Trees, 10 Exam Traps, 10 Interview Scenarios, 20 Capstone Practice Questions.
+- [x] **Phase 00 - Cloud Computing Fundamentals:** Service models (IaaS, PaaS, SaaS), deployment architectures, Shared Responsibility Model.
+- [x] **Phase 01 - GCP Fundamentals & Organization:** Resource Hierarchy (Org -> Folders -> Projects -> Resources), Resource Manager Tags vs. Labels, Cloud Shell.
+- [x] **Phase 02 - Identity & Access Management (IAM):** Principles, Predefined vs. Primitive vs. Custom roles, Service Accounts, Workload Identity, IAM Conditions.
+- [x] **Phase 03 - Compute Services:** Compute Engine, Managed Instance Groups, Autoscaling, Cloud Run, App Engine Standard vs. Flexible, Cloud Functions.
+- [x] **Phase 04 - Storage Services:** Cloud Storage classes (Standard, Nearline, Coldline, Archive), Lifecycle Rules, Retention Policies (Bucket Lock), Persistent Disks, Filestore.
+- [x] **Phase 05 - Database Services:** Cloud SQL (HA & Read Replicas), Cloud Spanner, Firestore, Cloud Bigtable, BigQuery (OLAP vs. OLTP).
+- [x] **Phase 06 - Networking Services:** VPC Architecture, Subnets, Firewall Rules, Cloud NAT, Cloud Router, Private Google Access, Cloud VPN, Cloud Interconnect, VPC Peering, Cloud Load Balancing.
+- [x] **Phase 07 - Kubernetes Engine (GKE):** Standard vs. Autopilot, Pods, Deployments, Services, Cluster Autoscaler, Horizontal Pod Autoscaler, Workload Identity.
+- [x] **Phase 08 - Monitoring & Operations:** Cloud Monitoring, Cloud Logging, Log Router & Sinks, Audit Logs (`_Required` vs `_Default`), Cloud Trace, Cloud Profiler, Ops Agent.
+- [x] **Phase 09 - DevOps & Automation:** Cloud Build (`cloudbuild.yaml`), Artifact Registry, CI/CD spectrum (CI vs. Delivery vs. Deployment), Terraform (IaC, remote state in GCS).
+- [x] **Phase 10 - Billing & Cost Optimization:** Billing Accounts, Budgets & Threshold Alerts, Programmatic Spend Capping, Pricing Calculator, Quotas, SUD vs. CUD.
+- [x] **Phase 11 - High Availability & Reliability:** Physical Hierarchy, Zonal vs. Regional vs. Multi-Regional, High Availability vs. Fault Tolerance, Disaster Recovery (RTO & RPO), Replication.
+- [x] **Phase 12 - Scenario Mastery & Battlecards:** 15 Battlecards, 5 Decision Trees, 10 Exam Traps, 10 Interview Scenarios, 20 Capstone Practice Questions.
 
 ---
 
-[<- Previous: Phase 11 — High Availability & Reliability](phase-11-high-availability-reliability.md)
+[<- Previous: Phase 11 - High Availability & Reliability](phase-11-high-availability-reliability.md)

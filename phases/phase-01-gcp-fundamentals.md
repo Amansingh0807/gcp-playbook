@@ -1,10 +1,10 @@
-[<- Previous: Phase 00 — Cloud Fundamentals](phase-00-cloud-fundamentals.md) | [-> Next: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md)
+[<- Previous: Phase 00 - Cloud Fundamentals](phase-00-cloud-fundamentals.md) | [-> Next: Phase 02 - Identity & Security (IAM)](phase-02-identity-security-iam.md)
 
 ---
 
-# Phase 1 — Google Cloud Platform Fundamentals (Exam Weight: 5/5)
+# Phase 1 - Google Cloud Platform Fundamentals (Exam Weight: 5/5)
 
-> **Prerequisite:** [Phase 00 — Cloud Computing Fundamentals](phase-00-cloud-fundamentals.md)  
+> **Prerequisite:** [Phase 00 - Cloud Computing Fundamentals](phase-00-cloud-fundamentals.md)  
 > **Estimated Study Time:** 3–4 Hours  
 > **Exam Weight:** (Exam Weight: 5/5) (Highest Priority Exam Domain)  
 > **Covers:** Module 1.1 (Console, Cloud Shell, Cloud SDK, gcloud CLI, APIs, Marketplace), Module 1.2 (Projects & Billing), Module 1.3 (Resource Hierarchy & Org Policies)
@@ -13,7 +13,7 @@
 
 ## 1. Definition
 
-Google Cloud Console, Projects & Billing, and the Resource Hierarchy together form the operational skeleton of GCP — the tools used to interact with GCP (Console, Cloud Shell, `gcloud` CLI), the fundamental container that holds resources and billing (Projects), and the organizational tree that governs security policies (Organization -> Folder -> Project -> Resources).
+Google Cloud Console, Projects & Billing, and the Resource Hierarchy together form the operational skeleton of GCP - the tools used to interact with GCP (Console, Cloud Shell, `gcloud` CLI), the fundamental container that holds resources and billing (Projects), and the organizational tree that governs security policies (Organization -> Folder -> Project -> Resources).
 
 > **Core Concept:** These components form GCP's central nervous system: Console and CLI tools provide management control, Projects serve as billing and resource containers, and the Resource Hierarchy establishes an inherited security and organizational structure across the entire enterprise.
 
@@ -22,13 +22,13 @@ Google Cloud Console, Projects & Billing, and the Resource Hierarchy together fo
 ## 2. Why does this service exist?
 
 ### Problem it solves:
-- An enterprise on the cloud might have hundreds of teams, thousands of virtual machines, and dozens of business units. Without a structured hierarchy, this results in administrative chaos — no one knows who owns what, who is paying for what, or how to enforce security rules across all workloads.
-- Without a centralized resource hierarchy, security teams would have to apply IAM permissions and firewall policies to every single server and storage bucket individually — slow, error-prone, and unmaintainable.
+- An enterprise on the cloud might have hundreds of teams, thousands of virtual machines, and dozens of business units. Without a structured hierarchy, this results in administrative chaos - no one knows who owns what, who is paying for what, or how to enforce security rules across all workloads.
+- Without a centralized resource hierarchy, security teams would have to apply IAM permissions and firewall policies to every single server and storage bucket individually - slow, error-prone, and unmaintainable.
 - Without management interfaces (Console, CLI, SDK), interacting with Google Cloud would require hand-crafting low-level raw HTTP REST requests.
 
 ### Why it was created:
 - **Console, Cloud Shell, and `gcloud` CLI** were built to provide multiple administrative paths: visual exploration for beginners and scripted automation for DevOps/CI-CD workflows.
-- **Projects** were introduced as the fundamental isolation boundary — every single resource in GCP **must** belong to exactly one project.
+- **Projects** were introduced as the fundamental isolation boundary - every single resource in GCP **must** belong to exactly one project.
 - **Resource Hierarchy** (Organization -> Folders -> Projects -> Resources) was engineered so enterprises can define a security or compliance rule once at the top level and have it inherit downwards to thousands of child resources automatically.
 
 ### What happens if this doesn't exist:
@@ -92,7 +92,7 @@ Google Cloud Console, Projects & Billing, and the Resource Hierarchy together fo
 
 ## 4. Core Components
 
-### Module 1.1 — Administrative Tools
+### Module 1.1 - Administrative Tools
 | Component | What it is | Why it exists | Real-World Analogy |
 | :--- | :--- | :--- | :--- |
 | **Cloud Console** | Graphical web UI (`console.cloud.google.com`) | Provides a visual, interactive dashboard for exploring and managing services | The **dashboard/touchscreen** of a modern car |
@@ -105,7 +105,7 @@ Google Cloud Console, Projects & Billing, and the Resource Hierarchy together fo
 
 ---
 
-### Module 1.2 — Projects & Billing
+### Module 1.2 - Projects & Billing
 | Component | What it is | Why it exists | Real-World Analogy |
 | :--- | :--- | :--- | :--- |
 | **Project** | Base container for all resources; every resource belongs to exactly ONE project | Isolates resources, security permissions, and billing | A **dedicated labeled folder** holding files for one client |
@@ -119,7 +119,7 @@ Google Cloud Console, Projects & Billing, and the Resource Hierarchy together fo
 
 ---
 
-### Module 1.3 — Resource Hierarchy (Exam Weight: 5/5)
+### Module 1.3 - Resource Hierarchy (Exam Weight: 5/5)
 | Component | What it is | Why it exists | Real-World Analogy |
 | :--- | :--- | :--- | :--- |
 | **Organization** | Root node of the hierarchy, linked to a Google Workspace or Cloud Identity domain | Represents the entire corporate enterprise; top-level governance boundary | The **global corporate headquarters** |
@@ -134,7 +134,7 @@ Google Cloud Console, Projects & Billing, and the Resource Hierarchy together fo
 
 ### Cloud Shell Features
 - Includes **5GB of free persistent storage** in your `$HOME` directory that persists across sessions.
-- Pre-authenticated with your Google account credentials — zero configuration needed.
+- Pre-authenticated with your Google account credentials - zero configuration needed.
 - Ephemeral VM instance: VM tears down after 20–60 minutes of inactivity, but disk contents remain safe.
 - Built-in web preview feature on port 8080.
 
@@ -442,8 +442,8 @@ Your company wants to guarantee that cloud spending in a development project sto
 
 ## 21. Related Topics & Navigation
 
-- **Study Before This:** [Phase 00 — Cloud Computing Fundamentals](phase-00-cloud-fundamentals.md).
-- **Study After This:** [Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md).
+- **Study Before This:** [Phase 00 - Cloud Computing Fundamentals](phase-00-cloud-fundamentals.md).
+- **Study After This:** [Phase 02 - Identity & Security (IAM)](phase-02-identity-security-iam.md).
 - **Directly Related GCP Services:** Cloud Resource Manager, Cloud Billing, Cloud IAM, Organization Policy Service, Cloud Shell, Cloud SDK.
 - **Official ACE Exam Guide Mappings:**
   - *Section 1.1:* Setting up cloud solution environments (Managing projects, assigning billing accounts, establishing resource hierarchy).
@@ -451,4 +451,4 @@ Your company wants to guarantee that cloud spending in a development project sto
 
 ---
 
-[<- Previous: Phase 00 — Cloud Fundamentals](phase-00-cloud-fundamentals.md) | [-> Next: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md)
+[<- Previous: Phase 00 - Cloud Fundamentals](phase-00-cloud-fundamentals.md) | [-> Next: Phase 02 - Identity & Security (IAM)](phase-02-identity-security-iam.md)

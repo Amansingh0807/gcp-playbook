@@ -1,4 +1,4 @@
-# Phase 05 Practice Drill — Databases & Analytics
+# Phase 05 Practice Drill - Databases & Analytics
 
 > **Total Questions:** 15 (10 MCQs + 5 MSQs)  
 > **Topic Tag:** `#phase-05-databases`  
@@ -74,7 +74,7 @@
 
 **C) Cloud Bigtable**
 
-**Explanation:** Cloud Bigtable delivers petabyte-scale wide-column storage optimized for IoT telemetry and time-series data at single-digit millisecond latency. However, it enforces a single-row atomicity constraint—it does not support multi-row ACID transactions. Cloud SQL and Spanner both support multi-row ACID transactions.
+**Explanation:** Cloud Bigtable delivers petabyte-scale wide-column storage optimized for IoT telemetry and time-series data at single-digit millisecond latency. However, it enforces a single-row atomicity constraint - it does not support multi-row ACID transactions. Cloud SQL and Spanner both support multi-row ACID transactions.
 </details>
 
 ---
@@ -181,7 +181,7 @@
 
 ---
 
-## MSQ Section (Multiple Correct Answers — Select ALL that apply)
+## MSQ Section (Multiple Correct Answers - Select ALL that apply)
 
 ---
 
@@ -216,7 +216,7 @@
 
 **A) It delivers external consistency globally using TrueTime technology, B) It supports multi-row, multi-table ACID transactions, D) It can scale compute and storage horizontally without maintenance downtime.**
 
-**Explanation:** Cloud Spanner uses atomic clocks and GPS receivers via the TrueTime API to provide global external consistency. It supports full multi-row, multi-table ACID transactions and scales compute (nodes/PUs) and storage horizontally. Spanner is significantly more expensive than Cloud SQL for small regional setups (C is false), and it is Bigtable—not Spanner—that is limited to single-row transactions (E is false).
+**Explanation:** Cloud Spanner uses atomic clocks and GPS receivers via the TrueTime API to provide global external consistency. It supports full multi-row, multi-table ACID transactions and scales compute (nodes/PUs) and storage horizontally. Spanner is significantly more expensive than Cloud SQL for small regional setups (C is false), and it is Bigtable - not Spanner - that is limited to single-row transactions (E is false).
 </details>
 
 ---

@@ -1,4 +1,4 @@
-# Phase 00 Practice Drill — Cloud Computing Fundamentals
+# Phase 00 Practice Drill - Cloud Computing Fundamentals
 
 > **Total Questions:** 15 (10 MCQs + 5 MSQs)  
 > **Topic Tag:** `#phase-00-cloud-fundamentals`  
@@ -7,7 +7,7 @@
 
 ---
 
-## Multiple Choice Questions (MCQs — Single Answer)
+## Multiple Choice Questions (MCQs - Single Answer)
 
 ### Question 1 [NIST Characteristics]
 Which of the following is NOT one of the five essential characteristics of cloud computing as defined by NIST?
@@ -254,7 +254,7 @@ A **Private Cloud** provides dedicated, single-tenant infrastructure operated so
 
 ---
 
-## Multiple Select Questions (MSQs — Multiple Correct Answers)
+## Multiple Select Questions (MSQs - Multiple Correct Answers)
 
 ### Question 11 [NIST Characteristics]
 Which of the following are among the five essential NIST characteristics of cloud computing? (Select TWO)

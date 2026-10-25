@@ -1,4 +1,4 @@
-# Phase 04 Practice Drill — Storage Services
+# Phase 04 Practice Drill - Storage Services
 
 > **Total Questions:** 15 (10 MCQs + 5 MSQs)  
 > **Topic Tag:** `#phase-04-storage`  
@@ -23,7 +23,7 @@
 
 **B) Standard → Nearline at 30 days → Coldline at 90 days → Archive at 365 days**
 
-**Explanation:** This follows the natural access pattern — hot data stays in Standard, then transitions progressively to colder classes. Moving directly to Archive too early incurs high retrieval costs if data is accessed. The progressive transition balances storage savings with retrieval costs.
+**Explanation:** This follows the natural access pattern - hot data stays in Standard, then transitions progressively to colder classes. Moving directly to Archive too early incurs high retrieval costs if data is accessed. The progressive transition balances storage savings with retrieval costs.
 
 **Trap:** Option C skips Nearline, which means paying Coldline retrieval costs for the 30–90 day period when data is still occasionally accessed.
 </details>
@@ -47,7 +47,7 @@
 
 ---
 
-### Q3. You need to ensure that financial records stored in Cloud Storage cannot be deleted by anyone — including project owners — for 7 years. What should you do?
+### Q3. You need to ensure that financial records stored in Cloud Storage cannot be deleted by anyone - including project owners - for 7 years. What should you do?
 
 - A) Enable Object Versioning
 - B) Set a Retention Policy of 7 years and lock it
@@ -59,7 +59,7 @@
 
 **B) Set a Retention Policy of 7 years and lock it**
 
-**Explanation:** A locked retention policy is permanent and irreversible — even project owners and organization admins cannot delete objects before the retention period expires. Versioning (A) protects against accidental deletes but doesn't prevent intentional deletion. CMEK (C) controls encryption, not deletion. Removing roles (D) can be circumvented by granting the role again.
+**Explanation:** A locked retention policy is permanent and irreversible - even project owners and organization admins cannot delete objects before the retention period expires. Versioning (A) protects against accidental deletes but doesn't prevent intentional deletion. CMEK (C) controls encryption, not deletion. Removing roles (D) can be circumvented by granting the role again.
 </details>
 
 ---
@@ -93,7 +93,7 @@
 
 **C) Bucket names are globally unique across all of Google Cloud**
 
-**Explanation:** Cloud Storage bucket names exist in a single global namespace — no two buckets in the world can have the same name. Names cannot be changed after creation (must delete and recreate). Names must be lowercase only (3–63 characters, no spaces or special characters).
+**Explanation:** Cloud Storage bucket names exist in a single global namespace - no two buckets in the world can have the same name. Names cannot be changed after creation (must delete and recreate). Names must be lowercase only (3–63 characters, no spaces or special characters).
 </details>
 
 ---
@@ -110,7 +110,7 @@
 
 **C) SSD Persistent Disk (`pd-ssd`)**
 
-**Explanation:** The requirement specifies both high IOPS AND data persistence (survive restarts). Local SSD (A) has the highest IOPS but data is lost on restart — eliminated. SSD Persistent Disk provides high IOPS with full persistence. Standard (B) has low IOPS, and Balanced (D) has moderate IOPS — neither optimal for a high-performance database.
+**Explanation:** The requirement specifies both high IOPS AND data persistence (survive restarts). Local SSD (A) has the highest IOPS but data is lost on restart - eliminated. SSD Persistent Disk provides high IOPS with full persistence. Standard (B) has low IOPS, and Balanced (D) has moderate IOPS - neither optimal for a high-performance database.
 </details>
 
 ---
@@ -168,7 +168,7 @@
 
 ### Q10. By default, how is data encrypted in Cloud Storage?
 
-- A) Data is NOT encrypted by default — you must enable it manually
+- A) Data is NOT encrypted by default - you must enable it manually
 - B) Data is encrypted using the customer's own key (CSEK)
 - C) Data is encrypted at rest using Google-managed AES-256 encryption keys
 - D) Data is encrypted only if stored in Archive class
@@ -183,7 +183,7 @@
 
 ---
 
-## MSQ Section (Multiple Correct Answers — Select ALL that apply)
+## MSQ Section (Multiple Correct Answers - Select ALL that apply)
 
 ---
 
@@ -200,7 +200,7 @@
 
 **A) Region, C) Dual-Region, D) Multi-Region**
 
-**Explanation:** Cloud Storage supports three location types: Region (single region), Dual-Region (two specific regions), and Multi-Region (continent-wide geo-redundancy like US, EU, ASIA). "Zone" (B) is a Compute Engine concept — Cloud Storage doesn't have zone-level granularity. "Global" (E) is not a valid location type.
+**Explanation:** Cloud Storage supports three location types: Region (single region), Dual-Region (two specific regions), and Multi-Region (continent-wide geo-redundancy like US, EU, ASIA). "Zone" (B) is a Compute Engine concept - Cloud Storage doesn't have zone-level granularity. "Global" (E) is not a valid location type.
 </details>
 
 ---
@@ -220,7 +220,7 @@
 
 **Explanation:** Signed URLs are time-limited URLs that embed credentials for accessing private objects. They work without requiring a Google account. V4 signed URLs have a maximum of 7 days. They can be configured for GET (read) or PUT (write) operations. They CANNOT be set to never expire (C is false).
 
-**Note:** Both D and E are correct — this question has 4 correct answers, making it tricky.
+**Note:** Both D and E are correct - this question has 4 correct answers, making it tricky.
 </details>
 
 ---
@@ -238,7 +238,7 @@
 
 **A) Persistent Disks support snapshots; Local SSDs do not, B) Persistent Disks survive VM stops; Local SSD data is lost, C) Local SSDs provide higher IOPS than Persistent Disks, E) Persistent Disks can be resized; Local SSDs have fixed 375 GB per device**
 
-**Explanation:** PDs support snapshots, persist across stops, and can be resized. Local SSDs have no snapshot support, data is ephemeral, provide the highest IOPS, and come in fixed 375 GB increments. Local SSDs CANNOT be shared across VMs (D is false) — they are physically attached to a single host.
+**Explanation:** PDs support snapshots, persist across stops, and can be resized. Local SSDs have no snapshot support, data is ephemeral, provide the highest IOPS, and come in fixed 375 GB increments. Local SSDs CANNOT be shared across VMs (D is false) - they are physically attached to a single host.
 </details>
 
 ---
@@ -256,7 +256,7 @@
 
 **A) All objects inherit the bucket's IAM policy, C) After the 90-day lock period, it becomes permanent**
 
-**Explanation:** Uniform Bucket-Level Access means ALL objects use the bucket-level IAM policy — no individual ACLs (B is false). Once enabled, there's a 90-day grace period to revert; after that, it's permanent and irreversible (D is false). It controls access, not encryption (E is false).
+**Explanation:** Uniform Bucket-Level Access means ALL objects use the bucket-level IAM policy - no individual ACLs (B is false). Once enabled, there's a 90-day grace period to revert; after that, it's permanent and irreversible (D is false). It controls access, not encryption (E is false).
 </details>
 
 ---
@@ -283,7 +283,7 @@
 
 | Score | Verdict |
 |-------|---------|
-| 15/15 | Storage Master — You're exam-ready for this domain |
-| 13–14 | [Yes] Solid — Minor review needed |
+| 15/15 | Storage Master - You're exam-ready for this domain |
+| 13–14 | [Yes] Solid - Minor review needed |
 | 10–12 | Note: Re-read Storage Classes, Lifecycle Rules, and PD vs Local SSD |
 | Below 10 | Re-study Phase 04 completely, focus on the Gotchas & Traps section |

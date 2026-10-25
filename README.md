@@ -22,6 +22,17 @@ Unlike conventional study guides that either provide high-level summaries or ove
 
 ---
 
+## Who Is This Playbook For?
+
+This playbook is designed to be accessible and valuable for anyone learning or working with Google Cloud Platform (GCP):
+
+- **Absolute Beginners:** If you are starting from ground zero, Phase 00 and Phase 01 walk you through core concepts in plain English without overwhelming jargon.
+- **Engineers Wanting to Advance Their Skills:** If you already use cloud services and want to deepen your understanding, master the `gcloud` CLI, and study real-world production architectures.
+- **Certification Aspirants:** If you are preparing for Google Cloud certifications (such as the Associate Cloud Engineer - ACE exam or preparing for Professional Cloud Architect), with 300+ scenario-based questions, exam trap tables, and timed mock tests.
+- **Teams and Practitioners:** If you need a clean, structured, zero-fluff daily reference for GCP service limits, configuration defaults, and architectural trade-offs.
+
+---
+
 ## How To Use This Playbook (The 4-Step Strategy)
 
 ```
@@ -32,10 +43,10 @@ Unlike conventional study guides that either provide high-level summaries or ove
 └─────────────────┘       └─────────────────┘       └─────────────────┘       └───────────────────┘
 ```
 
-1. **Step 1 — Master the Phase (`phases/`):** Study the phase file sequentially. Every file contains 21 standard sections including architecture, CLI syntax, and quick revision sheets.
-2. **Step 2 — Drill Phase Questions (`practice-questions/by-phase/`):** After reading the theory, immediately test your retention with the dedicated 15-question drill (10 MCQs + 5 MSQs) with deep option explanations.
-3. **Step 3 — Take Mock Exams (`practice-questions/mock-exams/`):** Every 3–4 phases, run a timed 50-question mock exam to practice time management across mixed GCP domains.
-4. **Step 4 — Final Polish with High-Frequency Bank (`practice-questions/high-frequency-questions.md`):** In the last 72 hours before your exam, drill the repeated questions and trap scenarios that candidates encounter year after year.
+1. **Step 1 - Master the Phase (`phases/`):** Study the phase file sequentially. Every file contains 21 standard sections including architecture, CLI syntax, and quick revision sheets.
+2. **Step 2 - Drill Phase Questions (`practice-questions/by-phase/`):** After reading the theory, immediately test your retention with the dedicated 15-question drill (10 MCQs + 5 MSQs) with deep option explanations.
+3. **Step 3 - Take Mock Exams (`practice-questions/mock-exams/`):** Every 3–4 phases, run a timed 50-question mock exam to practice time management across mixed GCP domains.
+4. **Step 4 - Final Polish with High-Frequency Bank (`practice-questions/high-frequency-questions.md`):** In the last 72 hours before your exam, drill the repeated questions and trap scenarios that candidates encounter year after year.
 
 ---
 ## Curriculum Roadmap
@@ -143,6 +154,12 @@ gcp-playbook/
 
 Have you taken the ACE exam recently? Found a recurring question pattern or want to submit an improvement?
 Check out our [CONTRIBUTING.md](CONTRIBUTING.md) guide!
+
+### Diagram Modernization Initiative (Call for Contributions)
+
+We want to upgrade every text and ASCII diagram throughout this playbook with high-quality visual pictures or interactive Mermaid diagrams.
+
+If you would like to help create visual architecture diagrams or convert text flows into Mermaid syntax, your contributions are warmly welcomed! Please feel free to open an issue or submit a pull request with new diagrams for any phase or section.
 
 ---
 

@@ -1,4 +1,4 @@
-# Google Cloud ACE — High-Frequency & Recurring Exam Questions
+# Google Cloud ACE - High-Frequency & Recurring Exam Questions
 
 > **Value Note:** These questions represent scenarios, architectural patterns, and tricky edge cases that candidates consistently report encountering on the Google Cloud Associate Cloud Engineer (ACE) exam year after year. Drill these thoroughly before your test.
 

@@ -1,4 +1,4 @@
-# Phase 07 Practice Drill — Kubernetes Engine (GKE)
+# Phase 07 Practice Drill - Kubernetes Engine (GKE)
 
 > **Total Questions:** 15 (10 MCQs + 5 MSQs)  
 > **Topic Tag:** `#phase-07-kubernetes-gke`  
@@ -181,7 +181,7 @@
 
 ---
 
-## MSQ Section (Multiple Correct Answers — Select ALL that apply)
+## MSQ Section (Multiple Correct Answers - Select ALL that apply)
 
 ---
 

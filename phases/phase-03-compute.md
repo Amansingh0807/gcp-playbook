@@ -1,10 +1,10 @@
-[<- Previous: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md) | [-> Next: Phase 04 — Storage Services](phase-04-storage.md)
+[<- Previous: Phase 02 - Identity & Security (IAM)](phase-02-identity-security-iam.md) | [-> Next: Phase 04 - Storage Services](phase-04-storage.md)
 
 ---
 
-# Phase 3 — Compute Services (Exam Weight: 5/5)
+# Phase 3 - Compute Services (Exam Weight: 5/5)
 
-> **Prerequisite:** [Phase 02 — Identity & Security (Cloud IAM)](phase-02-identity-security-iam.md)  
+> **Prerequisite:** [Phase 02 - Identity & Security (Cloud IAM)](phase-02-identity-security-iam.md)  
 > **Estimated Study Time:** 5–6 Hours  
 > **Exam Weight:** (Exam Weight: 5/5) (GCP's Biggest & Most Heavily Tested Compute Domain)  
 > **Covers:** Compute Engine (VM Basics, Machine Types, Storage, Images/Snapshots, Networking, Lifecycle, Metadata, Access, Pricing), Managed Instance Groups (Templates, Autoscaling, Autohealing, Rolling Updates, Health Checks), App Engine (Standard/Flexible, Versions, Traffic Splitting), Cloud Run (Containers, Revisions, Concurrency), Cloud Functions (Event-driven, Triggers).
@@ -13,7 +13,7 @@
 
 ## 1. Definition
 
-**Compute** in GCP is the overarching umbrella term for all the services that execute your application code — ranging from full virtual machines that you completely control (Compute Engine) to fully managed, serverless platforms where you simply deploy code or containers without managing infrastructure (App Engine, Cloud Run, Cloud Functions).
+**Compute** in GCP is the overarching umbrella term for all the services that execute your application code - ranging from full virtual machines that you completely control (Compute Engine) to fully managed, serverless platforms where you simply deploy code or containers without managing infrastructure (App Engine, Cloud Run, Cloud Functions).
 
 > **Core Concept:** Compute answers the question: **"Where and how does your application execute?"** Compute Engine gives you complete low-level control over OS, memory, and disks, while serverless offerings like Cloud Run and Cloud Functions abstract away infrastructure entirely so you pay only for code execution time.
 
@@ -251,7 +251,7 @@ Compute Engine   ─-->   GKE (Kubernetes)   ─-->   Cloud Run   ─-->   Cloud
 ### Key Compute Engine VM Parameters
 - **Zone:** Geographic data center deployment point (e.g., `asia-south1-a`).
 - **Machine Configuration:** Selecting series (E2, N2) and core/memory sizes.
-- **Boot Disk Options:** Deletion rule — check *Keep boot disk on instance deletion* for stateful production systems.
+- **Boot Disk Options:** Deletion rule - check *Keep boot disk on instance deletion* for stateful production systems.
 - **Network Tags:** Metadata labels (`http-server`, `backend`) used by VPC Firewall rules to target ingress traffic.
 
 ### Crucial MIG & Autoscaler Settings
@@ -477,8 +477,8 @@ What happens to data stored on a Local SSD when the parent Compute Engine VM is 
 
 ## 21. Related Topics & Navigation
 
-- **Study Before This:** [Phase 02 — Identity & Security (Cloud IAM)](phase-02-identity-security-iam.md).
-- **Study After This:** [Phase 04 — Storage Services](phase-04-storage.md) & [Phase 06 — Networking](phase-06-networking.md).
+- **Study Before This:** [Phase 02 - Identity & Security (Cloud IAM)](phase-02-identity-security-iam.md).
+- **Study After This:** [Phase 04 - Storage Services](phase-04-storage.md) & [Phase 06 - Networking](phase-06-networking.md).
 - **Directly Related GCP Services:** Compute Engine, Managed Instance Groups, Cloud Run, Cloud Functions, App Engine, GKE, Cloud Load Balancing.
 - **Official ACE Exam Guide Mappings:**
   - *Section 2.1:* Planning and configuring compute resources (sizing, Spot VMs, selecting runtimes).
@@ -487,4 +487,4 @@ What happens to data stored on a Local SSD when the parent Compute Engine VM is 
 
 ---
 
-[<- Previous: Phase 02 — Identity & Security (IAM)](phase-02-identity-security-iam.md) | [-> Next: Phase 04 — Storage Services](phase-04-storage.md)
+[<- Previous: Phase 02 - Identity & Security (IAM)](phase-02-identity-security-iam.md) | [-> Next: Phase 04 - Storage Services](phase-04-storage.md)

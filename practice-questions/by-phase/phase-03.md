@@ -1,4 +1,4 @@
-# Phase 03 Practice Drill — Compute Services
+# Phase 03 Practice Drill - Compute Services
 
 > **Total Questions:** 15 (10 MCQs + 5 MSQs)  
 > **Topic Tag:** `#phase-03-compute`  
@@ -7,7 +7,7 @@
 
 ---
 
-## Multiple Choice Questions (MCQs — Single Answer)
+## Multiple Choice Questions (MCQs - Single Answer)
 
 ### Question 1 [Compute Runtime Selection]
 A company operates a stateless REST API with highly volatile and unpredictable traffic, including multi-hour periods of complete inactivity. The company mandates minimizing both operational management overhead and infrastructure cost. Which service should they choose?
@@ -51,7 +51,7 @@ An engineer attaches a Local SSD to a Compute Engine virtual machine for high-pe
 **Why other options are incorrect:**
 - **A, B, D:** Google Cloud does not automatically snapshot, preserve, or migrate Local SSD data across VM stops.
 
-> **Key Exam Takeaway:** Local SSD data is strictly EPHEMERAL — it is wiped upon VM stop or termination.
+> **Key Exam Takeaway:** Local SSD data is strictly EPHEMERAL - it is wiped upon VM stop or termination.
 </details>
 
 ---
@@ -246,7 +246,7 @@ A **Rolling Update** gradually replaces older VM instances with new instances cr
 
 ---
 
-## Multiple Select Questions (MSQs — Multiple Correct Answers)
+## Multiple Select Questions (MSQs - Multiple Correct Answers)
 
 ### Question 11 [Scale-to-Zero Runtimes]
 Which of the following Google Cloud compute runtimes natively support automated scale-to-zero when idle? (Select THREE)

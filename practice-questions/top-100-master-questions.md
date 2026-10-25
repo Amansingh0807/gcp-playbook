@@ -1,4 +1,4 @@
-# Google Cloud ACE — Top 100 Topic-Wise Master Question Bank
+# Google Cloud ACE - Top 100 Topic-Wise Master Question Bank
 
 > **Source:** Official Google Cloud Certified Associate Cloud Engineer (ACE) Instructor Master Collection  
 > **Structure:** 100 High-Yield Exam Questions Categorized Across the 6 Official Test Domains  
@@ -19,7 +19,7 @@
 
 ---
 
-## Domain 1 — Identity, Access & Governance (IAM & Security)
+## Domain 1 - Identity, Access & Governance (IAM & Security)
 
 ### Question 1 of 100
 The security team has locked out SSH access to production VMs. How can operations manage the VMs?
@@ -354,7 +354,7 @@ Vertex AI Endpoints natively support **traffic splitting** across multiple deplo
 
 ---
 
-## Domain 2 — Networking & Content Delivery (VPC & Connectivity)
+## Domain 2 - Networking & Content Delivery (VPC & Connectivity)
 
 ### Question 19 of 100
 What are examples of global GCP resources? (Choose TWO)
@@ -662,7 +662,7 @@ Standard network and VM troubleshooting involves:
 
 ---
 
-## Domain 3 — Compute & Application Services (VMs, Containers & Serverless)
+## Domain 3 - Compute & Application Services (VMs, Containers & Serverless)
 
 ### Question 35 of 100
 What are your options to automatically deploy Compute Engine instances that already contain specific software and configuration? (Choose THREE)
@@ -1105,7 +1105,7 @@ Analysts need to query, model, and visualize data originating from diverse relat
 
 ---
 
-## Domain 4 — Storage & Migration Services (GCS & Data Transfer)
+## Domain 4 - Storage & Migration Services (GCS & Data Transfer)
 
 ### Question 59 of 100
 How can you minimize the storage cost of security video recordings in Cloud Storage that are accessed repeatedly during the first 30 days after recording, but rarely accessed thereafter?
@@ -1359,7 +1359,7 @@ An **Authorized View** in BigQuery allows sharing query results with specific us
 
 ---
 
-## Domain 5 — Databases, Analytics & Messaging (Cloud SQL, BigQuery, Pub/Sub)
+## Domain 5 - Databases, Analytics & Messaging (Cloud SQL, BigQuery, Pub/Sub)
 
 ### Question 73 of 100
 Which Google Cloud services work together to ingest, process, and analyze real-time delivery truck GPS location streams? (Choose THREE)
@@ -1691,7 +1691,7 @@ Running custom Apache Spark jobs on **Cloud Dataproc** performs the heavy transf
 
 ---
 
-## Domain 6 — Operations, Billing & Management
+## Domain 6 - Operations, Billing & Management
 
 ### Question 91 of 100
 You configured Dataplex to automatically discover and catalog files across Cloud Storage lakes and zones, but noticed that certain data files are missing from catalog discovery. What is the most likely cause?
